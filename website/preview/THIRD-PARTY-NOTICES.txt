@@ -1,0 +1,35 @@
+Blinkling local website adaptation
+Source: https://github.com/Alain00/blobatar
+Revision: a7fd546ebede49d0a9fa638945b9e534489782a2
+Upstream website: https://blobatar.dev/
+
+Site layout, visual tokens, editor pin/control/crowd interaction, export utility,
+and component compositions adapted from apps/site. Blinkling geometry, palettes,
+expressions, motion and identity are supplied solely by existing Blinkling packages.
+See docs/preview-adaptation.md for the source/destination ledger.
+
+MIT License
+
+Copyright (c) 2026 Alain
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR OTHER DEALINGS IN THE SOFTWARE.
+
+
+Optional Agent Scenes: selected MIT source from SparshKaushik/blobatarling at 8cb2ddecb5a5c33fbf7c1b4b2b846ee5c9439697. Original author Alain; fork maintained by Sparsh Kaushik; added commits authored by Khai. Exact license and file records: vendor/blobatarling-scene/{LICENSE,SOURCE.json}.
+
+Geist / Geist Mono: upstream pinned unmodified font subsets. Copyright (c) 2023 Vercel, in collaboration with basement.studio. SIL Open Font License 1.1; exact license in fonts/OFL.txt, source records in fonts/SOURCE.json.

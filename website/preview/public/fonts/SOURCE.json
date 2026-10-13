@@ -1,0 +1,20 @@
+{
+  "repository": "https://github.com/Alain00/blobatar",
+  "revision": "a7fd546ebede49d0a9fa638945b9e534489782a2",
+  "licenseSource": "https://registry.npmjs.org/geist/-/geist-1.3.1.tgz",
+  "license": "SIL Open Font License 1.1; Copyright (c) 2023 Vercel, in collaboration with basement.studio",
+  "files": [
+    {
+      "source": "apps/site/fonts/geist-variable.woff2",
+      "sha256": "743150c340c7e5b22e7af934406e20694e616b8732c0e6302b827757d2300187"
+    },
+    {
+      "source": "apps/site/fonts/geist-mono-variable.woff2",
+      "sha256": "75636d74ec05ba59f1aa7da266d2fb9d12125c146c1e442c5adc4008fb06cc63"
+    },
+    {
+      "source": "geist@1.3.1 package/LICENSE.TXT",
+      "sha256": "930853ee1daa68554d9e35c8a9175affb74f699fad9a5da6ee5ebe76379d9137"
+    }
+  ]
+}

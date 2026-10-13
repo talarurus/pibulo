@@ -1,0 +1,104 @@
+/**
+ * Optional scene motion. Visibility itself is serialized into the SVG, so a
+ * scene remains truthful without this file; this stylesheet supplies the
+ * friendly appear/retract movement for controlled boolean hand state.
+ */
+.bl-scene .bl-hand-motion {
+  transform-box: view-box;
+  transform-origin: 0 0;
+  transition:
+    opacity 180ms ease-out,
+    transform 340ms cubic-bezier(.2, .9, .25, 1.15);
+  pointer-events: none;
+}
+
+.bl-scene .bl-scene-body {
+  transform-box: view-box;
+  transform-origin: 80px 80px;
+}
+
+.bl-scene .bl-petting-heart {
+  transform-box: view-box;
+  transform-origin: 0 0;
+}
+
+.bl-scene .bl-hand-thumb {
+  transition: opacity 120ms ease-out;
+}
+
+.bl-scene.bl-hands-sampled .bl-hand-thumb {
+  transition: none;
+}
+
+.bl-scene .bl-coffee-mug {
+  transform-box: view-box;
+  transform-origin: 0 0;
+}
+
+.bl-scene .bl-laptop,
+.bl-scene .bl-laptop-status {
+  transform-box: view-box;
+  transform-origin: 80px 128px;
+}
+
+.bl-scene .bl-laptop-status {
+  transform-origin: 116px 76px;
+}
+
+.bl-scene .bl-gamepad {
+  transform-box: view-box;
+  transform-origin: 80px 114px;
+}
+
+.bl-scene .bl-earbud,
+.bl-scene .bl-music-note {
+  transform-box: view-box;
+  transform-origin: 0 0;
+}
+
+.bl-scene .bl-play-ball {
+  transform-box: view-box;
+  transform-origin: 0 0;
+}
+
+.bl-scene .bl-juggle-ball {
+  transform-box: view-box;
+  transform-origin: 0 0;
+}
+
+.bl-scene .bl-weather-umbrella,
+.bl-scene .bl-weather-rain,
+.bl-scene .bl-weather-snow,
+.bl-scene .bl-weather-smoke,
+.bl-scene .bl-weather-particles,
+.bl-scene .bl-weather-gusts,
+.bl-scene .bl-weather-tornado {
+  transform-box: view-box;
+  transform-origin: 0 0;
+}
+
+/* A sampled frame is already at its requested time and must not chase it. */
+.bl-scene.bl-hands-sampled .bl-hand-motion {
+  transition: none;
+}
+
+/*
+ * The same rule, one layer up. A sampled scene writes the pose's `--mo-*`
+ * channels on every playback frame, and the morph transitions `motion.css`
+ * declares on `.mo-root` would re-ease each frame behind the sample — the
+ * blobatar arriving a beat after the hands that are already there. `fill` goes
+ * too, since a tinted activity expression travels by `--mo-head`/`--mo-eye`
+ * the same per-frame way.
+ */
+.bl-scene.bl-hands-sampled .mo-root,
+.bl-scene.bl-hands-sampled .mo-eyes,
+.bl-scene.bl-hands-sampled .mo-bob > g:not(.mo-eyes),
+.bl-scene.bl-hands-sampled .mo-eye {
+  transition: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bl-scene .bl-hand-motion {
+    transition: none;
+  }
+}

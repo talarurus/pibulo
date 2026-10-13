@@ -1,0 +1,34 @@
+export type Expression = 'idle'|'happy'|'sad'|'mad'|'surprised'|'wink'|'sleepy'|'smug'|'unsure'|'scared'|'love'|'shy'|'sick'|'thinking';
+export type AgentState = 'idle'|'thinking'|'working'|'browsing'|'coding'|'waiting'|'scheduled'|'approval-required'|'success'|'error'|'sleeping'|'offline';
+export type Motion = 'off'|'hover'|'always';
+export interface AvatarConfig {
+ name?: string;
+ traits?: Record<string, number | number[]>;
+ expression?: Expression | 'auto';
+ state?: AgentState | 'none';
+ motion?: Motion;
+ theme?: 'dark'|'light';
+ backdrop?: 'none'|'circle'|'squircle'|'square';
+ normalization?: 'blobatar'|'raw';
+ pointerGaze?: boolean;
+ nextTime?: string;
+ timezone?: string;
+ recovery?: string;
+ palette?: Partial<Record<'head'|'eye'|'bg',string>>;
+ contrast?: boolean;
+}
+export type ResolvedConfig = Required<AvatarConfig>;
+export const DEFAULTS: Readonly<ResolvedConfig>;
+export const REVISION: string;
+export const EXPRESSIONS: Expression[];
+export const SHAPES: [string, number][];
+export const TONES: [string, number][];
+export const TRAIT_KEYS: string[];
+export const AGENT_STATES: AgentState[];
+export function configFor(input?: AvatarConfig, name?: string): ResolvedConfig;
+export function svgFor(config?: AvatarConfig, size?: number, options?: {decorative?: boolean; label?: string}): string;
+export function identity(config?: AvatarConfig, name?: string): {renderer: 'blobatar'; upstreamRevision: string; upstreamGeneration: 2; seed: string; canonicalSeed: string; normalization: 'blobatar'|'raw'; overrides: Record<string,number|number[]>; traits: Record<string,number>};
+export function expressionFor(config?: AvatarConfig): Expression;
+export function statusFor(config?: AvatarConfig): string|null;
+export function shareHash(config: AvatarConfig): string;
+export function readConfig(hash: string): ResolvedConfig & {linkError?: string};

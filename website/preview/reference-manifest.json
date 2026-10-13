@@ -1,0 +1,244 @@
+{
+  "upstream": "https://github.com/Alain00/blobatar",
+  "revision": "a7fd546ebede49d0a9fa638945b9e534489782a2",
+  "author": "Alain",
+  "license": "MIT",
+  "files": [
+    {
+      "source": "apps/site/styles.css",
+      "sha256": "45e1c62d90f77884efbb9db2575a2d567588d1d6d8e5544caea518e3dc6c1374",
+      "destination": "website/preview/public/style.css"
+    },
+    {
+      "source": "apps/site/src/App.tsx",
+      "sha256": "f37c629e17cefd4c67b2c972ce9815ee962677c05cb69de0dd609cfe7a8bf874",
+      "destination": "website/preview/src/Home.jsx"
+    },
+    {
+      "source": "apps/site/src/components/Hero.tsx",
+      "sha256": "7d5961cc0afd3b18d90b0526325a91fbfb575917eccd13197a19d0f82e50e427",
+      "destination": "website/preview/src/Home.jsx; src/components/ui.jsx"
+    },
+    {
+      "source": "apps/site/src/Editor.tsx",
+      "sha256": "d85ccfd477bc8e1605266d7271f7fe93602a8c7f57d57b58c0a19a03ea9d47d1",
+      "destination": "website/preview/src/Editor.jsx"
+    },
+    {
+      "source": "apps/site/src/editor/axes.ts",
+      "sha256": "b494c685228f42e384b51fa6b9039732cdb2c8d92cbfa96697551040e84c1bfc",
+      "destination": "website/preview/src/editor/axes.mjs"
+    },
+    {
+      "source": "apps/site/src/editor/resolved.ts",
+      "sha256": "86f3dfbd8cde0d29854df1409f11154204ffc9231e89270f4a6e61f580ad5b3c",
+      "destination": "website/preview/src/Editor.jsx (resolved() readback UI adaptation)"
+    },
+    {
+      "source": "apps/site/src/components/editor/pickers.tsx",
+      "sha256": "06de4c56f265efeb5130cb2d2bfa8428d62f2f65477e06b552704e07955f2c47",
+      "destination": "website/preview/src/Editor.jsx silhouette multi-picker"
+    },
+    {
+      "source": "apps/site/src/components/editor/control.tsx",
+      "sha256": "6ec13fba3f8d0422d4f7030f92f5ae42a4bc652b7b3d009b579c23b8fd2ddb97",
+      "destination": "website/preview/src/editor/control.jsx"
+    },
+    {
+      "source": "apps/site/src/components/editor/crowd.tsx",
+      "sha256": "dcfe81ee701a687284f421336a125166ee7cb1540387b993f27d7e411004d6cd",
+      "destination": "website/preview/src/editor/crowd.jsx"
+    },
+    {
+      "source": "apps/site/src/editor/snippet.ts",
+      "sha256": "d20f1e3d2df22e28a0767b091828008e7a7408ef9a6e3b3a4c3753f56c361520",
+      "destination": "website/preview/src/editor/snippet.mjs (adapted emitter for whoami source package)"
+    },
+    {
+      "source": "apps/site/src/components/editor/export.tsx",
+      "sha256": "3461b9beafa19dbce1a2583a18da521087a76ca67e9d6c29b47d32670757840f",
+      "destination": "website/preview/src/editor/export.jsx"
+    },
+    {
+      "source": "apps/site/src/components/WallSection.tsx",
+      "sha256": "140f9b338576ab7565cb333967d4d4dc87c24bcb987e35e2558dcd1d46ac659a",
+      "destination": "website/preview/src/Wall.jsx (adapted interaction)"
+    },
+    {
+      "source": "apps/site/src/wall/camera.ts",
+      "sha256": "77cd922a933fbbdf5e6bace0b80cea4a525146e328a5319c1d04c8433cf8f051",
+      "destination": "website/preview/src/Wall.jsx (multiplicative zoom, bounded DOM grid)"
+    },
+    {
+      "source": "apps/site/src/Components.tsx",
+      "sha256": "c614af752017e307343a41c7280935632a80af26387c7d8eb75a694f3664561d",
+      "destination": "website/preview/src/Components.jsx"
+    },
+    {
+      "source": "apps/site/registry/presence-avatar.tsx",
+      "sha256": "34707b39d1665a745660a555e36e41a7a93ec3b7314479656e4094a258112160",
+      "destination": "website/preview/src/components/compositions.jsx"
+    },
+    {
+      "source": "apps/site/registry/agent-list.tsx",
+      "sha256": "0b8cf8a3b2c89183c6f6988ae0f6618890c86b810e77704769083f955bab54fb",
+      "destination": "website/preview/src/components/compositions.jsx"
+    },
+    {
+      "source": "apps/site/registry/user-table.tsx",
+      "sha256": "ae4e7e86c1510630a0df9286c1a8a1b976f70e3a83874f4ee72e7e053b3464d2",
+      "destination": "website/preview/src/components/compositions.jsx"
+    },
+    {
+      "source": "apps/site/registry/password-field.tsx",
+      "sha256": "8d693a91410d60d443e2e6f45d40a3f7cf9d59b87dde331753530e21633a44c0",
+      "destination": "website/preview/src/components/compositions.jsx (caret mirror)"
+    },
+    {
+      "source": "apps/site/registry/group-chat.tsx",
+      "sha256": "f425da1e4e4f03532961e0cd00ce2e50f444d33d40b28c96aa3bee94334ebf7d",
+      "destination": "website/preview/src/components/compositions.jsx (grouping)"
+    },
+    {
+      "source": "apps/site/src/components/Chat.tsx",
+      "sha256": "de44858b7a96c3694c492653e987096c8855e922eab2be467abd047918eba56c",
+      "destination": "website/preview/src/Home.jsx (stable identity demonstration)"
+    },
+    {
+      "source": "apps/site/src/components/Close.tsx",
+      "sha256": "ca129d354e63e845195009712e6bd16ab1cba4e7cff5914b49254ba06cd75820",
+      "destination": "website/preview/src/Home.jsx (fact-row layout; own established values)"
+    },
+    {
+      "source": "LICENSE",
+      "sha256": "939e45eec9b4a8a904657acccda2beb0ff4c83d451a1e4971608cecaaad4d34a",
+      "destination": "website/preview/THIRD-PARTY-NOTICES.txt (exact retained text)"
+    },
+    {
+      "source": "packages/blobatar/src/animate.ts",
+      "sha256": "727c718c3831913084eebd83d44b4d3e1fe0f59edee2afab20bb5d1685a7346b",
+      "destination": "website/preview/vendor/blobatar/src/animate.ts",
+      "modifications": "None; exact pinned bytes"
+    },
+    {
+      "source": "packages/blobatar/src/color.ts",
+      "sha256": "f1a8704c20c8ab4618653e879b77b2538d61a27270e7bd2342c80f3618a8c941",
+      "destination": "website/preview/vendor/blobatar/src/color.ts",
+      "modifications": "None; exact pinned bytes"
+    },
+    {
+      "source": "packages/blobatar/src/blobatar.ts",
+      "sha256": "a33f0cf64007fe56bafd5b9dbeac4efaa36d6708759e36a78127fa1da48b4b6a",
+      "destination": "website/preview/vendor/blobatar/src/blobatar.ts",
+      "modifications": "None; exact pinned bytes"
+    },
+    {
+      "source": "packages/blobatar/src/render.ts",
+      "sha256": "a903c2ae354cc1fc6513d5287ead7bd1079964f7c6bfefee9eb6e3eb3ebf2168",
+      "destination": "website/preview/vendor/blobatar/src/render.ts",
+      "modifications": "None; exact pinned bytes"
+    },
+    {
+      "source": "packages/blobatar/src/gaze.ts",
+      "sha256": "cad1d1b8a36f8caac1cf68c9f6d912d97e59da835b9dfc59c59d421e7d995ddb",
+      "destination": "website/preview/vendor/blobatar/src/gaze.ts",
+      "modifications": "None; exact pinned bytes"
+    },
+    {
+      "source": "packages/blobatar/src/gaze.css",
+      "sha256": "bea3473ba5f214fa55f4edbc5654e9abf20d65cac636728ff8b6624b04aeedf6",
+      "destination": "website/preview/vendor/blobatar/src/gaze.css",
+      "modifications": "None; exact pinned bytes"
+    },
+    {
+      "source": "packages/blobatar/src/motion.css",
+      "sha256": "83a1b35bfb3ac4dd312b1b3d42f38caf1bd92d7251f23767f825f6211cc4a424",
+      "destination": "website/preview/vendor/blobatar/src/motion.css",
+      "modifications": "None; exact pinned bytes"
+    },
+    {
+      "source": "packages/blobatar/src/hash.ts",
+      "sha256": "533d06b09270fd965fb4a0def64de1b5c9304ea442b6fb3891f6fe3e3aee91bf",
+      "destination": "website/preview/vendor/blobatar/src/hash.ts",
+      "modifications": "None; exact pinned bytes"
+    },
+    {
+      "source": "packages/blobatar/src/shape.ts",
+      "sha256": "a418e2a62577e96f0d808a1acf3841206be4d8f9d8c28878dd6010494c7eb2db",
+      "destination": "website/preview/vendor/blobatar/src/shape.ts",
+      "modifications": "None; exact pinned bytes"
+    },
+    {
+      "source": "packages/blobatar/src/traits.ts",
+      "sha256": "acc14768b1028746c026077a977371b38469ceee797698f0649001a1bc93ca49",
+      "destination": "website/preview/vendor/blobatar/src/traits.ts",
+      "modifications": "None; exact pinned bytes"
+    },
+    {
+      "source": "packages/blobatar/src/expression.ts",
+      "sha256": "94692f2910b61581ed1b58d36c514e7970729c4254b394d566a0e6a16243f8e3",
+      "destination": "website/preview/vendor/blobatar/src/expression.ts",
+      "modifications": "None; exact pinned bytes"
+    },
+    {
+      "source": "packages/blobatar/src/morph.ts",
+      "sha256": "aecc8471379ded01b8c2cf806f21f61205f4b86acd7047431bacb7a583249854",
+      "destination": "website/preview/vendor/blobatar/src/morph.ts",
+      "modifications": "None; exact pinned bytes"
+    },
+    {
+      "source": "packages/blobatar/src/styles/blob.ts",
+      "sha256": "99a54cf2b1b2ab874bf9196e4849a0282b74f0977d599b1627a7ad44f35617ef",
+      "destination": "website/preview/vendor/blobatar/src/styles/blob.ts",
+      "modifications": "None; exact pinned bytes"
+    },
+    {
+      "source": "packages/blobatar/src/styles/compose.ts",
+      "sha256": "4ebc107aa48a5e86e46a2e1fbe46556658ce0c2c200ba69829571d879c61e4a3",
+      "destination": "website/preview/vendor/blobatar/src/styles/compose.ts",
+      "modifications": "None; exact pinned bytes"
+    },
+    {
+      "source": "packages/blobatar/src/styles/shapes.ts",
+      "sha256": "2b0eaa1f1692dd78f1b886785d5f7abd95c21dfa44adab4b4b5a586b303ab984",
+      "destination": "website/preview/vendor/blobatar/src/styles/shapes.ts",
+      "modifications": "None; exact pinned bytes"
+    },
+    {
+      "source": "packages/react/src/gaze.ts",
+      "sha256": "69c0ff34b5373393b8eda2859818a282e4b1e81dbc811d7cd0e49de606bfe8c6",
+      "destination": "website/preview/vendor/blobatar/useGaze.ts",
+      "modifications": "Local relative import and attribution banner"
+    },
+    {
+      "source": "packages/blobatar/test/keys.ts",
+      "sha256": "a71550c1626da5f4af17b38ff78b17060c8c719fff849beb078f0f55d7902da3",
+      "destination": "website/preview/src/blobatar-schema.mjs",
+      "modifications": "Trait inventory adapted, plus actual animate.ts keys"
+    },
+    {
+      "source": "apps/site/src/shapes.ts",
+      "sha256": "dd6e759a850a8ed8ffe430ac28805a570f3e38f8a80c3890f28c818d9e4f43cd",
+      "destination": "website/preview/src/blobatar-schema.mjs",
+      "modifications": "Exact silhouette midpoint table"
+    },
+    {
+      "source": "apps/site/src/editor/axes.ts",
+      "sha256": "b494c685228f42e384b51fa6b9039732cdb2c8d92cbfa96697551040e84c1bfc",
+      "destination": "website/preview/src/editor/axes.mjs",
+      "modifications": "Curated controls/applicability; full key controls added"
+    },
+    {
+      "source": "packages/blobatar/src/react.tsx",
+      "sha256": "fb4bd6b08561dc55925b239ebb9efcc6f840acf03d45bf9a0bf7729efffa5298",
+      "destination": "website/preview/src/components/BlobatarFace.jsx",
+      "modifications": "Static/animated wrapper using upstream parts; visibility and labels; stable actual useGaze"
+    },
+    {
+      "source": "apps/site/registry/password-field.tsx",
+      "sha256": "8d693a91410d60d443e2e6f45d40a3f7cf9d59b87dde331753530e21633a44c0",
+      "destination": "website/preview/src/lab/PasswordLab.jsx",
+      "modifications": "Actual client-coordinate caret targets and sleepy/rest reveal; local memory-only demo"
+    }
+  ]
+}

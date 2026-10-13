@@ -1,0 +1,69 @@
+{
+  "repository": "https://github.com/SparshKaushik/blobatarling",
+  "revision": "8cb2ddecb5a5c33fbf7c1b4b2b846ee5c9439697",
+  "baseRevision": "a7fd546ebede49d0a9fa638945b9e534489782a2",
+  "license": "MIT; exact root LICENSE retained",
+  "attribution": "Original author Alain; fork maintained by Sparsh Kaushik; added commits authored by Khai.",
+  "files": [
+    {
+      "path": "packages/blobatar/src/scene.ts",
+      "sha256": "0b783b006fdd05d6285f69056ac8c03c4f292613d196657b41f8a5040f26069b",
+      "adaptedSha256": "376c04d0aa94339ce319d41aa077ec858a678f990d75e01a690a5db4564bc497",
+      "changes": "Relative imports to the unchanged pinned Blobatar modules only."
+    },
+    {
+      "path": "packages/blobatar/src/scene-core.ts",
+      "sha256": "4e56b4042d0a59e47775e20af2fc04cfd43e16907b1abc63f9dbf2797f65b6fd",
+      "adaptedSha256": "ded72057cefbe2adcfae6bf8176d73dc27fad6d4f519374e65ac30c3aca949ad",
+      "changes": "Relative imports to the unchanged pinned Blobatar modules only."
+    },
+    {
+      "path": "packages/blobatar/src/scene-activity.ts",
+      "sha256": "8239884cb2d4fc11fcd6c29f1d845f3a329e289ec84418ac16c36d3e5fad14af",
+      "adaptedSha256": "743954c9ce70f02897f24980fcd4f523e8c0fbf8bb5c8b8d1a8b032800689c3b",
+      "changes": "Relative imports to the unchanged pinned Blobatar modules only."
+    },
+    {
+      "path": "packages/blobatar/src/scene-playback.ts",
+      "sha256": "2fb3b28ee6d7c7ac187b25ae79026f43317c6356ccd91a3b6b50590a5d0833b1",
+      "adaptedSha256": "2fb3b28ee6d7c7ac187b25ae79026f43317c6356ccd91a3b6b50590a5d0833b1",
+      "changes": "None."
+    },
+    {
+      "path": "packages/blobatar/src/scene-dom.ts",
+      "sha256": "1c4fc91721d17ce576e14f080f300145190f8ad140a51208cc91570eeb3c96ee",
+      "adaptedSha256": "1c4fc91721d17ce576e14f080f300145190f8ad140a51208cc91570eeb3c96ee",
+      "changes": "None."
+    },
+    {
+      "path": "packages/blobatar/src/activity-kit.ts",
+      "sha256": "87ee9da431571754fc1e2862195537022b001d3e303cbe9670b2da384d786eb6",
+      "adaptedSha256": "87ee9da431571754fc1e2862195537022b001d3e303cbe9670b2da384d786eb6",
+      "changes": "None."
+    },
+    {
+      "path": "packages/blobatar/src/activity-laptop.ts",
+      "sha256": "254ddc220e427249b6b8779eac3c1f1e6540bc686b1cfabd0302acdfa2263306",
+      "adaptedSha256": "53849c29996dfbef44f0b058573d295e9ed7cecab823368d4c6b6ec641078cd8",
+      "changes": "Relative imports to the unchanged pinned Blobatar modules only."
+    },
+    {
+      "path": "packages/blobatar/src/scene.css",
+      "sha256": "5ee9e0c1f465cb2aeb43b77c628486462363cce91f5e2ae8a29939641ef90cb2",
+      "adaptedSha256": "5ee9e0c1f465cb2aeb43b77c628486462363cce91f5e2ae8a29939641ef90cb2",
+      "changes": "None."
+    },
+    {
+      "path": "packages/blobatar/src/color.ts",
+      "sha256": "df337234354fbd57c2aefd1bbe5d04d2b0293abef68b700288cf298923178c42",
+      "changes": "Only mixPalettes extracted unchanged; imports reference pinned upstream fadeHex and types.",
+      "adaptedSha256": "2e4178040a564a75e33c1c9ce18751a3adb3eed67f057a8d2b168168429852c3"
+    },
+    {
+      "path": "LICENSE",
+      "sha256": "939e45eec9b4a8a904657acccda2beb0ff4c83d451a1e4971608cecaaad4d34a",
+      "adaptedSha256": "939e45eec9b4a8a904657acccda2beb0ff4c83d451a1e4971608cecaaad4d34a",
+      "changes": "None; exact fork root MIT license."
+    }
+  ]
+}

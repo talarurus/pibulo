@@ -1,0 +1,9 @@
+/*! Trait inventory, silhouette midpoints and tone choices from Alain00/blobatar at a7fd546, Copyright (c) 2026 Alain, MIT. See ../vendor/blobatar/LICENSE and reference-manifest.json. */
+export const REVISION='a7fd546ebede49d0a9fa638945b9e534489782a2';
+export const EXPRESSIONS=['idle','happy','sad','mad','surprised','wink','sleepy','smug','unsure','scared','love','shy','sick','thinking'];
+export const SHAPES=[['round',.11],['organic',.35],['boxy',.54],['capsule',.65],['nub',.745],['cloud',.825],['droplet',.888],['hexagon',.933],['sun',.965],['triangle',.99]];
+export const TONES=[['pastel',.1],['pale',.28],['mid',.49],['deep',.71],['bright',.865],['ink',.965]];
+export const TRAIT_KEYS=['shape','hue','tone','body.r','body.ratio','body.x','body.y','body.n','body.rot','body.pts',...Array.from({length:8},(_,i)=>`body.r${i}`),'gaze.x','gaze.y','eye.rx','eye.ratio','eye.scale','eye.stretch','eye.gap','eye.n','eye.lean','eye.lean2','eye.dy','sun.n','sun.dist','sun.r','sun.rot','cloud.n',...Array.from({length:6},(_,i)=>`cloud.r${i}`),'nub.n','nub.a0','nub.a1','nub.r0','nub.r1','poly.round','capsule.squat','droplet.tip','motion.phase','motion.bob','motion.blink','motion.blinkPhase','motion.saccade','motion.saccadePhase','motion.lookX','motion.lookY','motion.lookXFlip','motion.lookYFlip'];
+export const AGENT_STATES=['idle','thinking','working','browsing','coding','waiting','scheduled','approval-required','success','error','sleeping','offline'];
+// Site presentation only; no task execution or changes to the upstream pose values.
+export const STATES={idle:['idle','Ready'],thinking:['thinking','Thinking'],working:['thinking','Working'],browsing:['idle','Browsing'],coding:['thinking','Coding'],waiting:['idle','Waiting'],scheduled:['idle','Scheduled'],'approval-required':['unsure','Needs your approval'],success:['happy','Completed'],error:['sad','Failed'],sleeping:['sleepy','Sleeping'],offline:['idle','Offline']};

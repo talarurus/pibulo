@@ -1,0 +1,24 @@
+import {chromium} from 'playwright';
+import assert from 'node:assert/strict';
+import {mkdirSync,writeFileSync} from 'node:fs';
+const out=process.env.WHOAMI_CONSUMER_ARTIFACTS||'/tmp/whoami-consumer-browser';mkdirSync(out,{recursive:true});
+const browser=await chromium.launch({channel:'chrome',headless:true});
+const errors=[],checks=[];const context=await browser.newContext({viewport:{width:1280,height:900}}),page=await context.newPage();
+page.on('pageerror',e=>errors.push(e.message));
+await page.goto(process.env.CONSUMER_URL||'http://localhost:4330');
+await page.waitForTimeout(600);
+assert.equal(await page.locator('h1').innerText(),'whoami React example');
+assert.equal(await page.locator('svg').count(),2);assert.equal(await page.getByRole('img',{name:'Agent 001',exact:true}).count(),1);
+assert.ok(await page.locator('.preview-face .mo-root').count());
+await page.addStyleTag({content:'.mo-root,.mo-breathe,.mo-bob,.mo-eyes,.mo-eye,.mo-eye>*{animation-play-state:paused!important}'});
+async function eyes(){return page.locator('.preview-face .mo-eye').evaluateAll(es=>es.map(e=>{const r=e.getBoundingClientRect();return{x:r.x+r.width/2,y:r.y+r.height/2}}))}
+const box=await page.locator('.preview-face svg').boundingBox();
+await page.mouse.move(box.x-100,box.y+box.height/2);await page.waitForTimeout(700);const left=await eyes();
+await page.mouse.move(box.x+box.width+100,box.y+box.height/2);await page.waitForTimeout(700);const right=await eyes();
+assert.ok(right[0].x-left[0].x>2,'installed Face gaze moves');checks.push('desktop packaged Face mounts and follows pointer');
+await page.screenshot({path:out+'/consumer-desktop.png'});
+await context.close();
+const mobile=await browser.newContext({viewport:{width:390,height:844},isMobile:true,hasTouch:true,reducedMotion:'reduce'});const mp=await mobile.newPage();mp.on('pageerror',e=>errors.push(e.message));await mp.goto(process.env.CONSUMER_URL||'http://localhost:4330');await mp.waitForTimeout(500);assert.equal(await mp.locator('svg').count(),2);assert.ok(await mp.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));await mp.screenshot({path:out+'/consumer-mobile.png'});checks.push('mobile packaged Face renders with reduced motion');
+await mobile.close();
+const home=await browser.newPage({viewport:{width:1440,height:1000},reducedMotion:'reduce'});await home.goto(process.env.PREVIEW_URL||'http://localhost:4328');await home.locator('#hero-avatar svg').waitFor();await home.evaluate(()=>document.activeElement?.blur());await home.screenshot({path:out+'/homepage.png'});await home.close();
+assert.deepEqual(errors,[]);writeFileSync(out+'/report.json',JSON.stringify({browser:browser.version(),checks,errors},null,2));await browser.close();console.log('PASS separate installed React consumer desktop gaze, mobile rendering and no runtime errors.');
