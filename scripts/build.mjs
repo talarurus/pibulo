@@ -2,7 +2,7 @@ import {build} from 'esbuild';
 import {execFileSync} from 'node:child_process';
 import {mkdir,copyFile,readFile,writeFile} from 'node:fs/promises';
 await mkdir('dist',{recursive:true});
-for(const [entry,out] of [['src/index.mjs','dist/index.js'],['src/react.jsx','dist/react.js'],['src/activity.ts','dist/activity.js'],['src/activity-react.tsx','dist/activity-react.js'],['src/scenes.tsx','dist/scenes.js']]){
+for(const [entry,out] of [['src/index.mjs','dist/index.js'],['src/react.jsx','dist/react.js'],['src/activity.ts','dist/activity.js'],['src/recording.ts','dist/recording.js'],['src/activity-react.tsx','dist/activity-react.js'],['src/scenes.tsx','dist/scenes.js']]){
  await build({entryPoints:[entry],outfile:out,bundle:true,format:'esm',platform:'neutral',target:'es2022',external:['react'],legalComments:'eof'});
 }
 execFileSync(process.execPath,['node_modules/typescript/bin/tsc','-p','tsconfig.production.json'],{stdio:'inherit'});

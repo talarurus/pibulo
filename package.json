@@ -37,7 +37,11 @@
       "types": "./dist/types/src/scenes.d.ts",
       "import": "./dist/scenes.js"
     },
-    "./scenes.css": "./dist/scenes.css"
+    "./scenes.css": "./dist/scenes.css",
+    "./recording": {
+      "types": "./dist/types/src/recording.d.ts",
+      "import": "./dist/recording.js"
+    }
   },
   "files": [
     "dist",

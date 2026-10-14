@@ -4,6 +4,8 @@
 
 Adds a strict TypeScript activity engine with version 1 caller events, explicit lifecycle transitions, independent stable agents, bounded history, stale/task validation and deterministic replay. Adds subscribed React AgentAvatar/useAgentActivity and an isolated optional AgentScene entry. Declarations for new APIs are generated from checked source.
 
+Final refinements add compact mobile selection, prominent live/replay controls, keyboard timeline navigation and event details, clearer identity/activity explanation, and local JSON recording import/export. The framework-neutral recording entry pins version/identity metadata, bounds bytes/agents/events/strings and validates complete recordings through a fresh engine before import. Separate-agent technical review found no blocking defects; owner acceptance remains pending.
+
 Adds `/studio` with simulated task/input/error/reset controls, event timeline, replay/pause/step/seek and copyable integration/recording examples. Reuses the existing Blobatar/Blobatarling artwork and playback; preserves v0.1.0 renderer bytes, identity fixtures, Face API, share links and SVG/PNG behavior. No new renderer generation, monitoring integration, deployment or publication.
 
 ## 0.1.0

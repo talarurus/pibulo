@@ -18,6 +18,7 @@
   "include": [
     "src/activity.ts",
     "src/activity-react.tsx",
-    "src/scenes.tsx"
+    "src/scenes.tsx",
+    "src/recording.ts"
   ]
 }

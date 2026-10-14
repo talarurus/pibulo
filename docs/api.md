@@ -26,6 +26,7 @@ The existing root SVG and `/react` Face exports above remain unchanged. New ESM 
 | --- | --- |
 | `@talarurus/whoami/activity` | `createActivityEngine`, `replayActivity`, `validateActivityEvent`, `EVENT_VERSION`, `EVENT_STATES`, `ACTIVITY_LABELS`; generated public types |
 | `@talarurus/whoami/activity/react` | `AgentAvatar`, `useAgentActivity`; `AgentAvatarProps` |
+| `@talarurus/whoami/recording` | `serializeRecording`, `parseRecording`, `RECORDING_VERSION`, `RECORDING_IDENTITY`, `RECORDING_LIMITS`; generated recording types |
 | `@talarurus/whoami/scenes` | `AgentScene` |
 | `@talarurus/whoami/scenes.css` | Optional upstream scene transitions and reduced-motion rules |
 
@@ -106,3 +107,66 @@ Keep the engine stable outside render or create it once in state. `useAgentActiv
 Both components accept `engine`, `agentId`, `size`, `motion` (`off` default, `hover`, `always`) and `className`. AgentAvatar defaults to 64px and reuses Face with automatic state expressions. AgentScene defaults to 240px and adapts the existing Blobatarling laptop activities; import from `/scenes` and add `scenes.css` plus `motion.css`. Idle/thinking/waiting use existing expressions; working/input/completed/error use existing laptop poses. Appearance uses the exact stable seed in both integrations. Motion governs idle animation and scene entrance playback; off and OS reduced motion select a deterministic still. Hidden/offscreen scenes pause and dispose playback on unmount. Sizes should be positive pixel dimensions.
 
 Both provide an accessible visible text status (`Name · State`) with polite, atomic live announcements; decorative SVG is hidden. Consumers may visually hide the status while preserving it in the accessibility tree, as the Studio does alongside visible badges. Error/input meaning is preserved in text rather than color alone. Scene code is isolated from ordinary `/activity/react`, `/react`, root SVG and engine imports. Neither integration monitors coding agents, approves requests, schedules tasks or changes renderer generation.
+
+## JSON activity recordings · version 1
+
+`@talarurus/whoami/recording` is framework-neutral and bundles only the activity engine. It does not load React, the renderer or optional scenes. Recordings start from idle and preserve agent registration order, exact IDs/display names, accepted event order, the event version and pinned visual identity contract. No snapshots or unchecked engine hydration are imported.
+
+```ts
+import {serializeRecording, parseRecording} from '@talarurus/whoami/recording';
+
+const exported = serializeRecording({
+  agents: [{id: 'atlas', name: 'Atlas'}],
+  events: [{version: 1, type: 'task.started', agentId: 'atlas',
+    taskId: 'task-001', sequence: 1, timestamp: 0}],
+});
+if (!exported.ok) throw new Error(exported.error);
+// Save exported.json with your application's own file UI.
+const imported = parseRecording(exported.json);
+if (imported.ok) {
+  console.log(imported.engine.getAgent('atlas')?.state); // thinking
+  const same = serializeRecording(imported.recording); // validated re-export
+} else console.error(imported.code, imported.error);
+```
+
+Canonical JSON envelope:
+
+```json
+{
+  "format": "whoami-recording",
+  "version": 1,
+  "eventVersion": 1,
+  "initialState": "idle",
+  "identity": {
+    "renderer": "blobatar",
+    "revision": "a7fd546ebede49d0a9fa638945b9e534489782a2",
+    "normalization": "raw"
+  },
+  "agents": [{"id": "atlas", "name": "Atlas"}],
+  "events": [
+    {"version": 1, "type": "task.started", "agentId": "atlas", "taskId": "task-001", "sequence": 1, "timestamp": 0}
+  ]
+}
+```
+
+`serializeRecording({agents, events}, limits?)` validates a complete accepted sequence from idle and returns `{ok:true, json, recording}`. It also accepts an existing ActivityRecording, validating its envelope instead of silently overwriting metadata. Unknown fields and unsupported metadata fail. Display names are filled from IDs when omitted. Strings/events/definitions are copied and frozen; changing caller objects after export does not change the result. Serialization is deterministic for the same ordered input and produces indented JSON without creation timestamps or randomness. It never silently filters rejected events.
+
+`parseRecording(json, limits?)` bounds UTF-8 bytes **before** JSON parsing, validates the envelope and all agents/events, then dispatches the entire original sequence into a fresh activity engine. Only complete success returns `{ok:true, recording, engine}`. Failures return `{ok:false, code, error, eventIndex?}`, without an engine or a partially imported session. Event indexes are zero-based; messages number events from 1. Codes are `invalid-recording`, `unsupported-recording`, `recording-limit` and `inconsistent-recording`. Neither API throws for invalid recording content. Failed imports do not touch caller-owned engines.
+
+Limits apply together:
+
+| Boundary | SDK maximum | Studio maximum |
+| --- | --- | --- |
+| JSON file/text size, UTF-8 | 1 MiB (1,048,576 bytes) | 256 KiB (262,144 bytes) |
+| Events | 1,000 | 120 |
+| Agents | 32 (at least 1) | 8 (at least 1) |
+| Agent IDs, names, task IDs | 128 UTF-16 units, well-formed and without controls | Same |
+| Event messages | 512 UTF-16 units, well-formed and without controls | Same |
+
+Pass lower positive integer `maxBytes`, `maxEvents` or `maxAgents` limits to either API. Values above the SDK maximum, invalid numbers or unknown limit fields are rejected. There is no caller option to disable bounds. A recording may hit the byte bound before its event bound. Empty event recordings are valid; empty agent rosters are rejected.
+
+Recording validation enforces unique task IDs **per agent across the whole recording**, including after resets. This enforces the live engine’s documented caller responsibility while keeping the live engine unchanged. Different agents can use the same task ID independently. Unknown agents, duplicate/stale/out-of-order sequences, decreasing per-agent timestamps, missing task starts, illegal lifecycle transitions and task mismatches fail. Cross-agent timestamps need not be globally sorted; original arrival order is retained. Gaps in per-agent sequences remain valid, as in the engine. Another renderer revision, normalization, recording/event version or initial state is rejected without migration.
+
+Retain a **complete** accepted sequence in your application. A bounded history tail can omit a required task start; the serializer rejects sequences that cannot replay from idle. Replayability alone cannot prove that a caller retained every earlier valid event. No checkpoints or durable storage are added. The returned engine retains the imported accepted events up to its initial event count (minimum 1); keep the complete recording separately when appending more events, or replay it into an engine with your own history limit.
+
+Studio Import validates a bounded local file with strict UTF-8 decoding, then replaces the session atomically and opens replay at event zero. Invalid files preserve the current session and show a helpful error. Return to live to continue simulated events; the imported roster/identity remains stable. New session resets the current roster to idle. Export always includes the complete session, even while viewing an earlier replay position. Task descriptions and any caller-supplied information remain in the file; review them before sharing. No backend, upload, cloud storage, accounts, telemetry or automatic persistence is introduced.
