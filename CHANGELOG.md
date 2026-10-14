@@ -1,12 +1,23 @@
 # Changelog
 
-## 0.2.0 development (unreleased)
+## 0.2.0
 
-Adds a strict TypeScript activity engine with version 1 caller events, explicit lifecycle transitions, independent stable agents, bounded history, stale/task validation and deterministic replay. Adds subscribed React AgentAvatar/useAgentActivity and an isolated optional AgentScene entry. Declarations for new APIs are generated from checked source.
+### Added by whoami
 
-Final refinements add compact mobile selection, prominent live/replay controls, keyboard timeline navigation and event details, clearer identity/activity explanation, and local JSON recording import/export. The framework-neutral recording entry pins version/identity metadata, bounds bytes/agents/events/strings and validates complete recordings through a fresh engine before import. Separate-agent technical review found no blocking defects; owner acceptance remains pending.
+- Framework-neutral strict TypeScript activity engine: stable exact agent IDs, version 1 caller events, explicit task transitions, immutable snapshots, bounded accepted-event history, per-agent sequence/timestamp and task checks, and deterministic complete-recording replay.
+- React `AgentAvatar` and `useAgentActivity`, plus a separate optional `AgentScene` entry. New declarations are generated from checked source; ordinary SVG/avatar consumers do not load scene code.
+- Agent Identity Studio at `/studio`: independent agents, task/input/error/reset controls, compact mobile selection, live/replay mode, keyboard timeline navigation, event details, pause/step/seek and copyable integration examples.
+- Version 1 JSON recordings with pinned identity/event metadata, complete accepted events, bounded byte/agent/event/string validation, and atomic import through a fresh engine. Studio supports local export/import with privacy notices and strict UTF-8 decoding.
 
-Adds `/studio` with simulated task/input/error/reset controls, event timeline, replay/pause/step/seek and copyable integration/recording examples. Reuses the existing Blobatar/Blobatarling artwork and playback; preserves v0.1.0 renderer bytes, identity fixtures, Face API, share links and SVG/PNG behavior. No new renderer generation, monitoring integration, deployment or publication.
+### Reused and preserved
+
+Blobatar supplies the existing deterministic renderer, ten silhouettes, fourteen expressions, palettes, motion and gaze. Blobatarling supplies the already-adapted laptop/hand/badge artwork, activity frames, playback and DOM binding. These are reused upstream features, not new v0.2.0 differentiation. MIT credits and notices remain intact.
+
+Preserves v0.1.0 identity fixtures, renderer bytes, SVG/PNG results, Face API, share links, editor, website and existing compositions. No renderer generation or package rename. The repository is public; `private: true` in package.json intentionally prevents npm publication.
+
+### Status and limits
+
+Owner-requested desktop/mobile visual review passed. Separate-agent technical review found no blocking defects; it does not establish human or screen-reader certification. Final GitHub publication remains a separate approval step. Optional scenes remain experimental. Callers provide events and maintain unique task IDs; bounded history is not durable recording storage. One task per agent, fixed roster per engine, SDK recording limits of 1 MiB / 1,000 events / 32 agents, and narrower Studio limits of 256 KiB / 120 / 8 apply. Browser validation covers Chrome and mobile emulation. No automatic monitoring, backend, cloud storage, telemetry, deployment or npm publication.
 
 ## 0.1.0
 

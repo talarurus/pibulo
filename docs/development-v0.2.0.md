@@ -1,5 +1,7 @@
 # v0.2.0 development review
 
+Historical verification record: package versions and publication status below describe that development checkpoint. The repository is now public, owner-requested visual review has passed, and current release preparation is documented in [releases/preparation-v0.2.0.md](releases/preparation-v0.2.0.md). npm publication remains disabled.
+
 This is owner-authorized development, not a v0.2.0 release. Branch: `develop/v0.2.0`. Local package version: `0.2.0-dev.0`. No tag, GitHub release, deployment, npm publication, rename or change to another Talarurus project is part of this work.
 
 The baseline is the original v0.1.0 commit `f37d194` (annotated tag object `9456659e6b78833cbd68b29fa203608fa48a7e25`). The v0.1.0 tag, renderer/vendor files, reference manifest, seven identity fixtures, existing SVG/React implementation and declarations, fonts, license files and notices are unchanged. Existing validation remains in [validation.md](validation.md).
@@ -73,4 +75,4 @@ New production modules are checked TypeScript; the existing first-party JavaScri
 1. Owner visual and functional review of `/studio`, including replay, mobile controls and the integration example. Stop here for that review.
 2. Independent source/API and accessibility review by someone other than the implementation agent; none is claimed here and no subagents were used.
 3. Resolve review feedback, agree the v1 schema/ordering/task-ID contract and supported browser scope, and verify any resulting changes.
-4. Obtain separate authorization for a final version, tag, GitHub release, deployment or npm publication. The repository remains private and the current work is committed locally only.
+4. Obtain separate authorization for a final version, tag, GitHub release, deployment or npm publication. At that checkpoint, work was committed locally only. Current repository visibility and release status are recorded in releases/preparation-v0.2.0.md.

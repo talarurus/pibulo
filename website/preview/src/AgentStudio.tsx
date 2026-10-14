@@ -138,7 +138,7 @@ export function Agent() {
 // Optional laptop scenes: AgentScene from '@talarurus/whoami/scenes'
 // with '@talarurus/whoami/scenes.css'.`;
   return <section className="studio">
-    <div className="studio-intro"><div><span className="eyebrow">WHOAMI / AGENT TOOLKIT</span><h1>Identity, in motion.</h1><p>The same agent. A changing state. A story you can replay.</p></div><span className="studio-version">v0.2.0 <span>development</span></span></div>
+    <div className="studio-intro"><div><span className="eyebrow">WHOAMI / AGENT TOOLKIT</span><h1>Identity, in motion.</h1><p>The same agent. A changing state. A story you can replay.</p></div><span className="studio-version">v0.2.0 <span>source</span></span></div>
     <div className="studio-explanation"><p><strong>Identity stays familiar.</strong> An agent’s stable ID generates its face. Tasks change its expression and activity, never its identity.</p><p><strong>Your application supplies events.</strong> whoami validates them and presents what each agent is doing.</p></div>
     <div className="studio-notice"><span className="studio-indicator"/><span><strong>Agent Identity Studio</strong> <span className="studio-notice-detail">· {session.imported ? 'Imported caller events; controls simulate new events.' : 'Simulated events, supplied by you.'} No live agent connection.</span></span></div>
     <div className="studio-section-heading"><h2>Your agents <span>{String(agents.length).padStart(2, '0')}</span></h2><span>Stable IDs · independent activity</span></div>

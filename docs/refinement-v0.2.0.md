@@ -1,5 +1,7 @@
 # v0.2.0 final refinement and technical review
 
+Historical verification record: package versions and publication status below describe that development checkpoint. The repository is now public, owner-requested visual review has passed, and current release preparation is documented in [releases/preparation-v0.2.0.md](releases/preparation-v0.2.0.md). npm publication remains disabled.
+
 Work began on `develop/v0.2.0` at the expected clean baseline `4abff75044c6b3055741d16be9a5885edd2d1b66`. No unrelated changes were present or overwritten. The existing v0.1.0 commit/tag, renderer, identity fixtures, font and license bytes remain unchanged. This refinement also leaves the activity engine, React binding and optional scene implementation unchanged.
 
 ## Exact changes

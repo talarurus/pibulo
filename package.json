@@ -1,7 +1,7 @@
 {
   "name": "@talarurus/whoami",
-  "version": "0.2.0-dev.0",
-  "description": "Seeded expressive SVG avatars, an editor, and React components",
+  "version": "0.2.0",
+  "description": "Deterministic SVG agent identities and caller-driven activity, with React components",
   "private": true,
   "type": "module",
   "license": "MIT",
