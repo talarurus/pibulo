@@ -2,7 +2,7 @@ import {build} from 'esbuild';
 import {execFileSync} from 'node:child_process';
 import {mkdir,copyFile,readFile,writeFile} from 'node:fs/promises';
 await mkdir('dist',{recursive:true});
-for(const [entry,out] of [['src/index.mjs','dist/index.js'],['src/react.jsx','dist/react.js'],['src/activity.ts','dist/activity.js'],['src/recording.ts','dist/recording.js'],['src/activity-react.tsx','dist/activity-react.js'],['src/scenes.tsx','dist/scenes.js']]){
+for(const [entry,out] of [['src/index.mjs','dist/index.js'],['src/react.jsx','dist/react.js'],['src/activity.ts','dist/activity.js'],['src/recording.ts','dist/recording.js'],['src/activity-react.tsx','dist/activity-react.js'],['src/scenes.tsx','dist/scenes.js'],['src/motion.ts','dist/motion.js'],['src/motion-react.tsx','dist/motion-react.js']]){
  await build({entryPoints:[entry],outfile:out,bundle:true,format:'esm',platform:'neutral',target:'es2022',external:['react'],legalComments:'eof'});
 }
 execFileSync(process.execPath,['node_modules/typescript/bin/tsc','-p','tsconfig.production.json'],{stdio:'inherit'});
@@ -16,4 +16,4 @@ await writeFile('THIRD-PARTY-NOTICES.txt',(await Promise.all(files.map(async f=>
 await copyFile('THIRD-PARTY-NOTICES.txt','dist/THIRD-PARTY-NOTICES.txt');
 execFileSync(process.execPath,['node_modules/typescript/bin/tsc','-p','tsconfig.website.json'],{stdio:'inherit'});
 await import('../website/preview/build.mjs');
-console.log('Built @talarurus/whoami 0.2.0 source package core, activity engine, React entry, styles, and website.');
+console.log('Built @talarurus/whoami 0.3.0 development package core, activity engine, React entry, styles, and website.');

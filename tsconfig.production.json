@@ -19,6 +19,8 @@
     "src/activity.ts",
     "src/activity-react.tsx",
     "src/scenes.tsx",
-    "src/recording.ts"
+    "src/recording.ts",
+    "src/motion.ts",
+    "src/motion-react.tsx"
   ]
 }

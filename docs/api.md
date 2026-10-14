@@ -1,5 +1,9 @@
 # API and integration
 
+The `develop/v0.3.0` milestone adds the optional recorded-motion entries below.
+Package metadata is `0.3.0-dev.0`; historical v0.2.0 interfaces remain compatible.
+No v0.3.0 release or publication is implied.
+
 Install the locally built tarball as shown in the README. The root ESM entry is `@talarurus/whoami`; React is `@talarurus/whoami/react`. Node 24 and React 19.2 are the tested versions. CommonJS is not included.
 
 `svgFor(config?, size=512, {decorative=false, label}?)` returns static SVG. Sizes are integers 24..4096. `name` defaults to atlas. Informative SVG includes a title derived from name or label; decorative SVG omits it. Insert only the SVG returned by this renderer, never arbitrary untrusted markup.
@@ -172,3 +176,11 @@ Retain a **complete** accepted sequence in your application. A bounded history t
 Studio Import validates a bounded local file with strict UTF-8 decoding, then replaces the session atomically and opens replay at event zero. Invalid files preserve the current session and show a helpful error. Return to live to continue simulated events; the imported roster/identity remains stable. New session resets the current roster to idle. Export always includes the complete session, even while viewing an earlier replay position. Task descriptions and any caller-supplied information remain in the file; review them before sharing. No backend, upload, cloud storage, accounts, telemetry or automatic persistence is introduced.
 
 The optional AgentScene presentation and manual scene playground remain experimental in v0.2.0. The engine, React subscription contract and recording version 1 are the supported event interfaces; scenes introduce no additional task or monitoring system.
+
+## Recorded motion · v0.3.0 development
+
+Optional `/motion` exports `compileMotionRecording` and typed immutable sampling;
+`/motion/react` exports `RecordedAgentAvatar` and `useMotionReducedPreference`.
+See [the complete motion API and example](motion-api.md), including explicit origin,
+policy, timestamp ties, errors, reduced motion and the frame reproducibility contract.
+The [MP4 frame contract](mp4-frame-contract.md) prepares future export without an encoder.

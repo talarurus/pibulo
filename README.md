@@ -2,9 +2,11 @@
 
 A familiar face for every agent. Stable SVG identities, caller-driven task activity, React components, and an interactive Agent Identity Studio.
 
-![Agent Identity Studio](assets/studio-refined-desktop.png)
+This checkout is the **v0.3.0 development milestone** (`0.3.0-dev.0`), with optional recorded-motion sampling and Motion mode in the existing dark Studio. Existing APIs and identities are preserved. No v0.3.0 release is published.
 
-[Mobile Studio](assets/studio-refined-mobile.png)
+![Agent Identity Studio · Motion](assets/studio-motion-desktop.png)
+
+[Mobile Motion Studio](assets/studio-motion-mobile.png)
 
 **v0.2.0** is a source distribution of the agent identity and activity toolkit. The [GitHub repository](https://github.com/talarurus/whoami) is public. `whoami` remains a provisional product name; the package remains `@talarurus/whoami`. It is not published to npm, and no production website is deployed. The **v0.1.0** tag remains the immutable source-release baseline.
 
@@ -28,7 +30,7 @@ Open [Agent Identity Studio](http://localhost:4318/studio), [the website](http:/
 npm run build
 npm pack
 # In a separate application
-npm install /absolute/path/to/talarurus-whoami-0.2.0.tgz
+npm install /absolute/path/to/talarurus-whoami-0.3.0-dev.0.tgz
 ```
 
 The package name below resolves through that local tarball. It is **not** an npm registry installation instruction.

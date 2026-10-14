@@ -1,6 +1,6 @@
 {
   "name": "@talarurus/whoami",
-  "version": "0.2.0",
+  "version": "0.3.0-dev.0",
   "description": "Deterministic SVG agent identities and caller-driven activity, with React components",
   "private": true,
   "type": "module",
@@ -41,6 +41,14 @@
     "./recording": {
       "types": "./dist/types/src/recording.d.ts",
       "import": "./dist/recording.js"
+    },
+    "./motion": {
+      "types": "./dist/types/src/motion.d.ts",
+      "import": "./dist/motion.js"
+    },
+    "./motion/react": {
+      "types": "./dist/types/src/motion-react.d.ts",
+      "import": "./dist/motion-react.js"
     }
   },
   "files": [
@@ -70,7 +78,8 @@
     "check:release": "node scripts/check-release.mjs",
     "example:react": "node examples/react/dev.mjs",
     "test:consumer": "node scripts/check-consumer.mjs",
-    "test:studio": "node website/preview/tests/studio-browser.mjs"
+    "test:studio": "node website/preview/tests/studio-browser.mjs",
+    "test:motion:browser": "node website/preview/tests/motion-browser.mjs"
   },
   "devDependencies": {
     "@types/react": "19.2.2",

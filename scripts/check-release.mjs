@@ -2,7 +2,7 @@ import assert from 'node:assert/strict';
 import {readFileSync,readdirSync,statSync} from 'node:fs';
 import {createHash} from 'node:crypto';
 const pkg=JSON.parse(readFileSync('package.json')),lock=JSON.parse(readFileSync('package-lock.json'));
-assert.equal(pkg.version,'0.2.0');assert.equal(lock.version,pkg.version);assert.equal(lock.packages[''].version,pkg.version);assert.equal(pkg.private,true);assert.equal(pkg.repository.url,'https://github.com/talarurus/whoami.git');
+assert.equal(pkg.version,'0.3.0-dev.0');assert.equal(lock.version,pkg.version);assert.equal(lock.packages[''].version,pkg.version);assert.equal(pkg.private,true);assert.equal(pkg.repository.url,'https://github.com/talarurus/whoami.git');
 for(const [name,version] of Object.entries(pkg.devDependencies))assert.match(version,/^\d+\.\d+\.\d+$/);
 for(const [path,p] of Object.entries(lock.packages).filter(([k])=>k)){
  assert.ok(['MIT','Apache-2.0'].includes(p.license),path+' license');
@@ -14,7 +14,7 @@ const manifest=JSON.parse(readFileSync('website/preview/reference-manifest.json'
 for(const f of manifest.files.filter(x=>x.modifications==='None; exact pinned bytes'))assert.equal(createHash('sha256').update(readFileSync(f.destination)).digest('hex'),f.sha256,f.destination);
 const fonts=JSON.parse(readFileSync('website/preview/public/fonts/SOURCE.json'));
 for(const f of fonts.files){const name=f.source.endsWith('LICENSE.TXT')?'OFL.txt':f.source.split('/').at(-1);assert.equal(createHash('sha256').update(readFileSync('website/preview/public/fonts/'+name)).digest('hex'),f.sha256);}
-const skip=new Set(['.git','node_modules','dist']);let count=0;
+const skip=new Set(['.git','node_modules','dist','test-results','playwright-report','coverage']);let count=0;
 function walk(dir){for(const item of readdirSync(dir,{withFileTypes:true})){if(skip.has(item.name))continue;const path=dir==='.'?item.name:dir+'/'+item.name;if(item.isSymbolicLink())throw Error('Source symlink: '+path);if(item.isDirectory())walk(path);else{
  assert.ok(!/(^|\/)(?:\.env(?:\..*)?|\.DS_Store|id_rsa|id_ed25519|credentials|settings\.local\.json)$/.test(path),'Private file: '+path);
  if(/\.(woff2|png)$/.test(path))continue;
