@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "target": "ES2024",
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "strict": true,
+    "jsx": "react-jsx",
+    "lib": [
+      "ES2024",
+      "DOM"
+    ],
+    "declaration": true,
+    "emitDeclarationOnly": true,
+    "outDir": "dist/types",
+    "rootDir": ".",
+    "skipLibCheck": false
+  },
+  "include": [
+    "src/activity.ts",
+    "src/activity-react.tsx",
+    "src/scenes.tsx"
+  ]
+}

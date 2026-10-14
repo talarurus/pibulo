@@ -1,10 +1,10 @@
 # whoami
 
-A familiar face for every agent. A stable seed produces an expressive SVG avatar, with a local editor and a React component.
+A familiar face for every agent. Stable SVG identities, caller-driven task activity, React components, and an interactive Agent Identity Studio.
 
 ![whoami homepage](assets/homepage.png)
 
-Version **0.1.0** is a GitHub **source release**, initially private. Nothing is published to npm and no production website is deployed.
+This branch develops **v0.2.0** (`0.2.0-dev.0`). The **v0.1.0** tag remains the immutable source-release baseline. Nothing is published to npm and no production website is deployed.
 
 ## Run the website
 
@@ -17,7 +17,7 @@ npm ci
 npm start
 ```
 
-Open [the website](http://localhost:4318), [editor](http://localhost:4318/editor), [components](http://localhost:4318/components), or [documentation](http://localhost:4318/docs). Stop with Ctrl-C. `PORT=4320 npm start` selects another port; restart to rebuild after edits.
+Open [Agent Identity Studio](http://localhost:4318/studio), [the website](http://localhost:4318), [editor](http://localhost:4318/editor), [components](http://localhost:4318/components), or [documentation](http://localhost:4318/docs). Stop with Ctrl-C. `PORT=4320 npm start` selects another port; restart to rebuild after edits.
 
 ## Use the source package
 
@@ -26,7 +26,7 @@ Open [the website](http://localhost:4318), [editor](http://localhost:4318/editor
 npm run build
 npm pack
 # In a separate application
-npm install /absolute/path/to/talarurus-whoami-0.1.0.tgz
+npm install /absolute/path/to/talarurus-whoami-0.2.0-dev.0.tgz
 ```
 
 The package name below resolves through that local tarball. It is **not** an npm registry installation instruction.
@@ -55,6 +55,28 @@ export default function AgentAvatar() {
 
 React **19.2** is a peer dependency for React consumers. Run `npm run example:react` after building, then open http://localhost:4319. See [API and integration](docs/api.md) and the [working TypeScript example](examples/react/main.tsx).
 
+## Agent activity
+
+```tsx
+import { createActivityEngine } from '@talarurus/whoami/activity';
+import { AgentAvatar } from '@talarurus/whoami/activity/react';
+
+const engine = createActivityEngine({ agents: [{ id: 'atlas' }] });
+const result = engine.dispatch({
+  version: 1, agentId: 'atlas', taskId: 'task-001',
+  sequence: 1, timestamp: 0, type: 'task.started',
+});
+if (!result.ok) console.error(result.code, result.error);
+
+export function Agent() {
+  return <AgentAvatar engine={engine} agentId="atlas" />;
+}
+```
+
+Import the three CSS entries shown in the Face example for animated avatars. Optional `AgentScene` is exported from `@talarurus/whoami/scenes`; import `scenes.css` and `motion.css`. The engine has no React, renderer, clock or transport dependency. Caller-supplied events produce idle, waiting, thinking, working, needs-input, completed and error states. Sequences, task IDs and transition validation protect current state; accepted history is bounded. `replayActivity(options, recording)` deterministically reconstructs a complete caller recording.
+
+The Studio uses these public exports for three independent agents, task controls, input resolution, errors/reset, a timeline, replay/pause/step/seek and copyable examples. All events are clearly simulated. Its recording is in memory, capped at 120 accepted events; new sessions preserve agent identity. See [the schema and transition rules](docs/api.md), [typed examples](examples/activity/main.tsx), and [development verification](docs/development-v0.2.0.md).
+
 ## Included
 
 - Ten silhouettes, fourteen expressions and 58 geometry/motion controls.
@@ -63,7 +85,7 @@ React **19.2** is a peer dependency for React consumers. Run `npm run example:re
 - Presence, agent list, user table, password helper and group chat examples; a browser-local wall.
 - Six optional **experimental manual companion scenes** at `/agent-scenes`.
 
-The standard artwork uses pinned Blobatar generation 2. This release preserves existing renderer bytes and identity behavior. Companion scenes have no real agent monitoring, approval queue, session tracking, Claude/Codex integration, export or packaged scene API. Compositions are reusable checked-in examples; the packaged React API is `Face`.
+The standard artwork uses pinned Blobatar generation 2. This release preserves existing renderer bytes and identity behavior. The renderer, expressions, motion, gaze and laptop artwork are reused upstream work. The activity engine, replay, React activity binding and Studio are new first-party functionality. No automatic Codex/Claude monitoring, network transport, approval backend or scene export is included. Existing compositions remain checked-in examples; `Face` remains backward compatible.
 
 PNG export is browser-only and static. Live gaze and animation are not exported. The website server and SVG endpoint bind to loopback; there is no hosted service or hot reload. Other frameworks and native SDKs are outside this release. Desktop Chrome and emulated mobile viewport verification do not establish physical-device or all-browser compatibility.
 

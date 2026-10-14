@@ -1,0 +1,9 @@
+{
+  "extends": "./tsconfig.production.json",
+  "compilerOptions": {
+    "noEmit": true
+  },
+  "include": [
+    "website/preview/src/AgentStudio.tsx"
+  ]
+}

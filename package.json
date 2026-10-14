@@ -1,6 +1,6 @@
 {
   "name": "@talarurus/whoami",
-  "version": "0.1.0",
+  "version": "0.2.0-dev.0",
   "description": "Seeded expressive SVG avatars, an editor, and React components",
   "private": true,
   "type": "module",
@@ -24,7 +24,20 @@
     },
     "./motion.css": "./dist/motion.css",
     "./gaze.css": "./dist/gaze.css",
-    "./react.css": "./dist/react.css"
+    "./react.css": "./dist/react.css",
+    "./activity": {
+      "types": "./dist/types/src/activity.d.ts",
+      "import": "./dist/activity.js"
+    },
+    "./activity/react": {
+      "types": "./dist/types/src/activity-react.d.ts",
+      "import": "./dist/activity-react.js"
+    },
+    "./scenes": {
+      "types": "./dist/types/src/scenes.d.ts",
+      "import": "./dist/scenes.js"
+    },
+    "./scenes.css": "./dist/scenes.css"
   },
   "files": [
     "dist",
@@ -48,11 +61,12 @@
     "build": "node scripts/build.mjs",
     "start": "node website/preview/dev.mjs",
     "test": "node --test website/preview/tests/*.test.mjs tests/*.test.mjs",
-    "typecheck": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.production.json --noEmit && tsc -p tsconfig.website.json && tsc -p tsconfig.json",
     "test:browser": "node website/preview/tests/browser.mjs && node website/preview/tests/polish-browser.mjs && node website/preview/tests/refinement-browser.mjs",
     "check:release": "node scripts/check-release.mjs",
     "example:react": "node examples/react/dev.mjs",
-    "test:consumer": "node scripts/check-consumer.mjs"
+    "test:consumer": "node scripts/check-consumer.mjs",
+    "test:studio": "node website/preview/tests/studio-browser.mjs"
   },
   "devDependencies": {
     "@types/react": "19.2.2",

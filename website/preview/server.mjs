@@ -30,7 +30,7 @@ export function avatarResponse(rawUrl,method='GET'){
 export function startServer(port=4318){return createServer(async(req,res)=>{
  const path=new URL(req.url,'http://localhost').pathname;if(path.startsWith('/avatar/')){const r=avatarResponse(req.url,req.method);res.writeHead(r.status,r.headers);res.end(req.method==='HEAD'?undefined:r.body);return;}
  if(!['GET','HEAD'].includes(req.method)){res.writeHead(405,{Allow:'GET, HEAD'});res.end();return;}
- const known=['/','/agent-scenes','/design-lab','/editor','/components','/docs','/about','/contact','/privacy'],route=path.replace(/\/$/,'')||'/',pageRoute=!extname(path),file=pageRoute?'index.html':path.slice(1),target=resolve(root,file);
+ const known=['/studio','/','/agent-scenes','/design-lab','/editor','/components','/docs','/about','/contact','/privacy'],route=path.replace(/\/$/,'')||'/',pageRoute=!extname(path),file=pageRoute?'index.html':path.slice(1),target=resolve(root,file);
  if(!target.startsWith(root+'/')){res.writeHead(403);res.end();return;}
  try{const body=await readFile(target);res.writeHead(pageRoute&&!known.includes(route)?404:200,{'Content-Type':types[extname(file)]||'application/octet-stream','Cache-Control':'no-store'});res.end(req.method==='HEAD'?undefined:body)}catch{res.writeHead(404);res.end('Not found')}
  }).listen(port,'127.0.0.1',()=>console.log(`${BRAND.name} preview · Blobatar B: http://localhost:${port} (loopback only)`))}
