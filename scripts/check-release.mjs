@@ -17,7 +17,7 @@ for(const f of fonts.files){const name=f.source.endsWith('LICENSE.TXT')?'OFL.txt
 const skip=new Set(['.git','node_modules','dist','test-results','playwright-report','coverage']);let count=0;
 function walk(dir){for(const item of readdirSync(dir,{withFileTypes:true})){if(skip.has(item.name))continue;const path=dir==='.'?item.name:dir+'/'+item.name;if(item.isSymbolicLink())throw Error('Source symlink: '+path);if(item.isDirectory())walk(path);else{
  assert.ok(!/(^|\/)(?:\.env(?:\..*)?|\.DS_Store|id_rsa|id_ed25519|credentials|settings\.local\.json)$/.test(path),'Private file: '+path);
- if(/\.(woff2|png)$/.test(path))continue;
+ if(/\.(woff2|png|mp4)$/.test(path))continue;
  const text=readFileSync(path,'utf8');
  assert.ok(!/(?:-----BEGIN (?:RSA |OPENSSH |EC )?PRIVATE KEY-----|gh[pousr]_[A-Za-z0-9]{30,}|github_pat_[A-Za-z0-9_]{30,}|AKIA[0-9A-Z]{16}|sk-[A-Za-z0-9]{32,})/.test(text),'Credential pattern: '+path);
  if(path==='package-lock.json')assert.ok(!/"(?:link|resolved)":\s*(?:true|"(?:file:|\/Users\/|\/private\/tmp\/))/.test(text),'Local dependency');

@@ -183,4 +183,12 @@ Optional `/motion` exports `compileMotionRecording` and typed immutable sampling
 `/motion/react` exports `RecordedAgentAvatar` and `useMotionReducedPreference`.
 See [the complete motion API and example](motion-api.md), including explicit origin,
 policy, timestamp ties, errors, reduced motion and the frame reproducibility contract.
-The [MP4 frame contract](mp4-frame-contract.md) prepares future export without an encoder.
+The [MP4 frame contract](mp4-frame-contract.md) defines implemented fixed-time composition.
+
+## MP4 export · v0.3.0 development
+
+Optional `/export/mp4` exports `exportMP4`, `checkMP4Support`, `createMP4Plan`,
+`mp4FrameTiming`, `mp4FrameSVG`, `MP4_LIMITS` and `MP4ExportError`, with generated
+types. See [the API, example, browser qualification and limits](mp4-export.md).
+Only this optional entry loads the lazy MIT muxer; ordinary motion/activity imports
+remain codec-free. Studio exports explicit 512/1024, opaque, 30 fps multi-agent MP4.

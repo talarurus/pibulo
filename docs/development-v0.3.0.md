@@ -1,5 +1,9 @@
 # v0.3.0 Motion Studio development milestone
 
+Historical motion checkpoint at `bf51b0c`. The subsequent owner-authorized
+[MP4 implementation and qualification](mp4-export.md) extends this milestone;
+the original findings below retain their checkpoint context.
+
 Implemented locally on `develop/v0.3.0`, created from approved release commit
 `1e1530f38db1d533227d30fe1659e71417c9c317` after verifying a clean worktree. The
 approved `9254098` experiment remains on `experiment/v0.3-motion-feasibility`;

@@ -36,4 +36,18 @@ The final v0.2.0 refinement adds first-party bounded JSON recording serializatio
 
 ## v0.3.0 development milestone
 
+This section describes the original motion checkpoint. The subsequent MP4 work
+is recorded separately below.
+
 The owner authorized production motion development from the unchanged v0.2.0 release commit `1e1530f38db1d533227d30fe1659e71417c9c317`. The experiment at `9254098` remains on its branch; only its proven time-sampling approach is ported. The new typed motion compiler, optional React recorded avatar and Studio motion controls are first-party work. They reuse existing pinned Blobatar poses, geometry, baking, palette helpers and stable raw identity seeds. No Bloub code, measured xAI profiles, eyes, geometry, animation constants or artwork are copied. Existing engine/recording implementations, fixtures, upstream bytes and notices are unchanged; no generation migration occurs. Metadata `0.3.0-dev.0` identifies local development, not a release. No runtime dependencies, encoder or muxer are added. Browser QA downloads remain ignored and are not packaged.
+
+## MP4 development checkpoint
+
+Owner-authorized export extends `bf51b0c` on develop/v0.3.0. The frame compositor,
+bounded seekable sink, WebCodecs adapter and Studio controls are first-party code.
+Existing compiled motion/renderer and identities are reused unchanged. Optional
+export bundles lazy `mp4-muxer@5.2.2` (Vanilagy, MIT), with original copyright and
+license appended to notices. No renderer, artwork or Bloub material is copied.
+Muxer is pinned in development dependencies; its type dependencies are not part
+of consumer runtime requirements. Upstream deprecation/maintenance risk is
+documented in mp4-export.md. No release/tag/publication occurs.

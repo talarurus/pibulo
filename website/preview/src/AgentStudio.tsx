@@ -1,4 +1,4 @@
-import React, {useEffect, useMemo, useRef, useState} from 'react';
+import React, {lazy, Suspense, useEffect, useMemo, useRef, useState} from 'react';
 import {ACTIVITY_LABELS, createActivityEngine, replayActivity, type ActivityEvent, type EventType, type AgentSnapshot, type AgentDefinition} from '@talarurus/whoami/activity';
 import {parseRecording, serializeRecording} from '@talarurus/whoami/recording';
 import {AgentScene} from '@talarurus/whoami/scenes';
@@ -10,6 +10,7 @@ import {compileMotionRecording} from '@talarurus/whoami/motion';
 import {RecordedAgentAvatar, useMotionReducedPreference} from '@talarurus/whoami/motion/react';
 import {useMotionPlayback} from './useMotionPlayback';
 
+const MotionMP4Export=lazy(()=>import('./MotionMP4Export'));
 const initialAgents = [{id: 'atlas', name: 'Atlas'}, {id: 'mira', name: 'Mira'}, {id: 'cedar', name: 'Cedar'}] as const;
 const roles = ['Engineering', 'Research', 'Quality'];
 const epoch = 1800000000000;
@@ -192,6 +193,7 @@ export function Agent() {
       <input aria-label="Motion playback position" aria-valuetext={`${Math.round(player.time)} milliseconds`} type="range" min={0} max={motion?.durationMs ?? 0} step={1} value={Math.round(player.time)} onChange={e => motionSeek(Number(e.target.value))}/>
       <details><summary>Playback origin</summary><label>Origin timestamp (ms) <input aria-label="Playback origin" type="number" min={0} step={1} value={originDraft} onChange={e => setOriginDraft(e.target.value)}/></label><button type="button" onClick={applyOrigin}>Apply origin</button>{originError && <p role="alert">{originError} Current playback kept.</p>}<p>Event time minus this origin gives playback time. Record order is retained, including simultaneous events.</p></details>
       {!compiled.ok && <p role="alert">{compiled.error}</p>}
+      {motion&&<Suspense fallback={<p role="status">Loading video export…</p>}><MotionMP4Export motion={motion} reducedMotion={reduced}/></Suspense>}
     </section>}
     <div className="studio-section-heading"><h2>Your agents <span>{String(agents.length).padStart(2, '0')}</span></h2><span>Stable IDs · independent activity</span></div>
     <div className="studio-agents" role="group" aria-label="Choose an agent">{snapshots.map((agent, i) => <article key={agent.id} data-agent-id={agent.id} className={'studio-card' + (selected === agent.id ? ' selected' : '')}>

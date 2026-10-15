@@ -21,6 +21,7 @@
     "src/scenes.tsx",
     "src/recording.ts",
     "src/motion.ts",
-    "src/motion-react.tsx"
+    "src/motion-react.tsx",
+    "src/mp4.ts"
   ]
 }

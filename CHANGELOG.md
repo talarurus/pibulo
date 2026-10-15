@@ -5,7 +5,7 @@
 - Optional typed recorded-motion API: validated v1 recordings, explicit origin, immutable tracks, arbitrary sampling, continuous interrupted poses and reduced-motion policy.
 - Optional React recorded avatar and system motion preference hook; no clock or gaze in the component.
 - Dark Studio Motion mode: shared timestamp, playback speed, pause/restart, keyboard/touch seek and unchanged local JSON recording controls. Planning and execution have distinct text cues.
-- Fixed frame sampling contract for future opaque MP4 exports; no encoder or export UI. Existing identities, public APIs and pinned renderer bytes remain unchanged.
+- Optional typed MP4 export: fixed timestamps, multi-agent opaque composition, WebCodecs H.264 and a lazy MIT muxer, bounded resources, cancellation and runtime capability detection. Studio has 512/1024 presets, progress/cancel and download; existing identities, APIs and pinned renderer bytes remain unchanged.
 
 ## 0.2.0
 

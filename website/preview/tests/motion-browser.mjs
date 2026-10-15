@@ -10,7 +10,7 @@ process.env.PLAYWRIGHT_BROWSERS_PATH ??= new URL('../../../test-results/motion-v
 const {chromium, webkit} = await import('playwright');
 const base = process.env.PREVIEW_URL || 'http://127.0.0.1:4318';
 const output = new URL('../../../test-results/motion-v030/', import.meta.url);
-const shots = new URL('../../../assets/', import.meta.url);
+const shots = process.env.WHOAMI_MOTION_SCREENSHOTS ? new URL(process.env.WHOAMI_MOTION_SCREENSHOTS, 'file://'+process.cwd()+'/') : new URL('../../../assets/', import.meta.url);
 await mkdir(output, {recursive:true}); await mkdir(shots, {recursive:true});
 const event = (id, sequence, timestamp, type, taskId='task') => ({version:1,agentId:id,sequence,timestamp,type,...(type==='agent.reset'?{}:{taskId})});
 const source={agents:[{id:'atlas',name:'Atlas'},{id:'mira',name:'Mira'},{id:'cedar',name:'Cedar'}],events:[

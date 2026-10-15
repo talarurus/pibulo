@@ -1,0 +1,431 @@
+{
+  "inspection": "macOS AVFoundation parsed and decoded every frame; independent of muxer",
+  "browsers": [
+    {
+      "engine": "chrome",
+      "version": "155.0.8059.79",
+      "support": {
+        "supported": true,
+        "config": {
+          "codec": "avc1.420028",
+          "width": 512,
+          "height": 512,
+          "framerate": 30,
+          "bitrate": 3145728,
+          "latencyMode": "realtime",
+          "avc": {
+            "format": "avc"
+          },
+          "alpha": "discard"
+        }
+      },
+      "checks": [
+        "real 512/1024 MP4 creation, native playback and beginning/middle/end sampler fidelity",
+        "concurrency, mid-export cancellation, injected encoder/output-limit failures, unsupported API, empty/min/max exports and cleanup",
+        "React unmount aborts active export and revokes completed download URLs",
+        "desktop/mobile explicit export, genuine download, cancel, reduced-motion manual action and updated footer",
+        "unsupported browser message disables export gracefully"
+      ],
+      "faults": {
+        "busy": "busy",
+        "cancel": "cancelled",
+        "failed": "encode-failed",
+        "limit": "output-limit",
+        "timestamp": "encode-failed",
+        "raster": "render-failed",
+        "unsupported": "unsupported",
+        "codecUnsupported": "unsupported",
+        "emptyFrames": 30,
+        "emptyDuration": 1000,
+        "maxDimensions": [
+          2048,
+          2048
+        ],
+        "longestFrames": 900,
+        "longestDuration": 30000,
+        "resources": {
+          "openFrames": 0,
+          "openEncoders": 0,
+          "urls": 0,
+          "canvases": 0
+        }
+      },
+      "fidelity": [
+        {
+          "file": "chrome-512.mp4",
+          "codec": "avc1.420028",
+          "resources": {
+            "openFrames": 0,
+            "openEncoders": 0,
+            "urls": 0,
+            "canvases": 0,
+            "maximumQueue": 4
+          },
+          "frames": 114,
+          "fidelity": [
+            {
+              "index": 0,
+              "meanAbsoluteError": 0.5282427469889323,
+              "foregroundMAE": 1.1007538908278143,
+              "psnr": 43.578675395426515,
+              "opaque": true
+            },
+            {
+              "index": 57,
+              "meanAbsoluteError": 0.51141357421875,
+              "foregroundMAE": 1.0466239808538949,
+              "psnr": 44.39540182941741,
+              "opaque": true
+            },
+            {
+              "index": 113,
+              "meanAbsoluteError": 0.5169321695963541,
+              "foregroundMAE": 1.0420090359058363,
+              "psnr": 43.98333317867183,
+              "opaque": true
+            }
+          ]
+        },
+        {
+          "file": "chrome-1024.mp4",
+          "codec": "avc1.420028",
+          "resources": {
+            "openFrames": 0,
+            "openEncoders": 0,
+            "urls": 0,
+            "canvases": 0,
+            "maximumQueue": 4
+          },
+          "frames": 114,
+          "fidelity": [
+            {
+              "index": 0,
+              "meanAbsoluteError": 0.4169381459554036,
+              "foregroundMAE": 0.6173444651617768,
+              "psnr": 46.236406700211035,
+              "opaque": true
+            },
+            {
+              "index": 57,
+              "meanAbsoluteError": 0.4164924621582031,
+              "foregroundMAE": 0.6029421969328985,
+              "psnr": 46.20415287220389,
+              "opaque": true
+            },
+            {
+              "index": 113,
+              "meanAbsoluteError": 0.41035111745198566,
+              "foregroundMAE": 0.5618129238963092,
+              "psnr": 46.60971019961514,
+              "opaque": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "engine": "webkit",
+      "version": "26.5",
+      "support": {
+        "supported": true,
+        "config": {
+          "codec": "avc1.420028",
+          "width": 512,
+          "height": 512,
+          "framerate": 30,
+          "bitrate": 3145728,
+          "latencyMode": "realtime",
+          "avc": {
+            "format": "avc"
+          },
+          "alpha": "discard"
+        }
+      },
+      "checks": [
+        "real 512/1024 MP4 creation, native playback and beginning/middle/end sampler fidelity",
+        "concurrency, mid-export cancellation, injected encoder/output-limit failures, unsupported API, empty/min/max exports and cleanup",
+        "React unmount aborts active export and revokes completed download URLs",
+        "desktop/mobile explicit export, genuine download, cancel, reduced-motion manual action and updated footer",
+        "unsupported browser message disables export gracefully"
+      ],
+      "faults": {
+        "busy": "busy",
+        "cancel": "cancelled",
+        "failed": "encode-failed",
+        "limit": "output-limit",
+        "timestamp": "encode-failed",
+        "raster": "render-failed",
+        "unsupported": "unsupported",
+        "codecUnsupported": "unsupported",
+        "emptyFrames": 30,
+        "emptyDuration": 1000,
+        "maxDimensions": [
+          2048,
+          2048
+        ],
+        "longestFrames": 900,
+        "longestDuration": 30000,
+        "resources": {
+          "openFrames": 0,
+          "openEncoders": 0,
+          "urls": 0,
+          "canvases": 0
+        }
+      },
+      "fidelity": [
+        {
+          "file": "webkit-512.mp4",
+          "codec": "avc1.420028",
+          "resources": {
+            "openFrames": 0,
+            "openEncoders": 0,
+            "urls": 0,
+            "canvases": 0,
+            "maximumQueue": 0
+          },
+          "frames": 114,
+          "fidelity": [
+            {
+              "index": 0,
+              "meanAbsoluteError": 0.5040067036946615,
+              "foregroundMAE": 1.1215798824654912,
+              "psnr": 44.82131065057616,
+              "opaque": true
+            },
+            {
+              "index": 57,
+              "meanAbsoluteError": 0.4972419738769531,
+              "foregroundMAE": 1.0784737605309278,
+              "psnr": 45.190370771046204,
+              "opaque": true
+            },
+            {
+              "index": 113,
+              "meanAbsoluteError": 0.4989522298177083,
+              "foregroundMAE": 1.0817384894832442,
+              "psnr": 44.750480684793104,
+              "opaque": true
+            }
+          ]
+        },
+        {
+          "file": "webkit-1024.mp4",
+          "codec": "avc1.420028",
+          "resources": {
+            "openFrames": 0,
+            "openEncoders": 0,
+            "urls": 0,
+            "canvases": 0,
+            "maximumQueue": 0
+          },
+          "frames": 114,
+          "fidelity": [
+            {
+              "index": 0,
+              "meanAbsoluteError": 0.4241005579630534,
+              "foregroundMAE": 0.7508127039753748,
+              "psnr": 46.88094100222101,
+              "opaque": true
+            },
+            {
+              "index": 57,
+              "meanAbsoluteError": 0.42242081960042316,
+              "foregroundMAE": 0.736687588793127,
+              "psnr": 47.00257299556617,
+              "opaque": true
+            },
+            {
+              "index": 113,
+              "meanAbsoluteError": 0.41573365529378253,
+              "foregroundMAE": 0.6909957642507746,
+              "psnr": 47.674690574399094,
+              "opaque": true
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "files": [
+    {
+      "codec": "avc1",
+      "decodedFrames": 114,
+      "durationSeconds": 3.8,
+      "file": "chrome-512.mp4",
+      "firstPTS": 0,
+      "height": 512,
+      "lastPTS": 3.7666666666666666,
+      "maxIntervalErrorSeconds": 3.2612801348363973e-16,
+      "nominalFrameRate": 30,
+      "width": 512,
+      "bytes": 99462,
+      "sha256": "7cc44da41175d0bc21e03dd3e9432cd6668c0331ae0dc64db869c2830b50790d",
+      "maxContractPTSErrorUs": 0.33333333348855376
+    },
+    {
+      "codec": "avc1",
+      "decodedFrames": 114,
+      "durationSeconds": 3.8,
+      "file": "chrome-1024.mp4",
+      "firstPTS": 0,
+      "height": 1024,
+      "lastPTS": 3.7666666666666666,
+      "maxIntervalErrorSeconds": 3.2612801348363973e-16,
+      "nominalFrameRate": 30,
+      "width": 1024,
+      "bytes": 204769,
+      "sha256": "d8965c7275be5cfb77033f85858d9827ed93674a76a1b4e51ad99d94f3cd7023",
+      "maxContractPTSErrorUs": 0.33333333348855376
+    },
+    {
+      "codec": "avc1",
+      "decodedFrames": 30,
+      "durationSeconds": 1,
+      "file": "chrome-64-empty.mp4",
+      "firstPTS": 0,
+      "height": 64,
+      "lastPTS": 0.9666666666666667,
+      "maxIntervalErrorSeconds": 1.0408340855860843e-16,
+      "nominalFrameRate": 30,
+      "width": 64,
+      "bytes": 6768,
+      "sha256": "292ae44ee87491ddc64fc3b64d791f66ce2fc11be5e2ae912a1db9b014eb17d6",
+      "maxContractPTSErrorUs": 0.33333333337213844
+    },
+    {
+      "codec": "avc1",
+      "decodedFrames": 30,
+      "durationSeconds": 1,
+      "file": "chrome-2048-empty.mp4",
+      "firstPTS": 0,
+      "height": 2048,
+      "lastPTS": 0.9666666666666667,
+      "maxIntervalErrorSeconds": 1.0408340855860843e-16,
+      "nominalFrameRate": 30,
+      "width": 2048,
+      "bytes": 56065,
+      "sha256": "205e5c8a1baccb2ae2f34bfc104e71ac8354edd94df2cb99fd852da041b1d61c",
+      "maxContractPTSErrorUs": 0.33333333337213844
+    },
+    {
+      "codec": "avc1",
+      "decodedFrames": 216,
+      "durationSeconds": 7.2,
+      "file": "chrome-studio.mp4",
+      "firstPTS": 0,
+      "height": 512,
+      "lastPTS": 7.166666666666667,
+      "maxIntervalErrorSeconds": 7.7021722333370235e-16,
+      "nominalFrameRate": 30,
+      "width": 512,
+      "bytes": 138116,
+      "sha256": "ca3b8f0d80d257f86af93e7ee9476dbbbcc52ac39c5a1e59bd58f19b7267ad83",
+      "maxContractPTSErrorUs": 0.33333333395421505
+    },
+    {
+      "codec": "avc1",
+      "decodedFrames": 900,
+      "durationSeconds": 30,
+      "file": "chrome-64-boundary.mp4",
+      "firstPTS": 0,
+      "height": 64,
+      "lastPTS": 29.966666666666665,
+      "maxIntervalErrorSeconds": 1.8943180357666733e-15,
+      "nominalFrameRate": 30,
+      "width": 64,
+      "bytes": 83918,
+      "sha256": "eb8f694fb60ac54136a99de4ba5fa06976a48d6e2f2b9244ba27a769745a2bee",
+      "maxContractPTSErrorUs": 0.3333333358168602
+    },
+    {
+      "codec": "avc1",
+      "decodedFrames": 114,
+      "durationSeconds": 3.8,
+      "file": "webkit-512.mp4",
+      "firstPTS": 0,
+      "height": 512,
+      "lastPTS": 3.7666666666666666,
+      "maxIntervalErrorSeconds": 3.2612801348363973e-16,
+      "nominalFrameRate": 30,
+      "width": 512,
+      "bytes": 97252,
+      "sha256": "9c7ae447a783bee9975d973025c62f7369ba996ce25e43d5855d7ec590c4012c",
+      "maxContractPTSErrorUs": 0.33333333348855376
+    },
+    {
+      "codec": "avc1",
+      "decodedFrames": 114,
+      "durationSeconds": 3.8,
+      "file": "webkit-1024.mp4",
+      "firstPTS": 0,
+      "height": 1024,
+      "lastPTS": 3.7666666666666666,
+      "maxIntervalErrorSeconds": 3.2612801348363973e-16,
+      "nominalFrameRate": 30,
+      "width": 1024,
+      "bytes": 197513,
+      "sha256": "5b483ce3fd24b75eddc04f46758af7e3155f16e7d3e7b01431d8e51963e471df",
+      "maxContractPTSErrorUs": 0.33333333348855376
+    },
+    {
+      "codec": "avc1",
+      "decodedFrames": 30,
+      "durationSeconds": 1,
+      "file": "webkit-64-empty.mp4",
+      "firstPTS": 0,
+      "height": 64,
+      "lastPTS": 0.9666666666666667,
+      "maxIntervalErrorSeconds": 1.0408340855860843e-16,
+      "nominalFrameRate": 30,
+      "width": 64,
+      "bytes": 6721,
+      "sha256": "a24fbd44a5319a90d1af3a92439bbd557e08855664ec4b95fe6c245543ad1265",
+      "maxContractPTSErrorUs": 0.33333333337213844
+    },
+    {
+      "codec": "avc1",
+      "decodedFrames": 30,
+      "durationSeconds": 1,
+      "file": "webkit-2048-empty.mp4",
+      "firstPTS": 0,
+      "height": 2048,
+      "lastPTS": 0.9666666666666667,
+      "maxIntervalErrorSeconds": 1.0408340855860843e-16,
+      "nominalFrameRate": 30,
+      "width": 2048,
+      "bytes": 56034,
+      "sha256": "356647510a4f9fe9cacb8ada4bf8d386e37bb3e3e06e778e8a19ad4990a8a60c",
+      "maxContractPTSErrorUs": 0.33333333337213844
+    },
+    {
+      "codec": "avc1",
+      "decodedFrames": 216,
+      "durationSeconds": 7.2,
+      "file": "webkit-studio.mp4",
+      "firstPTS": 0,
+      "height": 512,
+      "lastPTS": 7.166666666666667,
+      "maxIntervalErrorSeconds": 7.7021722333370235e-16,
+      "nominalFrameRate": 30,
+      "width": 512,
+      "bytes": 134680,
+      "sha256": "9e343b972603f174489a07b1540d31aed76b33fdddcfa090aa5ea4c3f1b0a5b8",
+      "maxContractPTSErrorUs": 0.33333333395421505
+    },
+    {
+      "codec": "avc1",
+      "decodedFrames": 900,
+      "durationSeconds": 30,
+      "file": "webkit-64-boundary.mp4",
+      "firstPTS": 0,
+      "height": 64,
+      "lastPTS": 29.966666666666665,
+      "maxIntervalErrorSeconds": 1.8943180357666733e-15,
+      "nominalFrameRate": 30,
+      "width": 64,
+      "bytes": 82471,
+      "sha256": "ff5d9a99fb03a068c57f373632f624dbbfa7e069b8f8eb8c8b8c689f2b1c15ac",
+      "maxContractPTSErrorUs": 0.3333333358168602
+    }
+  ]
+}

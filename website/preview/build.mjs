@@ -13,6 +13,6 @@ await cp(`${base}/public/fonts`,`${out}/fonts`,{recursive:true});
 await copyFile(`${base}/vendor/blobatarling-scene/scene.css`,`${out}/agent-scenes.css`);
 for(const file of ['motion','gaze'])await copyFile(`${base}/vendor/blobatar/src/${file}.css`,`${out}/blobatar-${file}.css`);
 
-const licenses=['LICENSE','node_modules/react/LICENSE','node_modules/react-dom/LICENSE','node_modules/scheduler/LICENSE',`${base}/THIRD-PARTY-NOTICES.txt`,`${base}/public/fonts/OFL.txt`,`${base}/vendor/blobatarling-scene/LICENSE`];
+const licenses=['LICENSE','node_modules/react/LICENSE','node_modules/react-dom/LICENSE','node_modules/scheduler/LICENSE',`${base}/THIRD-PARTY-NOTICES.txt`,`${base}/public/fonts/OFL.txt`,`${base}/vendor/blobatarling-scene/LICENSE`,'node_modules/mp4-muxer/LICENSE'];
 await writeFile(`${out}/THIRD-PARTY-NOTICES.txt`,(await Promise.all(licenses.map(async p=>p+'\n\n'+await readFile(p,'utf8')))).join('\n\n'));
 console.log('Built B preview, runtime and exact third-party notices. No G1 packages built or included.');

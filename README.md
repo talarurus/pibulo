@@ -2,11 +2,15 @@
 
 A familiar face for every agent. Stable SVG identities, caller-driven task activity, React components, and an interactive Agent Identity Studio.
 
-This checkout is the **v0.3.0 development milestone** (`0.3.0-dev.0`), with optional recorded-motion sampling and Motion mode in the existing dark Studio. Existing APIs and identities are preserved. No v0.3.0 release is published.
+This checkout is the **v0.3.0 development milestone** (`0.3.0-dev.0`), with recorded-motion sampling and browser MP4 export in the existing dark Studio. Existing APIs and identities are preserved. No v0.3.0 release is published.
 
 ![Agent Identity Studio · Motion](assets/studio-motion-desktop.png)
 
 [Mobile Motion Studio](assets/studio-motion-mobile.png)
+
+[MP4 export API and verification](docs/mp4-export.md) ·
+[Playable three-agent sample](assets/motion-export-demo.mp4) ·
+[Export desktop](assets/studio-mp4-desktop.png) · [Export mobile](assets/studio-mp4-mobile.png).
 
 **v0.2.0** is a source distribution of the agent identity and activity toolkit. The [GitHub repository](https://github.com/talarurus/whoami) is public. `whoami` remains a provisional product name; the package remains `@talarurus/whoami`. It is not published to npm, and no production website is deployed. The **v0.1.0** tag remains the immutable source-release baseline.
 

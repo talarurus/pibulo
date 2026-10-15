@@ -49,6 +49,10 @@
     "./motion/react": {
       "types": "./dist/types/src/motion-react.d.ts",
       "import": "./dist/motion-react.js"
+    },
+    "./export/mp4": {
+      "types": "./dist/types/src/mp4.d.ts",
+      "import": "./dist/mp4.js"
     }
   },
   "files": [
@@ -56,7 +60,9 @@
     "LICENSE",
     "THIRD-PARTY-NOTICES.txt",
     "README.md",
-    "docs/api.md"
+    "docs/api.md",
+    "docs/mp4-export.md",
+    "docs/mp4-frame-contract.md"
   ],
   "sideEffects": [
     "**/*.css"
@@ -79,12 +85,14 @@
     "example:react": "node examples/react/dev.mjs",
     "test:consumer": "node scripts/check-consumer.mjs",
     "test:studio": "node website/preview/tests/studio-browser.mjs",
-    "test:motion:browser": "node website/preview/tests/motion-browser.mjs"
+    "test:motion:browser": "node website/preview/tests/motion-browser.mjs",
+    "test:mp4:browser": "node website/preview/tests/mp4-browser.mjs"
   },
   "devDependencies": {
     "@types/react": "19.2.2",
     "@types/react-dom": "19.2.2",
     "esbuild": "0.25.11",
+    "mp4-muxer": "5.2.2",
     "playwright": "1.62.1",
     "react": "19.2.0",
     "react-dom": "19.2.0",

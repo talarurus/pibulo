@@ -139,6 +139,6 @@ mounting, pause and replay history cannot change those values.
 Studio's rAF cursor, speed, hidden-tab pause and browser rasterization remain
 browser-driven. Existing Face CSS/gaze and AgentScene playback are outside this
 motion sampler. No cross-engine pixel identity, hardware encoding determinism or
-historical CSS-animation parity is claimed. See the proposed
+historical CSS-animation parity is claimed. See the implemented
 [MP4 frame contract](mp4-frame-contract.md) and
 [development validation](development-v0.3.0.md).
