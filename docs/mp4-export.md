@@ -1,4 +1,4 @@
-# MP4 export · v0.3.0 development
+# MP4 export · v0.3.0
 
 Optional `@talarurus/whoami/export/mp4` exports recorded agent motion locally
 using the existing deterministic sampler and identity artwork.
@@ -53,11 +53,15 @@ long-term release support. No Bloub code/design is reused. Support follows actua
 [WebCodecs configuration](https://www.w3.org/TR/webcodecs/), secure context and
 device capabilities, not browser names.
 
-## Verification and artifacts
+## Implementation verification and artifacts
 
-Extends approved `bf51b0c` on develop/v0.3.0. Historical tags, experiment branch,
+Implementation checkpoint `1f19df17f1e233b79ba5b47168539fd9b92b027b`
+extends approved `bf51b0c` on develop/v0.3.0. Historical tags, experiment branch,
 renderer bytes, APIs, fixtures and old screenshots are preserved. QA is by the
-implementation agent, not independent owner acceptance. No publication/deployment.
+implementation agent. The owner subsequently approved the desktop/mobile Studio
+and actual 512×512 MP4. This is distinct from the automated technical QA and does
+not certify every browser/device. [Final release preparation](releases/preparation-v0.3.0.md)
+records the metadata checks and separate publication gate.
 
 Qualification used Node 24.21.0/npm 11.19.0, Playwright 1.62.1 and macOS native
 AVFoundation. [Machine-readable results](mp4-verification.json) retain codec
@@ -117,7 +121,7 @@ H.264 is lossy; SVG/timestamp determinism does not imply identical video bytes.
 Playwright WebKit does not certify every Safari/iOS device; no physical mobile,
 Firefox, screen-reader or hardware matrix certification is claimed.
 
-Review imported recordings, label/status readability, reduced-motion manual export
-and target-device downloads/playback. Final release needs owner functional/visual
-acceptance and a muxer maintenance decision. Accessibility sidecars, broader codec
-qualification and worker isolation remain potential follow-up work.
+The pinned deprecated muxer is retained for this release; its maintenance risk
+remains explicit. Final GitHub publication requires separate owner authorization.
+Accessibility sidecars, broader codec qualification and worker isolation remain
+potential follow-up work.

@@ -1,7 +1,7 @@
 {
   "name": "@talarurus/whoami",
-  "version": "0.3.0-dev.0",
-  "description": "Deterministic SVG agent identities and caller-driven activity, with React components",
+  "version": "0.3.0",
+  "description": "Deterministic SVG agent identities, recorded motion and browser MP4 export, with React components",
   "private": true,
   "type": "module",
   "license": "MIT",
@@ -61,6 +61,7 @@
     "THIRD-PARTY-NOTICES.txt",
     "README.md",
     "docs/api.md",
+    "docs/motion-api.md",
     "docs/mp4-export.md",
     "docs/mp4-frame-contract.md"
   ],

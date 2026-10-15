@@ -1,11 +1,16 @@
 # Changelog
 
-## 0.3.0-dev.0 · unreleased development
+## 0.3.0 · prepared for GitHub source release
 
 - Optional typed recorded-motion API: validated v1 recordings, explicit origin, immutable tracks, arbitrary sampling, continuous interrupted poses and reduced-motion policy.
 - Optional React recorded avatar and system motion preference hook; no clock or gaze in the component.
 - Dark Studio Motion mode: shared timestamp, playback speed, pause/restart, keyboard/touch seek and unchanged local JSON recording controls. Planning and execution have distinct text cues.
 - Optional typed MP4 export: fixed timestamps, multi-agent opaque composition, WebCodecs H.264 and a lazy MIT muxer, bounded resources, cancellation and runtime capability detection. Studio has 512/1024 presets, progress/cancel and download; existing identities, APIs and pinned renderer bytes remain unchanged.
+- SVG samples/timing are reproducible from the complete recording, pinned identity/motion revisions, origin, resolved policy and frame configuration. Browser rasterization, fonts, CSS/gaze and encoded bytes are outside that guarantee; interrupted transitions preserve position, not velocity.
+- Chrome 155 and Playwright WebKit 26.5 genuinely encoded and played H.264 MP4. Twelve files/2,808 frames were independently decoded; desktop/mobile Studio and the 512×512 MP4 have owner approval. Physical Safari/iOS and universal codec support are not certified.
+- Export bounds: 30 fps, 1..8 agents, even 64..2048 dimensions, 30 seconds including final hold, 64 MiB maximum, opaque matte, no audio/captions/scene animation. Unsupported configurations fail clearly.
+- **Dependency disclosure:** pinned MIT `mp4-muxer@5.2.2` is deprecated upstream and retained unchanged. Its lazy optional bundle includes attribution; maintenance/security/compatibility fixes may require a separately reviewed replacement. Ordinary activity/recording/motion entries remain codec-free.
+- Owner authorization for GitHub publication remains separate. No npm publication or hosted website is included. See `docs/releases/preparation-v0.3.0.md` and `docs/releases/v0.3.0.md`.
 
 ## 0.2.0
 

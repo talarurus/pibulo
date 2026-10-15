@@ -51,3 +51,16 @@ license appended to notices. No renderer, artwork or Bloub material is copied.
 Muxer is pinned in development dependencies; its type dependencies are not part
 of consumer runtime requirements. Upstream deprecation/maintenance risk is
 documented in mp4-export.md. No release/tag/publication occurs.
+
+## v0.3.0 release preparation
+
+Metadata preparation starts at approved implementation commit
+`1f19df17f1e233b79ba5b47168539fd9b92b027b` on clean develop/v0.3.0.
+The owner approved desktop/mobile Studio and the actual 512×512 MP4. Package/lock
+metadata is now 0.3.0 with private:true; this does not publish anything. Motion,
+MP4 implementation, artwork, renderer bytes, identities, fixtures, licenses and
+existing media evidence remain unchanged. Historical checkpoint sections above
+retain their original context. Release copy and version labels are updated only.
+Pinned deprecated MIT mp4-muxer 5.2.2 is deliberately retained, with maintenance
+risk disclosed; no dependency replacement occurs. Final validation/publication
+proposal is in releases/preparation-v0.3.0.md. Publishing requires separate approval.

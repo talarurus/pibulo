@@ -1,4 +1,4 @@
-# Recorded motion · v0.3.0 development
+# Recorded motion · v0.3.0
 
 `@talarurus/whoami/motion` exports `compileMotionRecording`, `MOTION_REVISION`
 (`whoami-motion-1`) and generated public types. `@talarurus/whoami/motion/react`

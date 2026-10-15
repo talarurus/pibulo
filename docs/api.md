@@ -1,8 +1,8 @@
 # API and integration
 
-The `develop/v0.3.0` milestone adds the optional recorded-motion entries below.
-Package metadata is `0.3.0-dev.0`; historical v0.2.0 interfaces remain compatible.
-No v0.3.0 release or publication is implied.
+v0.3.0 adds optional recorded-motion and browser MP4 entries below.
+Package metadata is `0.3.0`; historical v0.2.0 interfaces remain compatible.
+This is a source distribution; npm publication remains disabled.
 
 Install the locally built tarball as shown in the README. The root ESM entry is `@talarurus/whoami`; React is `@talarurus/whoami/react`. Node 24 and React 19.2 are the tested versions. CommonJS is not included.
 
@@ -177,7 +177,7 @@ Studio Import validates a bounded local file with strict UTF-8 decoding, then re
 
 The optional AgentScene presentation and manual scene playground remain experimental in v0.2.0. The engine, React subscription contract and recording version 1 are the supported event interfaces; scenes introduce no additional task or monitoring system.
 
-## Recorded motion · v0.3.0 development
+## Recorded motion · v0.3.0
 
 Optional `/motion` exports `compileMotionRecording` and typed immutable sampling;
 `/motion/react` exports `RecordedAgentAvatar` and `useMotionReducedPreference`.
@@ -185,7 +185,7 @@ See [the complete motion API and example](motion-api.md), including explicit ori
 policy, timestamp ties, errors, reduced motion and the frame reproducibility contract.
 The [MP4 frame contract](mp4-frame-contract.md) defines implemented fixed-time composition.
 
-## MP4 export · v0.3.0 development
+## MP4 export · v0.3.0
 
 Optional `/export/mp4` exports `exportMP4`, `checkMP4Support`, `createMP4Plan`,
 `mp4FrameTiming`, `mp4FrameSVG`, `MP4_LIMITS` and `MP4ExportError`, with generated

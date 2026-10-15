@@ -17,4 +17,4 @@ await writeFile('THIRD-PARTY-NOTICES.txt',(await Promise.all(files.map(async f=>
 await copyFile('THIRD-PARTY-NOTICES.txt','dist/THIRD-PARTY-NOTICES.txt');
 execFileSync(process.execPath,['node_modules/typescript/bin/tsc','-p','tsconfig.website.json'],{stdio:'inherit'});
 await import('../website/preview/build.mjs');
-console.log('Built @talarurus/whoami 0.3.0 development package core, activity engine, React entry, styles, and website.');
+console.log('Built @talarurus/whoami 0.3.0 source package core, activity engine, React entry, styles, and website.');
