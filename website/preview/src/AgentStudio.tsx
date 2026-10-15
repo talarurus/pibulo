@@ -54,7 +54,7 @@ export default function AgentStudio() {
   const fileInput = useRef<HTMLInputElement>(null), importToken = useRef(0), eventList = useRef<HTMLOListElement>(null);
   const replay = useMemo(() => cursor === null ? null : replayActivity({agents, historyLimit: studioLimits.maxEvents}, recording.slice(0, cursor)).engine, [cursor, recording, agents]);
   const engine = replay ?? live;
-  const [mode, setMode] = useState<'activity' | 'motion'>('activity');
+  const [mode, setMode] = useState<'activity' | 'motion'>(() => new URLSearchParams(location.search).get('mode') === 'motion' ? 'motion' : 'activity');
   const [originOverride, setOriginOverride] = useState<number | null>(null);
   const [originDraft, setOriginDraft] = useState('');
   const [originError, setOriginError] = useState('');

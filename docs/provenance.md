@@ -64,3 +64,18 @@ retain their original context. Release copy and version labels are updated only.
 Pinned deprecated MIT mp4-muxer 5.2.2 is deliberately retained, with maintenance
 risk disclosed; no dependency replacement occurs. Final validation/publication
 proposal is in releases/preparation-v0.3.0.md. Publishing requires separate approval.
+
+## v0.3.1 visual pass (owner review)
+
+Owner-authorized local visual work starts from published v0.3.0 commit
+`629c32397057eba7719ab8fe8bb3544a1f985d47`. The homepage, editor discovery,
+component presentation and current-page copy are refined. A first-party homepage
+preview and README demo reuse the existing recording compiler and SVG sampler,
+with unchanged raw identities. New media frames add only surrounding text/cards;
+all character geometry remains pinned upstream artwork. The local website build
+also exposes the gallery's advertised source files and their existing helpers.
+No public library implementation, identity fixtures, vendor bytes, licenses,
+historical releases or company website are changed. No new dependency is added.
+Package metadata remains 0.3.0 pending separately authorized release preparation.
+See reviews/visual-parity-v0.3.1.md for comparison, evidence and the owner approval
+gate. No independent review is claimed.

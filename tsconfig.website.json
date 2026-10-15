@@ -4,6 +4,7 @@
     "noEmit": true
   },
   "include": [
-    "website/preview/src/AgentStudio.tsx"
+    "website/preview/src/AgentStudio.tsx",
+    "website/preview/src/MotionPreview.tsx"
   ]
 }

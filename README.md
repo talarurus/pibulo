@@ -2,17 +2,21 @@
 
 A familiar face for every agent. Stable SVG identities, caller-driven task activity, React components, and an interactive Agent Identity Studio.
 
-**v0.3.0** adds recorded-motion sampling and browser MP4 export in the existing dark Studio. Existing APIs, identities and version 1 JSON recordings are preserved. This source distribution is prepared for separately authorized GitHub publication; nothing is published to npm or deployed as a hosted website.
+**v0.3.0** is the published source baseline. This checkout contains the **v0.3.1 visual pass for owner review**, with package metadata still at 0.3.0. Existing generation-2 artwork, seed mappings and public APIs are preserved. Nothing is published to npm or deployed as a hosted website.
 
-![Agent Identity Studio · Motion](assets/studio-motion-desktop.png)
+![whoami: Atlas, Mira and Cedar progress from idle to thinking, working and completed](assets/whoami-activity-demo.gif)
 
-[Mobile Motion Studio](assets/studio-motion-mobile.png)
+A complete task in 5.5 seconds: **Idle → Thinking → Working → Completed**. The same three identities throughout, sampled from a validated version 1 demo recording.
+[Static poster](assets/whoami-activity-poster.png) · [Original MP4](assets/whoami-activity-demo.mp4) · [Importable recording](assets/whoami-activity-demo.recording.json).
 
-[MP4 export API and verification](docs/mp4-export.md) ·
-[Playable three-agent sample](assets/motion-export-demo.mp4) ·
-[Export desktop](assets/studio-mp4-desktop.png) · [Export mobile](assets/studio-mp4-mobile.png).
+![whoami homepage and interactive identity preview](assets/visual-parity-v0.3.1/after/home-1440.png)
 
-**v0.2.0** is a source distribution of the agent identity and activity toolkit. The [GitHub repository](https://github.com/talarurus/whoami) is public. `whoami` remains a provisional product name; the package remains `@talarurus/whoami`. It is not published to npm, and no production website is deployed. The **v0.1.0** tag remains the immutable source-release baseline.
+[Mobile homepage](assets/visual-parity-v0.3.1/after/home-390.png) ·
+[Visual editor](assets/visual-parity-v0.3.1/after/editor-1440.png) ·
+[Motion Studio](assets/visual-parity-v0.3.1/after/studio-motion-1440.png) ·
+[Visual comparison and verification](docs/reviews/visual-parity-v0.3.1.md).
+
+The [repository](https://github.com/talarurus/whoami) is public. The package remains `@talarurus/whoami`; installation uses a locally built tarball. Historical v0.1.0, v0.2.0 and v0.3.0 releases remain unchanged.
 
 ## Run the website
 

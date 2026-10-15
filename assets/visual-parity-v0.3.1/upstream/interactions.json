@@ -1,0 +1,262 @@
+{
+  "checks": [
+    {
+      "name": "Live hover, click morph and gaze",
+      "result": {
+        "before": [
+          {
+            "d": "M42.55 46.86C44.58 56.44 44.58 56.46 41.2 57.17C37.82 57.89 37.81 57.87 35.78 48.29C33.75 38.71 33.75 38.69 37.13 37.98C40.51 37.26 40.52 37.28 42.55 46.86Z",
+            "bounds": {
+              "x": 238.239013671875,
+              "y": 606.8115844726562,
+              "width": 20.64154052734375,
+              "height": 42.6949462890625,
+              "top": 606.8115844726562,
+              "right": 258.88055419921875,
+              "bottom": 649.5065307617188,
+              "left": 238.239013671875
+            }
+          },
+          {
+            "d": "M66.96 47.27C68.85 56.16 68.85 56.18 65.19 56.95C61.53 57.73 61.52 57.72 59.64 48.83C57.75 39.94 57.75 39.93 61.41 39.15C65.06 38.37 65.07 38.39 66.96 47.27Z",
+            "bounds": {
+              "x": 290.1505126953125,
+              "y": 609.2578125,
+              "width": 21.244873046875,
+              "height": 39.8599853515625,
+              "top": 609.2578125,
+              "right": 311.3953857421875,
+              "bottom": 649.1177978515625,
+              "left": 290.1505126953125
+            }
+          }
+        ],
+        "early": [
+          {
+            "d": "M42.55 46.86C44.58 56.44 44.58 56.46 41.2 57.17C37.82 57.89 37.81 57.87 35.78 48.29C33.75 38.71 33.75 38.69 37.13 37.98C40.51 37.26 40.52 37.28 42.55 46.86Z",
+            "bounds": {
+              "x": 235.8365478515625,
+              "y": 613.005859375,
+              "width": 25.115478515625,
+              "height": 34.51458740234375,
+              "top": 613.005859375,
+              "right": 260.9520263671875,
+              "bottom": 647.5204467773438,
+              "left": 235.8365478515625
+            }
+          },
+          {
+            "d": "M66.96 47.27C68.85 56.16 68.85 56.18 65.19 56.95C61.53 57.73 61.52 57.72 59.64 48.83C57.75 39.94 57.75 39.93 61.41 39.15C65.06 38.37 65.07 38.39 66.96 47.27Z",
+            "bounds": {
+              "x": 288.0769958496094,
+              "y": 614.8334350585938,
+              "width": 25.723358154296875,
+              "height": 32.9124755859375,
+              "top": 614.8334350585938,
+              "right": 313.80035400390625,
+              "bottom": 647.7459106445312,
+              "left": 288.0769958496094
+            }
+          }
+        ],
+        "held": [
+          {
+            "d": "M42.55 46.86C44.58 56.44 44.58 56.46 41.2 57.17C37.82 57.89 37.81 57.87 35.78 48.29C33.75 38.71 33.75 38.69 37.13 37.98C40.51 37.26 40.52 37.28 42.55 46.86Z",
+            "bounds": {
+              "x": 231.23675537109375,
+              "y": 631.5628051757812,
+              "width": 33.20703125,
+              "height": 10.10516357421875,
+              "top": 631.5628051757812,
+              "right": 264.44378662109375,
+              "bottom": 641.66796875,
+              "left": 231.23675537109375
+            }
+          },
+          {
+            "d": "M66.96 47.27C68.85 56.16 68.85 56.18 65.19 56.95C61.53 57.73 61.52 57.72 59.64 48.83C57.75 39.94 57.75 39.93 61.41 39.15C65.06 38.37 65.07 38.39 66.96 47.27Z",
+            "bounds": {
+              "x": 285.21026611328125,
+              "y": 631.75537109375,
+              "width": 32.59814453125,
+              "height": 11.75457763671875,
+              "top": 631.75537109375,
+              "right": 317.80841064453125,
+              "bottom": 643.5099487304688,
+              "left": 285.21026611328125
+            }
+          }
+        ],
+        "left": [
+          {
+            "d": "M42.55 46.86C44.58 56.44 44.58 56.46 41.2 57.17C37.82 57.89 37.81 57.87 35.78 48.29C33.75 38.71 33.75 38.69 37.13 37.98C40.51 37.26 40.52 37.28 42.55 46.86Z",
+            "bounds": {
+              "x": 218.98678588867188,
+              "y": 610.028564453125,
+              "width": 17.918533325195312,
+              "height": 40.63299560546875,
+              "top": 610.028564453125,
+              "right": 236.9053192138672,
+              "bottom": 650.6615600585938,
+              "left": 218.98678588867188
+            }
+          },
+          {
+            "d": "M66.96 47.27C68.85 56.16 68.85 56.18 65.19 56.95C61.53 57.73 61.52 57.72 59.64 48.83C57.75 39.94 57.75 39.93 61.41 39.15C65.06 38.37 65.07 38.39 66.96 47.27Z",
+            "bounds": {
+              "x": 266.26171875,
+              "y": 612.3511962890625,
+              "width": 20.938629150390625,
+              "height": 37.6748046875,
+              "top": 612.3511962890625,
+              "right": 287.2003479003906,
+              "bottom": 650.0260009765625,
+              "left": 266.26171875
+            }
+          }
+        ],
+        "right": [
+          {
+            "d": "M42.55 46.86C44.58 56.44 44.58 56.46 41.2 57.17C37.82 57.89 37.81 57.87 35.78 48.29C33.75 38.71 33.75 38.69 37.13 37.98C40.51 37.26 40.52 37.28 42.55 46.86Z",
+            "bounds": {
+              "x": 263.50439453125,
+              "y": 609.7186889648438,
+              "width": 20.314605712890625,
+              "height": 40.44268798828125,
+              "top": 609.7186889648438,
+              "right": 283.8190002441406,
+              "bottom": 650.161376953125,
+              "left": 263.50439453125
+            }
+          },
+          {
+            "d": "M66.96 47.27C68.85 56.16 68.85 56.18 65.19 56.95C61.53 57.73 61.52 57.72 59.64 48.83C57.75 39.94 57.75 39.93 61.41 39.15C65.06 38.37 65.07 38.39 66.96 47.27Z",
+            "bounds": {
+              "x": 310.13665771484375,
+              "y": 611.8788452148438,
+              "width": 16.8651123046875,
+              "height": 38.46173095703125,
+              "top": 611.8788452148438,
+              "right": 327.00177001953125,
+              "bottom": 650.340576171875,
+              "left": 310.13665771484375
+            }
+          }
+        ],
+        "animations": 8
+      }
+    },
+    {
+      "name": "Visual hero controls",
+      "result": {
+        "selected": [
+          "auto",
+          "happy",
+          ""
+        ],
+        "url": "https://blobatar.dev/?expression=happy&hue=275"
+      }
+    },
+    {
+      "name": "Reduced-motion click reaction",
+      "result": {
+        "animations": 0
+      }
+    },
+    {
+      "name": "Editor controls and motion choices",
+      "result": {
+        "before": [
+          "✓auto",
+          "✓auto"
+        ],
+        "after": [
+          "✓boxy",
+          "✓auto"
+        ],
+        "sliders": 12,
+        "url": "https://blobatar.dev/editor"
+      }
+    },
+    {
+      "name": "Component showcase interactions",
+      "result": {
+        "controls": [
+          {
+            "tag": "BUTTON",
+            "text": "$npx shadcn@latest registry add @blobatar=https://blobatar.dev/r/{name}.json",
+            "aria": "Copy: npx shadcn@latest registry add @blobatar=https://blobatar.dev/r/{name}.json",
+            "type": "button"
+          },
+          {
+            "tag": "BUTTON",
+            "text": "$npx shadcn@latest add @blobatar/presence-avatar",
+            "aria": "Copy: npx shadcn@latest add @blobatar/presence-avatar",
+            "type": "button"
+          },
+          {
+            "tag": "BUTTON",
+            "text": "$npx shadcn@latest add @blobatar/agent-list",
+            "aria": "Copy: npx shadcn@latest add @blobatar/agent-list",
+            "type": "button"
+          },
+          {
+            "tag": "BUTTON",
+            "text": "scoutreading 41 files",
+            "aria": null,
+            "type": null
+          },
+          {
+            "tag": "BUTTON",
+            "text": "plannerdrafting the migration",
+            "aria": null,
+            "type": null
+          },
+          {
+            "tag": "BUTTON",
+            "text": "reviewerwaiting for a diff",
+            "aria": null,
+            "type": null
+          },
+          {
+            "tag": "BUTTON",
+            "text": "packagerlast ran 6m ago",
+            "aria": null,
+            "type": null
+          },
+          {
+            "tag": "BUTTON",
+            "text": "publishernot started",
+            "aria": null,
+            "type": null
+          },
+          {
+            "tag": "BUTTON",
+            "text": "$npx shadcn@latest add @blobatar/user-table",
+            "aria": "Copy: npx shadcn@latest add @blobatar/user-table",
+            "type": "button"
+          },
+          {
+            "tag": "BUTTON",
+            "text": "$npx shadcn@latest add @blobatar/password-field",
+            "aria": "Copy: npx shadcn@latest add @blobatar/password-field",
+            "type": "button"
+          },
+          {
+            "tag": "BUTTON",
+            "text": "$npx shadcn@latest add @blobatar/group-chat",
+            "aria": "Copy: npx shadcn@latest add @blobatar/group-chat",
+            "type": "button"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Live wall hover/click and panel",
+      "result": {
+        "text": "alain00\nLeave your blobatar\non the wall\n\nEvery blobatar here is somebody's name, and nobody chose their colour. Click an empty cell to leave yours.\n\n+\n−"
+      }
+    }
+  ],
+  "errors": []
+}

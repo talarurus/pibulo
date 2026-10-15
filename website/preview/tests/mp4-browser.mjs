@@ -4,7 +4,7 @@ import {buildSync} from 'esbuild';
 process.env.PLAYWRIGHT_BROWSERS_PATH??=new URL('../../../test-results/motion-v030/browsers',import.meta.url).pathname;
 const {chromium,webkit}=await import('playwright');
 const base=process.env.PREVIEW_URL||'http://127.0.0.1:4318';
-const output=new URL('../../../test-results/mp4/',import.meta.url),assets=new URL('../../../assets/',import.meta.url);
+const output=new URL('../../../test-results/mp4/',import.meta.url),assets=new URL(process.env.WHOAMI_MEDIA_DIR||'../../../assets/',import.meta.url);
 await mkdir(output,{recursive:true});await mkdir(assets,{recursive:true});
 const harness=buildSync({stdin:{contents:'import * as mp4 from "./src/mp4.ts";import {compileMotionRecording} from "./src/motion.ts";import {serializeRecording} from "./src/recording.ts";window.exportProbe={...mp4,compileMotionRecording,serializeRecording};',resolveDir:process.cwd()},bundle:true,platform:'browser',format:'iife',write:false}).outputFiles[0].text;
 const event=(agentId,sequence,timestamp,type)=>({version:1,agentId,sequence,timestamp,type,taskId:'task-1'});

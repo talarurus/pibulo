@@ -1,0 +1,67 @@
+{
+  "mode": "upstream",
+  "browser": "155.0.8059.79",
+  "pages": [
+    {
+      "name": "home",
+      "width": 1440,
+      "overflow": false,
+      "title": "blobatar — deterministic geometric blobatars"
+    },
+    {
+      "name": "editor",
+      "width": 1440,
+      "overflow": false,
+      "title": "blobatar editor — tune one and take the code"
+    },
+    {
+      "name": "components",
+      "width": 1440,
+      "overflow": false,
+      "title": "blobatar components — avatar UI for shadcn"
+    },
+    {
+      "name": "wall",
+      "width": 1440,
+      "overflow": false,
+      "title": "blobatar — deterministic geometric blobatars"
+    },
+    {
+      "name": "docs",
+      "width": 1440,
+      "overflow": false,
+      "title": "blobatar docs — the avatar API and packages"
+    },
+    {
+      "name": "home",
+      "width": 390,
+      "overflow": false,
+      "title": "blobatar — deterministic geometric blobatars"
+    },
+    {
+      "name": "editor",
+      "width": 390,
+      "overflow": false,
+      "title": "blobatar editor — tune one and take the code"
+    },
+    {
+      "name": "components",
+      "width": 390,
+      "overflow": false,
+      "title": "blobatar components — avatar UI for shadcn"
+    },
+    {
+      "name": "wall",
+      "width": 390,
+      "overflow": false,
+      "title": "blobatar — deterministic geometric blobatars"
+    },
+    {
+      "name": "docs",
+      "width": 390,
+      "overflow": false,
+      "title": "blobatar docs — the avatar API and packages"
+    }
+  ],
+  "errors": []
+}

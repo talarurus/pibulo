@@ -1,0 +1,1814 @@
+{
+  "baseline": "629c32397057eba7719ab8fe8bb3544a1f985d47",
+  "date": "2026-10-15",
+  "independentReview": false,
+  "unitTests": {
+    "passed": 46,
+    "failed": 0
+  },
+  "build": "pass",
+  "typecheck": "pass",
+  "releaseIntegrity": "pass",
+  "tarballConsumer": "pass",
+  "suites": {
+    "avatar_browser": [
+      {
+        "browser": "155.0.8059.79",
+        "checks": [
+          {
+            "name": "Homepage displays B, fourteen poses, deterministic seed geometry and empty-seed support",
+            "pass": true,
+            "detail": {
+              "poses": 14,
+              "viewBox": "100\u00d7100",
+              "repeatable": true
+            }
+          },
+          {
+            "name": "Copy/local setup examples are executable preview code and offer no published installation",
+            "pass": true
+          },
+          {
+            "name": "Wall renders exact B and preserves browser-local placement/zoom across reload",
+            "pass": true,
+            "detail": {
+              "renderer": "blobatar",
+              "persistent": true
+            }
+          },
+          {
+            "name": "Complete editor has all ten silhouettes and fourteen upstream expressions",
+            "pass": true,
+            "detail": {
+              "silhouettes": 10,
+              "expressions": 14
+            }
+          },
+          {
+            "name": "Scalar pins, constrained sets, conditionals, shuffle and full JSON overrides use B traits",
+            "pass": true,
+            "detail": {
+              "scalar": true,
+              "set": true,
+              "advanced": true,
+              "shuffle": true
+            }
+          },
+          {
+            "name": "States/context, palette overrides, tones and backgrounds remain real B configuration",
+            "pass": true,
+            "detail": {
+              "states": 12,
+              "tones": 6,
+              "customPalette": true
+            }
+          },
+          {
+            "name": "Revisioned share links, crowd selection and code copy reproduce the selected B identity",
+            "pass": true
+          },
+          {
+            "name": "SVG and PNG exports exactly match the selected B pose, pins, palette and backdrop",
+            "pass": true,
+            "detail": {
+              "differences": 0,
+              "opaque": 206416
+            }
+          },
+          {
+            "name": "Local GET/HEAD return exact B; gen=1 is rejected without identity remapping",
+            "pass": true
+          },
+          {
+            "name": "All five components display B and retain their existing interactions",
+            "pass": true
+          },
+          {
+            "name": "Homepage has visible four-direction eye movement, smooth pursuit and rest",
+            "pass": true,
+            "detail": {
+              "horizontalPx": 18.692964961632697,
+              "verticalPx": 18.05692849995978
+            }
+          },
+          {
+            "name": "Actual blink and breathing/bobbing geometry advance",
+            "pass": true,
+            "detail": {
+              "minEye": 9.991607666015625,
+              "maxEye": 41.623199462890625,
+              "bodyTravel": 3.156341552734375,
+              "bodyWidthChange": 4.32635498046875
+            }
+          },
+          {
+            "name": "Password caret uses actual B geometry and revealed text selects sleepy/rest",
+            "pass": true,
+            "detail": {
+              "caretTravel": 4.891201737113079,
+              "revealHeight": 4.02276611328125
+            }
+          },
+          {
+            "name": "Reduced motion returns stable eye geometry and disables automatic animation",
+            "pass": true
+          },
+          {
+            "name": "Existing pages/navigation, B-only defaults, legacy lab alias and mobile layouts work",
+            "pass": true
+          },
+          {
+            "name": "Coarse-pointer mobile disables pointer gaze while preserving B",
+            "pass": true
+          },
+          {
+            "name": "No runtime errors or external site requests during local interactions",
+            "pass": true
+          }
+        ],
+        "errors": []
+      }
+    ],
+    "polish_browser": [
+      {
+        "browser": "155.0.8059.79",
+        "checks": [
+          {
+            "name": "whoami release branding, source-preserving labels and loaded Geist fonts",
+            "pass": true,
+            "details": {
+              "body": "Geist, ui-sans-serif, system-ui, sans-serif",
+              "wordmark": "Geist, ui-sans-serif, system-ui, sans-serif",
+              "code": "\"Geist Mono\", ui-monospace, monospace",
+              "faces": [
+                {
+                  "family": "Geist",
+                  "status": "loaded"
+                },
+                {
+                  "family": "Geist Mono",
+                  "status": "loaded"
+                }
+              ],
+              "sans": true,
+              "mono": true
+            }
+          },
+          {
+            "name": "Actual eye geometry morphs on click, holds and restores selected base with stable identity",
+            "pass": true,
+            "details": {
+              "base": [
+                {
+                  "x": 989.45359942664,
+                  "y": 359.6655034370989,
+                  "width": 35.0018310546875,
+                  "height": 16.846527099609375
+                },
+                {
+                  "x": 1054.1481808515523,
+                  "y": 360.40753330480356,
+                  "width": 39.24609375,
+                  "height": 24.205322265625
+                }
+              ],
+              "early": [
+                {
+                  "x": 989.2616088803284,
+                  "y": 364.2274007919567,
+                  "width": 29.31182861328125,
+                  "height": 19.74639892578125
+                },
+                {
+                  "x": 1054.3387341994016,
+                  "y": 364.9700381650017,
+                  "width": 35.86474609375,
+                  "height": 21.973846435546875
+                }
+              ],
+              "held": [
+                {
+                  "x": 988.3880009326498,
+                  "y": 384.98799677569394,
+                  "width": 17.6724853515625,
+                  "height": 25.576812744140625
+                },
+                {
+                  "x": 1055.2057036396477,
+                  "y": 385.7310463748846,
+                  "width": 21.0731201171875,
+                  "height": 28.654541015625
+                }
+              ],
+              "restored": [
+                {
+                  "x": 989.45359942664,
+                  "y": 359.6655034370989,
+                  "width": 35.0018310546875,
+                  "height": 16.846527099609375
+                },
+                {
+                  "x": 1054.1481808515523,
+                  "y": 360.40753330480356,
+                  "width": 39.24609375,
+                  "height": 24.205322265625
+                }
+              ],
+              "geometryChangePx": 25.32351307008105,
+              "seed": "atlas",
+              "holdMs": 1500
+            }
+          },
+          {
+            "name": "Repeated activation restarts hold, keyboard works, and selecting a base cancels a burst",
+            "pass": true,
+            "details": {
+              "first": "sad",
+              "second": "happy",
+              "enter": true,
+              "space": true,
+              "latestBase": "thinking"
+            }
+          },
+          {
+            "name": "Pointer geometry still tracks during reactions and returns to rest",
+            "pass": true,
+            "details": {
+              "horizontalPx": 17.619645755142983,
+              "verticalPx": 17.62607064337476,
+              "rest": [
+                {
+                  "x": 986.94204726254,
+                  "y": 363.2984706306938,
+                  "width": 16.49627685546875,
+                  "height": 39.5504150390625
+                },
+                {
+                  "x": 1043.5082538702393,
+                  "y": 363.69985930389544,
+                  "width": 19.7786865234375,
+                  "height": 51.916229248046875
+                }
+              ]
+            }
+          },
+          {
+            "name": "Reduced-motion click changes real pose without movement and resets; mobile has no overflow",
+            "pass": true,
+            "details": {
+              "runningAnimations": 0
+            }
+          },
+          {
+            "name": "Six actual scene states have stable frames, distinct expressions/props and replayable entrance",
+            "pass": true,
+            "details": {
+              "states": 6,
+              "earlyReplay": 0.023458333348234342,
+              "frame": "160\u00d7160",
+              "nativeBody": "100\u00d7100"
+            }
+          },
+          {
+            "name": "Scene playback stops when offscreen, cancels on replacement, and reduced motion needs no frames",
+            "pass": true,
+            "details": {
+              "pausedProgress": "0.06758333334326759",
+              "reducedMotionPending": 0,
+              "replacedPending": 0
+            }
+          },
+          {
+            "name": "All routes use whoami brand, nav works and scenes remain opt-in",
+            "pass": true
+          }
+        ],
+        "errors": []
+      }
+    ],
+    "refinement_browser": [
+      {
+        "browser": "155.0.8059.79",
+        "checks": [
+          {
+            "name": "Clear live name field and keyboard shuffle preserve deterministic identity",
+            "pass": true,
+            "details": {
+              "repeatable": true,
+              "shuffled": "echo",
+              "emptySeed": true
+            }
+          },
+          {
+            "name": "Local setup and homepage copy avoid published-install and internal design labels",
+            "pass": true
+          },
+          {
+            "name": "Long examples scroll inside blocks; copy stays visible and works at five widths",
+            "pass": true,
+            "details": [
+              {
+                "width": 320,
+                "api": "react",
+                "client": 286,
+                "scroll": 1772,
+                "overflow": "auto",
+                "copyWidth": 40
+              },
+              {
+                "width": 320,
+                "api": "core",
+                "client": 286,
+                "scroll": 1897,
+                "overflow": "auto",
+                "copyWidth": 40
+              },
+              {
+                "width": 360,
+                "api": "react",
+                "client": 326,
+                "scroll": 1772,
+                "overflow": "auto",
+                "copyWidth": 40
+              },
+              {
+                "width": 360,
+                "api": "core",
+                "client": 326,
+                "scroll": 1897,
+                "overflow": "auto",
+                "copyWidth": 40
+              },
+              {
+                "width": 390,
+                "api": "react",
+                "client": 340,
+                "scroll": 1772,
+                "overflow": "auto",
+                "copyWidth": 40
+              },
+              {
+                "width": 390,
+                "api": "core",
+                "client": 340,
+                "scroll": 1897,
+                "overflow": "auto",
+                "copyWidth": 40
+              },
+              {
+                "width": 768,
+                "api": "react",
+                "client": 325,
+                "scroll": 1772,
+                "overflow": "auto",
+                "copyWidth": 32
+              },
+              {
+                "width": 768,
+                "api": "core",
+                "client": 325,
+                "scroll": 1897,
+                "overflow": "auto",
+                "copyWidth": 32
+              },
+              {
+                "width": 1440,
+                "api": "react",
+                "client": 536,
+                "scroll": 1772,
+                "overflow": "auto",
+                "copyWidth": 32
+              },
+              {
+                "width": 1440,
+                "api": "core",
+                "client": 536,
+                "scroll": 1897,
+                "overflow": "auto",
+                "copyWidth": 32
+              }
+            ]
+          },
+          {
+            "name": "Companion entry is clear, manual, navigable, and does not add standard avatar props",
+            "pass": true
+          },
+          {
+            "name": "Code scroll/copy changes also preserve editor, components and docs at mobile widths",
+            "pass": true
+          }
+        ],
+        "errors": []
+      }
+    ],
+    "visual_parity": [
+      {
+        "checks": [
+          "All four preview states sample the same three stable IDs",
+          "Playback pauses on command and when scrolled out of view",
+          "Reduced motion disables playback and retains manual settled states",
+          "Homepage link opens Studio directly in Motion mode",
+          "Visual expression controls sync with select; section navigation preserves config; hue feedback/reset works",
+          "Incomplete palette entry can be corrected without losing the editor",
+          "All requested routes fit desktop, mobile and narrow mobile",
+          "Every advertised component source download returns a real file",
+          "Touch reaction and identity selection work at 320px"
+        ],
+        "errors": []
+      }
+    ],
+    "studio": [
+      {
+        "browser": "155.0.8059.79",
+        "checks": [
+          "Studio loads three independent stable identities using the public scene API",
+          "Input resolution, completion, thinking, waiting, errors and resets update only their agent",
+          "Replay, pause, step and seeking reproduce event history and return to live state",
+          "Code examples and recording JSON copy through the clipboard",
+          "Timeline buttons and keyboard navigation expose selected event details and clear replay mode",
+          "Recording export/import round-trip uses the versioned public format and preserves independent live state",
+          "Malformed, unsupported, unordered, oversized and invalid-UTF8 files preserve the current session",
+          "Reduced motion is stable, status text remains available, and viewport pauses scenes",
+          "320, 390, 768 and 1440 pixel layouts fit without horizontal overflow",
+          "Fresh sessions preserve identity and support the full simulated lifecycle",
+          "Recording capacity prevents eviction and a new session restores controls",
+          "Touch mobile can resolve input, start tasks and inspect replay",
+          "Custom imported identities, escaped integration code and future timestamps remain usable",
+          "Existing editor share links and SVG/PNG export still reproduce the original renderer",
+          "Recording documentation exposes a copyable public integration on small screens",
+          "No browser runtime errors"
+        ],
+        "errors": []
+      }
+    ],
+    "motion": [
+      {
+        "engine": "chrome",
+        "version": "155.0.8059.79",
+        "checks": [
+          "v1 import, shared clock and distinct static planning/execution cues",
+          "backward/forward seeks and repeated restart",
+          "speed control, play and stable pause",
+          "keyboard timeline, keyboard timestamp nudges and touch-sized seek controls",
+          "atomic failed import and origin changes",
+          "motion cannot mutate live state",
+          "reduced-motion settled frames and 390/320px responsive interaction",
+          "empty recording fallback",
+          "700 geometric samples: all ten silhouettes and fourteen expression targets contained",
+          "seven baseline/current SVG and decoded PNG parity comparisons",
+          "three React mount/play/unmount cycles release rAF and media listeners"
+        ],
+        "errors": []
+      },
+      {
+        "engine": "webkit",
+        "version": "26.5",
+        "checks": [
+          "v1 import, shared clock and distinct static planning/execution cues",
+          "backward/forward seeks and repeated restart",
+          "speed control, play and stable pause",
+          "keyboard timeline, keyboard timestamp nudges and touch-sized seek controls",
+          "atomic failed import and origin changes",
+          "motion cannot mutate live state",
+          "reduced-motion settled frames and 390/320px responsive interaction",
+          "empty recording fallback",
+          "700 geometric samples: all ten silhouettes and fourteen expression targets contained",
+          "seven baseline/current SVG and decoded PNG parity comparisons",
+          "three React mount/play/unmount cycles release rAF and media listeners"
+        ],
+        "errors": []
+      }
+    ],
+    "mp4": [
+      {
+        "engine": "chrome",
+        "version": "155.0.8059.79",
+        "checks": [
+          "real 512/1024 MP4 creation, native playback and beginning/middle/end sampler fidelity",
+          "concurrency, mid-export cancellation, injected encoder/output-limit failures, unsupported API, empty/min/max exports and cleanup",
+          "React unmount aborts active export and revokes completed download URLs",
+          "desktop/mobile explicit export, genuine download, cancel, reduced-motion manual action and updated footer",
+          "unsupported browser message disables export gracefully"
+        ],
+        "files": [
+          {
+            "bytes": 99462,
+            "plan": {
+              "revision": "whoami-mp4-grid-1",
+              "width": 512,
+              "height": 512,
+              "background": "#0a0a0b",
+              "agentIds": [
+                "atlas",
+                "mira",
+                "cedar"
+              ],
+              "reducedMotion": false,
+              "fps": 30,
+              "frameCount": 114,
+              "durationMs": 3800
+            },
+            "codec": "avc1.420028",
+            "progress": [
+              {
+                "phase": "checking",
+                "completedFrames": 0,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 1,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 2,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 3,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 4,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 5,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 6,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 7,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 8,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 9,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 10,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 11,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 12,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 13,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 14,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 15,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 16,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 17,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 18,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 19,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 20,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 21,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 22,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 23,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 24,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 25,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 26,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 27,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 28,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 29,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 30,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 31,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 32,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 33,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 34,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 35,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 36,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 37,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 38,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 39,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 40,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 41,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 42,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 43,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 44,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 45,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 46,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 47,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 48,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 49,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 50,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 51,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 52,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 53,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 54,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 55,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 56,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 57,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 58,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 59,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 60,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 61,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 62,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 63,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 64,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 65,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 66,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 67,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 68,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 69,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 70,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 71,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 72,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 73,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 74,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 75,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 76,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 77,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 78,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 79,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 80,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 81,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 82,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 83,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 84,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 85,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 86,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 87,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 88,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 89,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 90,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 91,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 92,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 93,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 94,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 95,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 96,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 97,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 98,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 99,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 100,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 101,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 102,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 103,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 104,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 105,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 106,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 107,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 108,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 109,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 110,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 111,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 112,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 113,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 114,
+                "totalFrames": 114
+              },
+              {
+                "phase": "finalizing",
+                "completedFrames": 114,
+                "totalFrames": 114
+              }
+            ],
+            "resources": {
+              "openFrames": 0,
+              "openEncoders": 0,
+              "urls": 0,
+              "canvases": 0,
+              "maximumQueue": 4
+            },
+            "metadata": {
+              "duration": 3.8,
+              "width": 512,
+              "height": 512
+            },
+            "played": true,
+            "fidelity": [
+              {
+                "index": 0,
+                "meanAbsoluteError": 0.5282427469889323,
+                "foregroundMAE": 1.1007538908278143,
+                "psnr": 43.578675395426515,
+                "opaque": true
+              },
+              {
+                "index": 57,
+                "meanAbsoluteError": 0.51141357421875,
+                "foregroundMAE": 1.0466239808538949,
+                "psnr": 44.39540182941741,
+                "opaque": true
+              },
+              {
+                "index": 113,
+                "meanAbsoluteError": 0.5169321695963541,
+                "foregroundMAE": 1.0420090359058363,
+                "psnr": 43.98333317867183,
+                "opaque": true
+              }
+            ],
+            "file": "chrome-512.mp4"
+          },
+          {
+            "bytes": 204769,
+            "plan": {
+              "revision": "whoami-mp4-grid-1",
+              "width": 1024,
+              "height": 1024,
+              "background": "#0a0a0b",
+              "agentIds": [
+                "atlas",
+                "mira",
+                "cedar"
+              ],
+              "reducedMotion": false,
+              "fps": 30,
+              "frameCount": 114,
+              "durationMs": 3800
+            },
+            "codec": "avc1.420028",
+            "progress": [
+              {
+                "phase": "checking",
+                "completedFrames": 0,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 1,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 2,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 3,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 4,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 5,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 6,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 7,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 8,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 9,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 10,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 11,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 12,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 13,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 14,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 15,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 16,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 17,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 18,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 19,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 20,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 21,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 22,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 23,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 24,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 25,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 26,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 27,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 28,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 29,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 30,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 31,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 32,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 33,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 34,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 35,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 36,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 37,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 38,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 39,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 40,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 41,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 42,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 43,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 44,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 45,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 46,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 47,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 48,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 49,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 50,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 51,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 52,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 53,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 54,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 55,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 56,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 57,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 58,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 59,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 60,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 61,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 62,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 63,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 64,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 65,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 66,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 67,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 68,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 69,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 70,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 71,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 72,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 73,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 74,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 75,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 76,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 77,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 78,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 79,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 80,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 81,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 82,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 83,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 84,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 85,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 86,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 87,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 88,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 89,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 90,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 91,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 92,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 93,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 94,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 95,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 96,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 97,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 98,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 99,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 100,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 101,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 102,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 103,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 104,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 105,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 106,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 107,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 108,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 109,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 110,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 111,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 112,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 113,
+                "totalFrames": 114
+              },
+              {
+                "phase": "rendering",
+                "completedFrames": 114,
+                "totalFrames": 114
+              },
+              {
+                "phase": "finalizing",
+                "completedFrames": 114,
+                "totalFrames": 114
+              }
+            ],
+            "resources": {
+              "openFrames": 0,
+              "openEncoders": 0,
+              "urls": 0,
+              "canvases": 0,
+              "maximumQueue": 4
+            },
+            "metadata": {
+              "duration": 3.8,
+              "width": 1024,
+              "height": 1024
+            },
+            "played": true,
+            "fidelity": [
+              {
+                "index": 0,
+                "meanAbsoluteError": 0.4169381459554036,
+                "foregroundMAE": 0.6173444651617768,
+                "psnr": 46.236406700211035,
+                "opaque": true
+              },
+              {
+                "index": 57,
+                "meanAbsoluteError": 0.4164924621582031,
+                "foregroundMAE": 0.6029421969328985,
+                "psnr": 46.20415287220389,
+                "opaque": true
+              },
+              {
+                "index": 113,
+                "meanAbsoluteError": 0.41035111745198566,
+                "foregroundMAE": 0.5618129238963092,
+                "psnr": 46.60971019961514,
+                "opaque": true
+              }
+            ],
+            "file": "chrome-1024.mp4"
+          }
+        ],
+        "errors": [],
+        "support": {
+          "supported": true,
+          "config": {
+            "codec": "avc1.420028",
+            "width": 512,
+            "height": 512,
+            "framerate": 30,
+            "bitrate": 3145728,
+            "latencyMode": "realtime",
+            "avc": {
+              "format": "avc"
+            },
+            "alpha": "discard"
+          }
+        },
+        "faults": {
+          "busy": "busy",
+          "cancel": "cancelled",
+          "failed": "encode-failed",
+          "limit": "output-limit",
+          "timestamp": "encode-failed",
+          "raster": "render-failed",
+          "unsupported": "unsupported",
+          "codecUnsupported": "unsupported",
+          "emptyFrames": 30,
+          "emptyDuration": 1000,
+          "maxDimensions": [
+            2048,
+            2048
+          ],
+          "longestFrames": 900,
+          "longestDuration": 30000,
+          "resources": {
+            "openFrames": 0,
+            "openEncoders": 0,
+            "urls": 0,
+            "canvases": 0
+          }
+        }
+      }
+    ]
+  }
+}

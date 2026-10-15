@@ -1,0 +1,133 @@
+{
+  "mode": "after",
+  "browser": "155.0.8059.79",
+  "pages": [
+    {
+      "name": "home",
+      "width": 1440,
+      "overflow": false,
+      "title": "whoami — a familiar face for every agent · v0.3.0"
+    },
+    {
+      "name": "editor",
+      "width": 1440,
+      "overflow": false,
+      "title": "whoami editor · v0.3.0"
+    },
+    {
+      "name": "components",
+      "width": 1440,
+      "overflow": false,
+      "title": "whoami components · v0.3.0"
+    },
+    {
+      "name": "studio-activity",
+      "width": 1440,
+      "overflow": false,
+      "title": "whoami studio · v0.3.0"
+    },
+    {
+      "name": "studio-motion",
+      "width": 1440,
+      "overflow": false,
+      "title": "whoami studio · v0.3.0"
+    },
+    {
+      "name": "agent-scenes",
+      "width": 1440,
+      "overflow": false,
+      "title": "whoami agent-scenes · v0.3.0"
+    },
+    {
+      "name": "docs",
+      "width": 1440,
+      "overflow": false,
+      "title": "whoami docs · v0.3.0"
+    },
+    {
+      "name": "home",
+      "width": 390,
+      "overflow": false,
+      "title": "whoami — a familiar face for every agent · v0.3.0"
+    },
+    {
+      "name": "editor",
+      "width": 390,
+      "overflow": false,
+      "title": "whoami editor · v0.3.0"
+    },
+    {
+      "name": "components",
+      "width": 390,
+      "overflow": false,
+      "title": "whoami components · v0.3.0"
+    },
+    {
+      "name": "studio-activity",
+      "width": 390,
+      "overflow": false,
+      "title": "whoami studio · v0.3.0"
+    },
+    {
+      "name": "studio-motion",
+      "width": 390,
+      "overflow": false,
+      "title": "whoami studio · v0.3.0"
+    },
+    {
+      "name": "agent-scenes",
+      "width": 390,
+      "overflow": false,
+      "title": "whoami agent-scenes · v0.3.0"
+    },
+    {
+      "name": "docs",
+      "width": 390,
+      "overflow": false,
+      "title": "whoami docs · v0.3.0"
+    },
+    {
+      "name": "home",
+      "width": 320,
+      "overflow": false,
+      "title": "whoami — a familiar face for every agent · v0.3.0"
+    },
+    {
+      "name": "editor",
+      "width": 320,
+      "overflow": false,
+      "title": "whoami editor · v0.3.0"
+    },
+    {
+      "name": "components",
+      "width": 320,
+      "overflow": false,
+      "title": "whoami components · v0.3.0"
+    },
+    {
+      "name": "studio-activity",
+      "width": 320,
+      "overflow": false,
+      "title": "whoami studio · v0.3.0"
+    },
+    {
+      "name": "studio-motion",
+      "width": 320,
+      "overflow": false,
+      "title": "whoami studio · v0.3.0"
+    },
+    {
+      "name": "agent-scenes",
+      "width": 320,
+      "overflow": false,
+      "title": "whoami agent-scenes · v0.3.0"
+    },
+    {
+      "name": "docs",
+      "width": 320,
+      "overflow": false,
+      "title": "whoami docs · v0.3.0"
+    }
+  ],
+  "errors": []
+}

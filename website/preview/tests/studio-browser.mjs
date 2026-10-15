@@ -4,7 +4,8 @@ import {parseRecording, serializeRecording} from '@talarurus/whoami/recording';
 import {svgFor} from '@talarurus/whoami';
 import {mkdirSync, writeFileSync, readFileSync} from 'node:fs';
 const base=process.env.PREVIEW_URL||'http://localhost:4318', out=process.env.WHOAMI_STUDIO_ARTIFACTS||'/tmp/whoami-v020-studio';
-mkdirSync(out,{recursive:true});mkdirSync('assets',{recursive:true});
+const assets=process.env.WHOAMI_MEDIA_DIR||'assets';
+mkdirSync(out,{recursive:true});mkdirSync(assets,{recursive:true});
 const browser=await chromium.launch({channel:'chrome',headless:true});
 const context=await browser.newContext({viewport:{width:1440,height:1100},permissions:['clipboard-read','clipboard-write']});
 const page=await context.newPage();page.setDefaultTimeout(10000);
@@ -22,7 +23,7 @@ try {
   assert.equal(await card('atlas').getByRole('status').innerText(),'Atlas · Working');
   assert.equal(await card('mira').getByRole('status').getAttribute('aria-live'),'polite');
   await page.evaluate(()=>document.fonts.ready);await page.waitForTimeout(1400);
-  await page.screenshot({path:'assets/studio-refined-desktop.png',fullPage:true});
+  await page.screenshot({path:assets+'/studio-refined-desktop.png',fullPage:true});
  });
  await check('Input resolution, completion, thinking, waiting, errors and resets update only their agent',async()=>{
   await click('Select Mira');await click('Resolve input');await assertState('mira','working');await assertState('atlas','working');
@@ -106,7 +107,7 @@ try {
  const mobile=await browser.newContext({viewport:{width:390,height:844},isMobile:true,hasTouch:true,reducedMotion:'reduce'}),mp=await mobile.newPage();mp.on('pageerror',error=>errors.push(error.message));
  await check('Touch mobile can resolve input, start tasks and inspect replay',async()=>{
   await mp.goto(base+'/studio');await mp.getByRole('heading',{name:'Identity, in motion.'}).waitFor();await mp.evaluate(()=>document.fonts.ready);
-  await mp.screenshot({path:'assets/studio-refined-mobile.png',fullPage:true});
+  await mp.screenshot({path:assets+'/studio-refined-mobile.png',fullPage:true});
   await mp.getByRole('button',{name:'Select Mira',exact:true}).focus();await mp.keyboard.press('Enter');assert.equal(await mp.getByRole('button',{name:'Select Mira',exact:true}).getAttribute('aria-pressed'),'true');await mp.getByRole('button',{name:'Resolve input',exact:true}).click();
   assert.equal(await mp.locator('[data-agent-id="mira"] [data-agent-state]').getAttribute('data-agent-state'),'working');
   await mp.getByRole('button',{name:'Complete',exact:true}).click();await mp.getByRole('button',{name:'Start task ↗',exact:true}).click();
@@ -149,7 +150,7 @@ try {
   assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1));
  });
  assert.deepEqual(errors,[]);checks.push('No browser runtime errors');
- writeFileSync(out+'/report.json',JSON.stringify({browser:browser.version(),checks,errors,screenshots:['assets/studio-refined-desktop.png','assets/studio-refined-mobile.png']},null,2));
+ writeFileSync(out+'/report.json',JSON.stringify({browser:browser.version(),checks,errors,screenshots:[assets+'/studio-refined-desktop.png',assets+'/studio-refined-mobile.png']},null,2));
  console.log('Artifacts:',out);
 } catch(error){await page.screenshot({path:out+'/failure.png',fullPage:true});writeFileSync(out+'/report.json',JSON.stringify({browser:browser.version(),checks,errors,failure:String(error)},null,2));throw error;}
 finally {await browser.close();}

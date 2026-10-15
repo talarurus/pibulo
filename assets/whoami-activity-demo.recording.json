@@ -1,0 +1,99 @@
+{
+  "format": "whoami-recording",
+  "version": 1,
+  "eventVersion": 1,
+  "initialState": "idle",
+  "identity": {
+    "renderer": "blobatar",
+    "revision": "a7fd546ebede49d0a9fa638945b9e534489782a2",
+    "normalization": "raw"
+  },
+  "agents": [
+    {
+      "id": "atlas",
+      "name": "Atlas"
+    },
+    {
+      "id": "mira",
+      "name": "Mira"
+    },
+    {
+      "id": "cedar",
+      "name": "Cedar"
+    }
+  ],
+  "events": [
+    {
+      "version": 1,
+      "type": "task.started",
+      "agentId": "atlas",
+      "sequence": 1,
+      "timestamp": 900,
+      "taskId": "demo/task-1"
+    },
+    {
+      "version": 1,
+      "type": "task.started",
+      "agentId": "mira",
+      "sequence": 1,
+      "timestamp": 900,
+      "taskId": "demo/task-1"
+    },
+    {
+      "version": 1,
+      "type": "task.started",
+      "agentId": "cedar",
+      "sequence": 1,
+      "timestamp": 900,
+      "taskId": "demo/task-1"
+    },
+    {
+      "version": 1,
+      "type": "task.working",
+      "agentId": "atlas",
+      "sequence": 2,
+      "timestamp": 2300,
+      "taskId": "demo/task-1"
+    },
+    {
+      "version": 1,
+      "type": "task.working",
+      "agentId": "mira",
+      "sequence": 2,
+      "timestamp": 2300,
+      "taskId": "demo/task-1"
+    },
+    {
+      "version": 1,
+      "type": "task.working",
+      "agentId": "cedar",
+      "sequence": 2,
+      "timestamp": 2300,
+      "taskId": "demo/task-1"
+    },
+    {
+      "version": 1,
+      "type": "task.completed",
+      "agentId": "atlas",
+      "sequence": 3,
+      "timestamp": 4100,
+      "taskId": "demo/task-1"
+    },
+    {
+      "version": 1,
+      "type": "task.completed",
+      "agentId": "mira",
+      "sequence": 3,
+      "timestamp": 4100,
+      "taskId": "demo/task-1"
+    },
+    {
+      "version": 1,
+      "type": "task.completed",
+      "agentId": "cedar",
+      "sequence": 3,
+      "timestamp": 4100,
+      "taskId": "demo/task-1"
+    }
+  ]
+}

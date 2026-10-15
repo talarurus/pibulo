@@ -1,0 +1,13 @@
+{
+  "durationMs": 5500,
+  "width": 768,
+  "height": 432,
+  "frameCount": 165,
+  "gifFrameCount": 83,
+  "playback": {
+    "width": 768,
+    "height": 432,
+    "duration": 5.5,
+    "played": true
+  }
+}
