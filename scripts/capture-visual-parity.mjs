@@ -17,7 +17,7 @@ for(const width of (upstream?[1440,390]:[1440,390,320])){
   if(name==='wall')await page.locator('#wall').scrollIntoViewIfNeeded();
   if(name==='editor'&&upstream)await page.screenshot({path:`${root}/editor-full-${width}.png`,fullPage:true});
   await page.screenshot({path:`${root}/${name}-${width}.png`});
-  if(!upstream && mode==='after' && width!==320){
+  if(!upstream && ['after','restored'].includes(mode)){
    if(name==='home'){
     await page.screenshot({path:`${root}/home-full-${width}.png`,fullPage:true});
     await page.locator('.motion-preview').screenshot({path:`${root}/recorded-preview-${width}.png`});
@@ -34,5 +34,5 @@ for(const width of (upstream?[1440,390]:[1440,390,320])){
  }
  await page.close();
 }
-if(!only)await writeFile(`${root}/capture.json`,JSON.stringify(report,null,2));
+await writeFile(`${root}/capture.json`,JSON.stringify(report,null,2));
 await browser.close();console.log(report);

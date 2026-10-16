@@ -1,0 +1,475 @@
+{
+  "date": "2026-10-15",
+  "branch": "design/v0.3.1-visual-parity",
+  "parent": "96af0a352fbc3c0ccb9dfc1a1ae89bdf1143b93a",
+  "baseline": "629c32397057eba7719ab8fe8bb3544a1f985d47",
+  "browser": {
+    "checks": [
+      {
+        "name": "Homepage displays B, fourteen poses, deterministic seed geometry and empty-seed support",
+        "pass": true,
+        "detail": {
+          "poses": 14,
+          "viewBox": "100\u00d7100",
+          "repeatable": true
+        }
+      },
+      {
+        "name": "Copy/local setup examples are executable preview code and offer no published installation",
+        "pass": true
+      },
+      {
+        "name": "Wall renders exact B and preserves browser-local placement/zoom across reload",
+        "pass": true,
+        "detail": {
+          "renderer": "blobatar",
+          "persistent": true
+        }
+      },
+      {
+        "name": "Complete editor has all ten silhouettes and fourteen upstream expressions",
+        "pass": true,
+        "detail": {
+          "silhouettes": 10,
+          "expressions": 14
+        }
+      },
+      {
+        "name": "Scalar pins, constrained sets, conditionals, shuffle and full JSON overrides use B traits",
+        "pass": true,
+        "detail": {
+          "scalar": true,
+          "set": true,
+          "advanced": true,
+          "shuffle": true
+        }
+      },
+      {
+        "name": "States/context, palette overrides, tones and backgrounds remain real B configuration",
+        "pass": true,
+        "detail": {
+          "states": 12,
+          "tones": 6,
+          "customPalette": true
+        }
+      },
+      {
+        "name": "Revisioned share links, crowd selection and code copy reproduce the selected B identity",
+        "pass": true
+      },
+      {
+        "name": "SVG and PNG exports exactly match the selected B pose, pins, palette and backdrop",
+        "pass": true,
+        "detail": {
+          "differences": 0,
+          "opaque": 206416
+        }
+      },
+      {
+        "name": "Local GET/HEAD return exact B; gen=1 is rejected without identity remapping",
+        "pass": true
+      },
+      {
+        "name": "All five components display B and retain their existing interactions",
+        "pass": true
+      },
+      {
+        "name": "Homepage has visible four-direction eye movement, smooth pursuit and rest",
+        "pass": true,
+        "detail": {
+          "horizontalPx": 21.59724633335412,
+          "verticalPx": 20.81208606364362
+        }
+      },
+      {
+        "name": "Actual blink and breathing/bobbing geometry advance",
+        "pass": true,
+        "detail": {
+          "minEye": 11.0606689453125,
+          "maxEye": 45.716552734375,
+          "bodyTravel": 3.64190673828125,
+          "bodyWidthChange": 4.99224853515625
+        }
+      },
+      {
+        "name": "Password caret uses actual B geometry and revealed text selects sleepy/rest",
+        "pass": true,
+        "detail": {
+          "caretTravel": 4.891201737113079,
+          "revealHeight": 4.02276611328125
+        }
+      },
+      {
+        "name": "Reduced motion returns stable eye geometry and disables automatic animation",
+        "pass": true
+      },
+      {
+        "name": "Existing pages/navigation, B-only defaults, legacy lab alias and mobile layouts work",
+        "pass": true
+      },
+      {
+        "name": "Coarse-pointer mobile disables pointer gaze while preserving B",
+        "pass": true
+      },
+      {
+        "name": "No runtime errors or external site requests during local interactions",
+        "pass": true
+      }
+    ],
+    "errors": []
+  },
+  "typecheck": "pass",
+  "unitTests": {
+    "passed": 46,
+    "failed": 0
+  },
+  "releaseIntegrity": "pass",
+  "consumer": {
+    "checks": [
+      "installed separate tarball",
+      "stable SVG hash/identity",
+      "React SSR",
+      "TypeScript declarations",
+      "browser application bundle"
+    ],
+    "result": "pass"
+  },
+  "protectedSources": "No diff from v0.3.0 in src/, tests/fixtures/, website/preview/vendor/, package.json, package-lock.json, LICENSE or THIRD-PARTY-NOTICES.txt",
+  "retainedMedia": {
+    "whoami-activity-demo.gif": {
+      "bytes": 89749,
+      "sha256": "4d443de22462fa423474e4377c0750830fb483e2c9f7ec8673bb5ace74a20640",
+      "unchangedFromParent": true
+    },
+    "whoami-activity-demo.mp4": {
+      "bytes": 181626,
+      "sha256": "04d93b75465b9f7074612fd32be1982e1f5ad856be13b0022ee2fe4e0e2485c6",
+      "unchangedFromParent": true
+    },
+    "whoami-activity-poster.png": {
+      "bytes": 25384,
+      "sha256": "b95e0222f151c2c9e5be3855ebd855f9e03d7c1afb7736cfe5466d80ca0e5b5a",
+      "unchangedFromParent": true
+    },
+    "whoami-activity-demo.recording.json": {
+      "bytes": 1920,
+      "sha256": "c09fc906f325816b9cd137de1dfd15fe3df2a6bbf41d98ac42255901c0ad0b0f",
+      "unchangedFromParent": true
+    }
+  },
+  "polish": {
+    "checks": [
+      {
+        "name": "whoami release branding, source-preserving labels and loaded Geist fonts",
+        "pass": true,
+        "details": {
+          "body": "Geist, ui-sans-serif, system-ui, sans-serif",
+          "wordmark": "Geist, ui-sans-serif, system-ui, sans-serif",
+          "code": "\"Geist Mono\", ui-monospace, monospace",
+          "faces": [
+            {
+              "family": "Geist",
+              "status": "loaded"
+            },
+            {
+              "family": "Geist Mono",
+              "status": "loaded"
+            }
+          ],
+          "sans": true,
+          "mono": true
+        }
+      },
+      {
+        "name": "Actual eye geometry morphs on click, holds and restores selected base with stable identity",
+        "pass": true,
+        "details": {
+          "base": [
+            {
+              "x": 287.99600889235626,
+              "y": 655.1291662792564,
+              "width": 40.27178955078125,
+              "height": 19.4852294921875
+            },
+            {
+              "x": 362.43121041148817,
+              "y": 655.9874207889568,
+              "width": 45.155059814453125,
+              "height": 27.99658203125
+            }
+          ],
+          "early": [
+            {
+              "x": 287.9126321310547,
+              "y": 657.1203419693675,
+              "width": 37.833465576171875,
+              "height": 20.82733154296875
+            },
+            {
+              "x": 362.51396890759906,
+              "y": 657.9788867583028,
+              "width": 43.703887939453125,
+              "height": 26.92474365234375
+            }
+          ],
+          "held": [
+            {
+              "x": 286.76997053038457,
+              "y": 684.4179389427255,
+              "width": 20.333343505859375,
+              "height": 29.58294677734375
+            },
+            {
+              "x": 363.64795716383117,
+              "y": 685.2773729051471,
+              "width": 24.2459716796875,
+              "height": 33.1427001953125
+            }
+          ],
+          "restored": [
+            {
+              "x": 287.99600889235626,
+              "y": 655.1291662792564,
+              "width": 40.27178955078125,
+              "height": 19.4852294921875
+            },
+            {
+              "x": 362.43121041148817,
+              "y": 655.9874207889568,
+              "width": 45.155059814453125,
+              "height": 27.99658203125
+            }
+          ],
+          "geometryChangePx": 29.289952116190307,
+          "seed": "atlas",
+          "holdMs": 1500
+        }
+      },
+      {
+        "name": "Repeated activation restarts hold, keyboard works, and selecting a base cancels a burst",
+        "pass": true,
+        "details": {
+          "first": "sad",
+          "second": "happy",
+          "enter": true,
+          "space": true,
+          "latestBase": "thinking"
+        }
+      },
+      {
+        "name": "Pointer geometry still tracks during reactions and returns to rest",
+        "pass": true,
+        "details": {
+          "horizontalPx": 18.917982441458264,
+          "verticalPx": 20.037753213631163,
+          "rest": [
+            {
+              "x": 285.09410098484864,
+              "y": 651.2986196000816,
+              "width": 18.9765625,
+              "height": 45.72235107421875
+            },
+            {
+              "x": 350.1771061226518,
+              "y": 651.7569646941661,
+              "width": 22.758453369140625,
+              "height": 60.023193359375
+            }
+          ]
+        }
+      },
+      {
+        "name": "Reduced-motion click changes real pose without movement and resets; mobile has no overflow",
+        "pass": true,
+        "details": {
+          "runningAnimations": 0
+        }
+      },
+      {
+        "name": "Six actual scene states have stable frames, distinct expressions/props and replayable entrance",
+        "pass": true,
+        "details": {
+          "states": 6,
+          "earlyReplay": 0.019458333348234193,
+          "frame": "160\u00d7160",
+          "nativeBody": "100\u00d7100"
+        }
+      },
+      {
+        "name": "Scene playback stops when offscreen, cancels on replacement, and reduced motion needs no frames",
+        "pass": true,
+        "details": {
+          "pausedProgress": "0.06712500000496675",
+          "reducedMotionPending": 0,
+          "replacedPending": 0
+        }
+      },
+      {
+        "name": "All routes use whoami brand, nav works and scenes remain opt-in",
+        "pass": true
+      }
+    ],
+    "errors": []
+  },
+  "refinement": {
+    "checks": [
+      {
+        "name": "Clear live name field and keyboard shuffle preserve deterministic identity",
+        "pass": true,
+        "details": {
+          "repeatable": true,
+          "shuffled": "sage",
+          "emptySeed": true
+        }
+      },
+      {
+        "name": "Local setup and homepage copy avoid published-install and internal design labels",
+        "pass": true
+      },
+      {
+        "name": "Long examples scroll inside blocks; copy stays visible and works at five widths",
+        "pass": true,
+        "details": [
+          {
+            "width": 320,
+            "api": "react",
+            "client": 286,
+            "scroll": 1772,
+            "overflow": "auto",
+            "copyWidth": 40
+          },
+          {
+            "width": 320,
+            "api": "core",
+            "client": 286,
+            "scroll": 1897,
+            "overflow": "auto",
+            "copyWidth": 40
+          },
+          {
+            "width": 360,
+            "api": "react",
+            "client": 326,
+            "scroll": 1772,
+            "overflow": "auto",
+            "copyWidth": 40
+          },
+          {
+            "width": 360,
+            "api": "core",
+            "client": 326,
+            "scroll": 1897,
+            "overflow": "auto",
+            "copyWidth": 40
+          },
+          {
+            "width": 390,
+            "api": "react",
+            "client": 340,
+            "scroll": 1772,
+            "overflow": "auto",
+            "copyWidth": 40
+          },
+          {
+            "width": 390,
+            "api": "core",
+            "client": 340,
+            "scroll": 1897,
+            "overflow": "auto",
+            "copyWidth": 40
+          },
+          {
+            "width": 768,
+            "api": "react",
+            "client": 312,
+            "scroll": 1772,
+            "overflow": "auto",
+            "copyWidth": 32
+          },
+          {
+            "width": 768,
+            "api": "core",
+            "client": 312,
+            "scroll": 1897,
+            "overflow": "auto",
+            "copyWidth": 32
+          },
+          {
+            "width": 1440,
+            "api": "react",
+            "client": 484,
+            "scroll": 1772,
+            "overflow": "auto",
+            "copyWidth": 32
+          },
+          {
+            "width": 1440,
+            "api": "core",
+            "client": 484,
+            "scroll": 1897,
+            "overflow": "auto",
+            "copyWidth": 32
+          }
+        ]
+      },
+      {
+        "name": "Companion entry is clear, manual, navigable, and does not add standard avatar props",
+        "pass": true
+      },
+      {
+        "name": "Code scroll/copy changes also preserve editor, components and docs at mobile widths",
+        "pass": true
+      }
+    ],
+    "errors": []
+  },
+  "visualParity": {
+    "checks": [
+      "All four preview states sample the same three stable IDs",
+      "Playback pauses on command and when scrolled out of view",
+      "Reduced motion disables playback and retains manual settled states",
+      "Homepage link opens Studio directly in Motion mode",
+      "Visual expression controls sync with select; section navigation preserves config; hue feedback/reset works",
+      "Incomplete palette entry can be corrected without losing the editor",
+      "All requested routes fit desktop, mobile and narrow mobile",
+      "Every advertised component source download returns a real file",
+      "Touch reaction and identity selection work at 320px"
+    ],
+    "errors": []
+  },
+  "studio": {
+    "checks": [
+      "Studio loads three independent stable identities using the public scene API",
+      "Input resolution, completion, thinking, waiting, errors and resets update only their agent",
+      "Replay, pause, step and seeking reproduce event history and return to live state",
+      "Code examples and recording JSON copy through the clipboard",
+      "Timeline buttons and keyboard navigation expose selected event details and clear replay mode",
+      "Recording export/import round-trip uses the versioned public format and preserves independent live state",
+      "Malformed, unsupported, unordered, oversized and invalid-UTF8 files preserve the current session",
+      "Reduced motion is stable, status text remains available, and viewport pauses scenes",
+      "320, 390, 768 and 1440 pixel layouts fit without horizontal overflow",
+      "Fresh sessions preserve identity and support the full simulated lifecycle",
+      "Recording capacity prevents eviction and a new session restores controls",
+      "Touch mobile can resolve input, start tasks and inspect replay",
+      "Custom imported identities, escaped integration code and future timestamps remain usable",
+      "Existing editor share links and SVG/PNG export still reproduce the original renderer",
+      "Recording documentation exposes a copyable public integration on small screens",
+      "No browser runtime errors"
+    ],
+    "errors": []
+  },
+  "motionFlow": {
+    "checks": [
+      "Import retained README recording; seek all four states; restart, play and stable pause",
+      "512px MP4 exports, downloads and decodes natively from the retained recording",
+      "Reduced motion retains settled manual seeking"
+    ],
+    "errors": [],
+    "metadata": {
+      "bytes": 124863,
+      "width": 512,
+      "height": 512,
+      "duration": 5.5
+    }
+  }
+}

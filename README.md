@@ -9,12 +9,12 @@ A familiar face for every agent. Stable SVG identities, caller-driven task activ
 A complete task in 5.5 seconds: **Idle → Thinking → Working → Completed**. The same three identities throughout, sampled from a validated version 1 demo recording.
 [Static poster](assets/whoami-activity-poster.png) · [Original MP4](assets/whoami-activity-demo.mp4) · [Importable recording](assets/whoami-activity-demo.recording.json).
 
-![whoami homepage and interactive identity preview](assets/visual-parity-v0.3.1/after/home-1440.png)
+![whoami homepage and interactive identity preview](assets/visual-parity-v0.3.1/restored/home-1440.png)
 
-[Mobile homepage](assets/visual-parity-v0.3.1/after/home-390.png) ·
+[Mobile homepage](assets/visual-parity-v0.3.1/restored/home-390.png) ·
 [Visual editor](assets/visual-parity-v0.3.1/after/editor-1440.png) ·
 [Motion Studio](assets/visual-parity-v0.3.1/after/studio-motion-1440.png) ·
-[Visual comparison and verification](docs/reviews/visual-parity-v0.3.1.md).
+[Homepage restoration and verification](docs/reviews/homepage-restoration-v0.3.1.md).
 
 The [repository](https://github.com/talarurus/whoami) is public. The package remains `@talarurus/whoami`; installation uses a locally built tarball. Historical v0.1.0, v0.2.0 and v0.3.0 releases remain unchanged.
 

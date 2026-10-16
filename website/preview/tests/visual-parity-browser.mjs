@@ -20,7 +20,7 @@ await player.getByRole('button',{name:'Play preview'}).click();await page.locato
 checks.push('Playback pauses on command and when scrolled out of view');
 await page.emulateMedia({reducedMotion:'reduce'});await player.scrollIntoViewIfNeeded();assert.equal(await player.getByRole('button',{name:'Play preview'}).isDisabled(),true);await player.getByRole('button',{name:'Thinking',exact:false}).click();assert.equal(await player.locator('[data-agent-state=thinking]').count(),3);assert.equal(await player.evaluate(e=>e.getAnimations({subtree:true}).filter(a=>a.playState==='running').length),0);
 checks.push('Reduced motion disables playback and retains manual settled states');
-await page.getByRole('link',{name:'Replay your own recording ↗'}).click();await page.waitForURL('**/studio?mode=motion');assert.equal(await page.getByRole('button',{name:'Motion',exact:true}).getAttribute('aria-pressed'),'true');
+await page.getByRole('link',{name:'Open Studio ↗'}).click();await page.waitForURL('**/studio?mode=motion');assert.equal(await page.getByRole('button',{name:'Motion',exact:true}).getAttribute('aria-pressed'),'true');
 checks.push('Homepage link opens Studio directly in Motion mode');
 await page.goto(base+'/editor');
 await page.getByRole('group',{name:'Visual expressions'}).getByRole('button',{name:'love',exact:true}).click();
@@ -45,6 +45,7 @@ for(const link of await page.locator('.source-links a').all()){const response=aw
 checks.push('Every advertised component source download returns a real file');
 const mobile=await browser.newPage({viewport:{width:320,height:844},hasTouch:true,isMobile:true,reducedMotion:'reduce'});
 await mobile.goto(base);await mobile.locator('#hero-avatar').tap();assert.notEqual(await mobile.locator('#hero-avatar').getAttribute('data-expression'),'idle');
+await mobile.locator('.hero-identities summary').tap();
 await mobile.locator('.hero-roster').getByRole('button',{name:'nova',exact:true}).tap();assert.equal(await mobile.locator('#hero-name').inputValue(),'nova');
 checks.push('Touch reaction and identity selection work at 320px');
 assert.deepEqual(errors,[]);await browser.close();

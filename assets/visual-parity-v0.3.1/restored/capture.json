@@ -1,0 +1,25 @@
+{
+  "mode": "restored",
+  "browser": "155.0.8059.79",
+  "pages": [
+    {
+      "name": "home",
+      "width": 1440,
+      "overflow": false,
+      "title": "whoami — a familiar face for every agent · v0.3.0"
+    },
+    {
+      "name": "home",
+      "width": 390,
+      "overflow": false,
+      "title": "whoami — a familiar face for every agent · v0.3.0"
+    },
+    {
+      "name": "home",
+      "width": 320,
+      "overflow": false,
+      "title": "whoami — a familiar face for every agent · v0.3.0"
+    }
+  ],
+  "errors": []
+}

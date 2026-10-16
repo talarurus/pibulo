@@ -1,6 +1,9 @@
 # v0.3.1 visual parity pass — owner review
 
-**Status:** implemented and verified locally; awaiting owner visual approval.
+**Status:** the owner requested restoration of the v0.3.0 homepage after reviewing
+the first pass (`96af0a3`). The restored homepage is awaiting visual approval.
+See [the restoration review](homepage-restoration-v0.3.1.md) for current screenshots
+and follow-up verification. The first-pass evidence remains below.
 No release, tag, push, deployment or npm publication. Package metadata remains
 0.3.0. This is an implementation-agent review, not independent acceptance.
 
@@ -10,13 +13,13 @@ Inspection date: 2026-10-15. The separate company website was not touched.
 
 ## Visual result
 
-The homepage now leads with the product's agent workflow and a contained,
-interactive identity card. Six selectable identities show real variety without
-scrolling to the wall. Studio, customization, integration and components have
-explicit entry points. A new three-agent preview samples a validated version 1 demo
-recording through the existing public motion API. Play/pause, four manual state
-choices, pause when offscreen/hidden, and reduced-motion still states make the
-workflow directly explorable. No new avatar geometry or animation system.
+The homepage again uses the v0.3.0 wordmark, generous spacing and two-column
+identity/code composition. The first pass's marketing headline, CTA cluster,
+statistics and framed identity card are removed. Expression tiles and six identity
+shortcuts remain inside quiet disclosures. The three-agent recording preview now
+sits in an unframed secondary section below the hero, with one contextual Studio
+link. It still uses the existing public motion API: play/pause, manual states,
+offscreen/hidden pause and reduced-motion states are retained. No artwork changes.
 
 The editor shows all fourteen expressions as actual pose tiles, brings palette
 controls ahead of detailed geometry axes, and provides section navigation and
@@ -52,7 +55,8 @@ and hue choices in a popover. Its editor makes pinning and named silhouette
 thumbnails clear. Its component gallery distinguishes illustrative UI from source
 registry installation. Its wall is a large canvas, not a grid of live React
 avatars. We borrowed the lessons of visual choice and clear feedback, while
-keeping whoami's own dark layout and agent-focused introduction.
+keeping whoami's dark identity. Owner feedback subsequently restored the original
+homepage composition, as recorded in the follow-up review.
 
 Actual upstream interactions inspected: hover motion, click reaction at early
 and held frames, left/right gaze, expression and hue selection, reduced-motion
@@ -83,8 +87,8 @@ illustrative demos are separate categories; a local endpoint is not a hosted API
 | Experience | Before | v0.3.1 result / remaining difference |
 | --- | --- | --- |
 | Ten shapes, fourteen poses, palettes, seed identity | Already implemented | Preserved, including all fixtures and pinned renderer bytes. |
-| Hero hover, click morph, pointer gaze | Already implemented | More explicit affordance, framed preview and keyboard/touch operation; same behavior underneath. |
-| Visual variety on entry | Implemented but poorly exposed | Six selectable existing identities above the wall; visual expression picker. |
+| Hero hover, click morph, pointer gaze | Already implemented | Unframed v0.3.0 presentation, clearer interaction hint and keyboard/touch operation; same behavior underneath. |
+| Visual variety on entry | Implemented but poorly exposed | Six selectable existing identities and visual expressions in optional hero disclosures. |
 | Editor expressions, palette and motion discovery | Implemented but poorly exposed | Pose tiles, early palette controls, section jumps, selected hue + Auto; motion stays beside preview. |
 | Rich one-click hero shape/color controls | Missing on homepage | Full editor remains one click away with current config; intentionally kept out of the compact hero. |
 | Five interface compositions | Already implemented | Consistent surfaces/selection feedback; repaired source downloads. Checked-in examples, **not five published packages**. |
@@ -102,7 +106,9 @@ illustrative demos are separate categories; a local endpoint is not a hosted API
   and [mobile comparison](../../assets/visual-parity-v0.3.1/compare-home-390.png).
 - [Editor desktop comparison](../../assets/visual-parity-v0.3.1/compare-editor-1440.png)
   and [mobile comparison](../../assets/visual-parity-v0.3.1/compare-editor-390.png).
-- [Final screenshots](../../assets/visual-parity-v0.3.1/after/) include all requested
+- [Restored homepage screenshots and three-way comparisons](../../assets/visual-parity-v0.3.1/restored/)
+  supersede the first-pass homepage images.
+- [First-pass screenshots](../../assets/visual-parity-v0.3.1/after/) include all requested
   routes at 1440, 390 and 320 pixels; full homepage, recorded preview, wall,
   expression and palette captures supplement the viewport shots.
 - [Baseline screenshots](../../assets/visual-parity-v0.3.1/before/) and
@@ -132,7 +138,7 @@ labels/cards around `demoMotion.svgFor`; it never authors avatar paths. Existing
 WebCodecs and the already-pinned MIT muxer encode the original MP4. The public
 Studio exporter and its frame contract are unchanged.
 
-## Verification
+## First-pass verification (`96af0a3`)
 
 [Machine-readable results](../../assets/visual-parity-v0.3.1/verification.json)
 and [demo decode metadata](../../assets/visual-parity-v0.3.1/demo.json).
@@ -167,7 +173,7 @@ new framework SDK or automatic agent integration was added. The optional pinned
 honor a system reduced-motion preference, so the static poster is linked beside it;
 the website preview does honor that preference.
 
-**Recommendation:** approve the visual direction, then authorize a separate
+**Recommendation:** review the restored homepage linked above before considering a separate
 v0.3.1 source-release preparation step. That later step would set release metadata
 and perform any required independent review. This branch is ready for owner
 visual review; it is not a published or owner-approved v0.3.1 release.
