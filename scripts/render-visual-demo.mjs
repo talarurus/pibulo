@@ -27,7 +27,7 @@ const result=await page.evaluate(async()=>{
    return `<rect x="${x}" y="106" width="232" height="236" rx="13" fill="#141416" stroke="#34343b"/>${avatar}<text x="${x+116}" y="302" text-anchor="middle" font-size="17" fill="#fafaf8">${sample.snapshot.name}</text><text x="${x+116}" y="325" text-anchor="middle" font-size="13" fill="#bbc6b5">${labels[phase]}</text>`;
   }).join('');
   const steps=labels.map((label,i)=>`<rect x="${24+i*183}" y="362" width="171" height="39" rx="7" fill="${phase===i?'#d1dfc9':'#141416'}" stroke="${phase===i?'#d1dfc9':'#34343b'}"/><text x="${38+i*183}" y="387" font-size="13" fill="${phase===i?'#182315':'#b3b3bd'}">0${i+1}  ${label}</text>`).join('');
-  return `<svg xmlns="http://www.w3.org/2000/svg" width="768" height="432"><rect width="768" height="432" fill="#0a0a0b"/><g font-family="Arial,sans-serif"><text x="24" y="46" font-size="29" font-weight="600" fill="#fafaf8">whoami</text><text x="744" y="43" text-anchor="end" font-size="11" letter-spacing="1.5" fill="#b8c4b2">RECORDED AGENT ACTIVITY</text><text x="24" y="78" font-size="17" fill="#a7a7b1">One identity. From thought to done.</text>${avatars}${steps}<rect x="24" y="414" width="720" height="2" rx="1" fill="#2b2b31"/><rect x="24" y="414" width="${720*Math.min(1,time/duration)}" height="2" rx="1" fill="#a9bd9d"/></g></svg>`;
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="768" height="432"><rect width="768" height="432" fill="#0a0a0b"/><g font-family="Arial,sans-serif"><text x="24" y="46" font-size="29" font-weight="600" fill="#fafaf8">pibulo</text><text x="744" y="43" text-anchor="end" font-size="11" letter-spacing="1.5" fill="#b8c4b2">RECORDED AGENT ACTIVITY</text><text x="24" y="78" font-size="17" fill="#a7a7b1">One identity. From thought to done.</text>${avatars}${steps}<rect x="24" y="414" width="720" height="2" rx="1" fill="#2b2b31"/><rect x="24" y="414" width="${720*Math.min(1,time/duration)}" height="2" rx="1" fill="#a9bd9d"/></g></svg>`;
  }
  try{for(let i=0;i<count;i++){
   if(error)throw error;
@@ -44,8 +44,8 @@ const result=await page.evaluate(async()=>{
  return {base64:btoa(binary),recording,durationMs:count*1000/fps,width,height,frameCount:count,gifFrameCount:Math.ceil(count/2)};
  }finally{encoder.close();}
 });
-await writeFile(`${output}/whoami-activity-demo.mp4`,Buffer.from(result.base64,'base64'));delete result.base64;
-await writeFile(`${output}/whoami-activity-demo.recording.json`,result.recording);delete result.recording;
+await writeFile(`${output}/pibulo-activity-demo.mp4`,Buffer.from(result.base64,'base64'));delete result.base64;
+await writeFile(`${output}/pibulo-activity-demo.recording.json`,result.recording);delete result.recording;
 const playback=await page.evaluate(async()=>{
  const video=document.createElement('video');video.src=URL.createObjectURL(window.demoVideo);video.muted=true;video.playsInline=true;document.body.replaceChildren(video);
  await new Promise((resolve,reject)=>{video.onloadeddata=resolve;video.onerror=reject;});
@@ -55,4 +55,4 @@ const playback=await page.evaluate(async()=>{
 });
 await page.screenshot({path:`${frames}/mp4-decoded.png`});await browser.close();
 if(!playback.played||playback.width!==768||Math.abs(playback.duration-result.durationMs/1000)>.04)throw Error('MP4 playback mismatch');
-await writeFile(`${output}/visual-parity-v0.3.1/demo.json`,JSON.stringify({...result,playback},null,2));console.log({...result,playback});
+await writeFile(`${output}/pibulo-rebrand/demo.json`,JSON.stringify({...result,playback},null,2));console.log({...result,playback});

@@ -4,8 +4,8 @@ import {readFileSync} from 'node:fs';
 import {createHash} from 'node:crypto';
 import {createElement} from 'react';
 import {renderToStaticMarkup} from 'react-dom/server';
-import {svgFor,identity,shareHash,readConfig} from '@talarurus/whoami';
-import {Face} from '@talarurus/whoami/react';
+import {svgFor,identity,shareHash,readConfig} from '@talarurus/pibulo';
+import {Face} from '@talarurus/pibulo/react';
 const fixtures=JSON.parse(readFileSync('tests/fixtures/preview-identity.json'));
 test('packaged SVG/identity preserves seven existing preview checkpoint fixtures',()=>{
  for(const {config,size,sha256,identity:expected} of fixtures.cases){

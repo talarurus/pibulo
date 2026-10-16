@@ -1,9 +1,9 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {build} from 'esbuild';
-import {REVISION, identity} from '@talarurus/whoami';
-import {createActivityEngine} from '@talarurus/whoami/activity';
-import {parseRecording, serializeRecording, RECORDING_IDENTITY, RECORDING_LIMITS} from '@talarurus/whoami/recording';
+import {REVISION, identity} from '@talarurus/pibulo';
+import {createActivityEngine} from '@talarurus/pibulo/activity';
+import {parseRecording, serializeRecording, RECORDING_IDENTITY, RECORDING_LIMITS} from '@talarurus/pibulo/recording';
 const agents=[{id:'Atlas',name:'Atlas "one"'},{id:'atlas',name:'Second agent'}];
 const event=(type,sequence,extra={})=>({version:1,type,agentId:'Atlas',taskId:'task-1',sequence,timestamp:sequence,...extra});
 const events=[event('task.started',1),event('task.working',2),event('task.started',1,{agentId:'atlas'}),event('task.input-required',3),event('task.completed',2,{agentId:'atlas'}),event('task.input-resolved',4),event('task.completed',5)];

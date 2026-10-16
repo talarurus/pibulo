@@ -1,13 +1,13 @@
 import React, {lazy, Suspense, useEffect, useMemo, useRef, useState} from 'react';
-import {ACTIVITY_LABELS, createActivityEngine, replayActivity, type ActivityEvent, type EventType, type AgentSnapshot, type AgentDefinition} from '@talarurus/whoami/activity';
-import {parseRecording, serializeRecording} from '@talarurus/whoami/recording';
-import {AgentScene} from '@talarurus/whoami/scenes';
-import '@talarurus/whoami/scenes.css';
-import '@talarurus/whoami/motion.css';
-import '@talarurus/whoami/react.css';
+import {ACTIVITY_LABELS, createActivityEngine, replayActivity, type ActivityEvent, type EventType, type AgentSnapshot, type AgentDefinition} from '@talarurus/pibulo/activity';
+import {parseRecording, serializeRecording} from '@talarurus/pibulo/recording';
+import {AgentScene} from '@talarurus/pibulo/scenes';
+import '@talarurus/pibulo/scenes.css';
+import '@talarurus/pibulo/motion.css';
+import '@talarurus/pibulo/react.css';
 import './studio.css';
-import {compileMotionRecording} from '@talarurus/whoami/motion';
-import {RecordedAgentAvatar, useMotionReducedPreference} from '@talarurus/whoami/motion/react';
+import {compileMotionRecording} from '@talarurus/pibulo/motion';
+import {RecordedAgentAvatar, useMotionReducedPreference} from '@talarurus/pibulo/motion/react';
 import {useMotionPlayback} from './useMotionPlayback';
 
 const MotionMP4Export=lazy(()=>import('./MotionMP4Export'));
@@ -111,7 +111,7 @@ export default function AgentStudio() {
   function download() {
     if (!exported.ok) {setFileNotice({error: true, text: exported.error}); return;}
     const url = URL.createObjectURL(new Blob([exported.json], {type: 'application/json'}));
-    const link = document.createElement('a'); link.href = url; link.download = 'whoami-recording-v1.json'; link.click();
+    const link = document.createElement('a'); link.href = url; link.download = 'pibulo-recording-v1.json'; link.click();
     setTimeout(() => URL.revokeObjectURL(url), 1000);
     setFileNotice({error: false, text: 'Recording exported. Review caller-supplied information before sharing.'});
   }
@@ -143,8 +143,8 @@ export default function AgentStudio() {
     if (!result.ok) { setFeedback(result.error); return; }
     setSession({...session, events: [...recording, live.getHistory().at(-1)!]});
   }
-  const code = mode === 'motion' && codeTab === 'react' ? `import { compileMotionRecording } from '@talarurus/whoami/motion';
-import { RecordedAgentAvatar } from '@talarurus/whoami/motion/react';
+  const code = mode === 'motion' && codeTab === 'react' ? `import { compileMotionRecording } from '@talarurus/pibulo/motion';
+import { RecordedAgentAvatar } from '@talarurus/pibulo/motion/react';
 
 const result = compileMotionRecording(recordingJSON, { originMs: ${originMs} });
 if (!result.ok) throw new Error(result.error);
@@ -154,11 +154,11 @@ const motion = result.motion;
 export function Agent({ playbackMs }) {
   return <RecordedAgentAvatar motion={motion} agentId={${JSON.stringify(selected)}}
     playbackMs={playbackMs} />;
-}` : codeTab === 'events' ? (exported.ok ? exported.json : exported.error) : `import { createActivityEngine } from '@talarurus/whoami/activity';
-import { AgentAvatar } from '@talarurus/whoami/activity/react';
-import '@talarurus/whoami/motion.css';
-import '@talarurus/whoami/gaze.css';
-import '@talarurus/whoami/react.css';
+}` : codeTab === 'events' ? (exported.ok ? exported.json : exported.error) : `import { createActivityEngine } from '@talarurus/pibulo/activity';
+import { AgentAvatar } from '@talarurus/pibulo/activity/react';
+import '@talarurus/pibulo/motion.css';
+import '@talarurus/pibulo/gaze.css';
+import '@talarurus/pibulo/react.css';
 
 const engine = createActivityEngine({
   agents: [{ id: ${JSON.stringify(selected)}, name: ${JSON.stringify(current.name)} }],
@@ -180,11 +180,11 @@ export function Agent() {
   return <AgentAvatar engine={engine} agentId={${JSON.stringify(selected)}} />;
 }
 
-// Optional laptop scenes: AgentScene from '@talarurus/whoami/scenes'
-// with '@talarurus/whoami/scenes.css'.`;
+// Optional laptop scenes: AgentScene from '@talarurus/pibulo/scenes'
+// with '@talarurus/pibulo/scenes.css'.`;
   return <section className="studio">
-    <div className="studio-intro"><div><span className="eyebrow">WHOAMI / AGENT TOOLKIT</span><h1>Identity, in motion.</h1><p>The same agent. A changing state. A story you can replay.</p></div><span className="studio-version">v0.3.1 <span>release</span></span></div>
-    <div className="studio-explanation"><p><strong>Identity stays familiar.</strong> An agent’s stable ID generates its face. Tasks change its expression and activity, never its identity.</p><p><strong>Your application supplies events.</strong> whoami validates them and presents what each agent is doing.</p></div>
+    <div className="studio-intro"><div><span className="eyebrow">PIBULO / AGENT TOOLKIT</span><h1>Identity, in motion.</h1><p>The same agent. A changing state. A story you can replay.</p></div><span className="studio-version">v0.3.2-dev.0 <span>development</span></span></div>
+    <div className="studio-explanation"><p><strong>Identity stays familiar.</strong> An agent’s stable ID generates its face. Tasks change its expression and activity, never its identity.</p><p><strong>Your application supplies events.</strong> pibulo validates them and presents what each agent is doing.</p></div>
     <div className="studio-notice"><span className="studio-indicator"/><span><strong>Agent Identity Studio</strong> <span className="studio-notice-detail">· {session.imported ? 'Imported caller events; controls simulate new events.' : 'Simulated events, supplied by you.'} No live agent connection.</span></span></div>
     <div className="studio-view-switch" role="group" aria-label="Studio mode"><button type="button" aria-pressed={mode === 'activity'} onClick={() => changeMode('activity')}>Activity</button><button type="button" aria-pressed={mode === 'motion'} onClick={() => changeMode('motion')}>Motion</button><span>{mode === 'motion' ? 'One timestamp. Every agent.' : 'Simulate events and inspect activity.'}</span></div>
     {mode === 'motion' && <section className="studio-motion-panel" aria-label="Recorded motion controls" onKeyDown={e => {if (e.target !== e.currentTarget) return; if (e.key === ' ') {e.preventDefault(); player.playing ? player.pause() : player.play();} if (e.key === 'ArrowLeft' || e.key === 'ArrowRight') {e.preventDefault(); motionSeek(player.time + (e.key === 'ArrowLeft' ? -100 : 100));}}} tabIndex={0}>

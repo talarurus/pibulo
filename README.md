@@ -1,26 +1,27 @@
-# whoami
+# pibulo
 
-A familiar face for every agent. Stable SVG identities, caller-driven task activity, React components, and an interactive Agent Identity Studio.
+**Little faces. Big personalities.**
 
-**v0.3.1** is prepared for a GitHub source release, with the restored homepage approved at desktop and both mobile widths. It refines avatar customization and presentation while preserving generation-2 artwork, seed mappings and public APIs. Publication requires separate owner authorization. The package is not published to npm; the website runs locally.
+An open-source toolkit for expressive AI-agent identities, activity visualization, deterministic replay and motion export. Published by **Talarurus**.
 
-![whoami: Atlas, Mira and Cedar progress from idle to thinking, working and completed](assets/whoami-activity-demo.gif)
+**0.3.2-dev.0 is unreleased local development.** This rebrands whoami v0.3.1 while preserving the approved homepage, Blobatar artwork, deterministic identities and API behavior. Install the source package as `@talarurus/pibulo` using a local tarball. Neither package has been publicly published to npm.
 
-A complete task in 5.5 seconds: **Idle → Thinking → Working → Completed**. The same three identities throughout, sampled from a validated version 1 demo recording.
-[Static poster](assets/whoami-activity-poster.png) · [Original MP4](assets/whoami-activity-demo.mp4) · [Importable recording](assets/whoami-activity-demo.recording.json).
+![pibulo homepage](assets/pibulo-rebrand/home-1440.png)
 
-![whoami homepage and interactive identity preview](assets/visual-parity-v0.3.1/restored/home-1440.png)
+[Mobile homepage](assets/pibulo-rebrand/home-390.png) ·
+[Studio](assets/pibulo-rebrand/studio-motion-1440.png) ·
+[Mobile Studio](assets/pibulo-rebrand/studio-motion-390.png) ·
+[Migration](docs/migration-pibulo.md) · [Local verification](docs/reviews/pibulo-rebrand.md).
 
-[Mobile homepage](assets/visual-parity-v0.3.1/restored/home-390.png) ·
-[Visual editor](assets/visual-parity-v0.3.1/after/editor-1440.png) ·
-[Motion Studio](assets/visual-parity-v0.3.1/after/studio-motion-1440.png) ·
-[Homepage restoration and verification](docs/reviews/homepage-restoration-v0.3.1.md).
+The [GitHub repository](https://github.com/talarurus/whoami) retains its current name pending separate authorization. Historical releases v0.1.0–v0.3.1 and their original media remain unchanged. The following is the **historical whoami activity demo**, with the same three identities throughout:
 
-The [repository](https://github.com/talarurus/whoami) is public. The package remains `@talarurus/whoami`; installation uses a locally built tarball. Historical v0.1.0, v0.2.0 and v0.3.0 releases remain unchanged.
+![Historical whoami activity demo: Atlas, Mira and Cedar](assets/whoami-activity-demo.gif)
+
+[Historical poster](assets/whoami-activity-poster.png) · [Original MP4](assets/whoami-activity-demo.mp4) · [Compatible version 1 recording](assets/whoami-activity-demo.recording.json).
 
 ## Run the website
 
-Use Node **24.21.0 or later in Node 24** and npm **11**. Cloning this public repository does not require a GitHub account.
+Use Node **24.21.0 or later in Node 24** and npm **11**. The rebrand is currently available only on the local `brand/pibulo-rebrand` branch. The clone commands below identify the current repository; its remote retains published whoami until a separately authorized push.
 
 ```sh
 git clone https://github.com/talarurus/whoami.git
@@ -34,17 +35,17 @@ Open [Agent Identity Studio](http://localhost:4318/studio), [the website](http:/
 ## Use the source package
 
 ```sh
-# In the whoami checkout
+# In the pibulo checkout
 npm run build
 npm pack
 # In a separate application
-npm install /absolute/path/to/talarurus-whoami-0.3.1.tgz
+npm install /absolute/path/to/talarurus-pibulo-0.3.2-dev.0.tgz
 ```
 
 The package name below resolves through that local tarball. It is **not** an npm registry installation instruction.
 
 ```js
-import { svgFor, identity } from '@talarurus/whoami';
+import { svgFor, identity } from '@talarurus/pibulo';
 
 const config = { name: 'agent-001', expression: 'happy' };
 const svg = svgFor(config, 128);
@@ -54,10 +55,10 @@ console.log(identity(config).canonicalSeed);
 The SVG entry has no runtime dependencies and includes TypeScript declarations. `node examples/svg.mjs` runs this path after building.
 
 ```tsx
-import { Face } from '@talarurus/whoami/react';
-import '@talarurus/whoami/motion.css';
-import '@talarurus/whoami/gaze.css';
-import '@talarurus/whoami/react.css';
+import { Face } from '@talarurus/pibulo/react';
+import '@talarurus/pibulo/motion.css';
+import '@talarurus/pibulo/gaze.css';
+import '@talarurus/pibulo/react.css';
 
 export default function AgentAvatar() {
   return <Face name="agent-001" size={128} motion="always" pointerGaze
@@ -70,8 +71,8 @@ React **19.2** is a peer dependency for React consumers. Run `npm run example:re
 ## Agent activity
 
 ```tsx
-import { createActivityEngine } from '@talarurus/whoami/activity';
-import { AgentAvatar } from '@talarurus/whoami/activity/react';
+import { createActivityEngine } from '@talarurus/pibulo/activity';
+import { AgentAvatar } from '@talarurus/pibulo/activity/react';
 
 const engine = createActivityEngine({ agents: [{ id: 'atlas' }] });
 const result = engine.dispatch({
@@ -85,14 +86,14 @@ export function Agent() {
 }
 ```
 
-Import the three CSS entries shown in the Face example for animated avatars. Optional `AgentScene` is exported from `@talarurus/whoami/scenes`; import `scenes.css` and `motion.css`. The engine has no React, renderer, clock or transport dependency. Caller-supplied events produce idle, waiting, thinking, working, needs-input, completed and error states. Sequences, task IDs and transition validation protect current state; accepted history is bounded. `replayActivity(options, recording)` deterministically reconstructs a complete caller recording.
+Import the three CSS entries shown in the Face example for animated avatars. Optional `AgentScene` is exported from `@talarurus/pibulo/scenes`; import `scenes.css` and `motion.css`. The engine has no React, renderer, clock or transport dependency. Caller-supplied events produce idle, waiting, thinking, working, needs-input, completed and error states. Sequences, task IDs and transition validation protect current state; accepted history is bounded. `replayActivity(options, recording)` deterministically reconstructs a complete caller recording.
 
 The Studio uses these public exports for independent agents, task controls, input resolution, errors/reset, a navigable timeline, replay/pause/step/seek, validated local JSON import/export and copyable examples. Built-in events and controls are clearly simulated; imported recordings are labeled as caller-supplied. Its recording is in memory, capped at 120 accepted events; new sessions preserve agent identity. See [the schema and transition rules](docs/api.md), [typed examples](examples/activity/main.tsx), and [development verification](docs/development-v0.2.0.md).
 
-Recording files use `@talarurus/whoami/recording`:
+Recording files use `@talarurus/pibulo/recording`:
 
 ```ts
-import { serializeRecording, parseRecording } from '@talarurus/whoami/recording';
+import { serializeRecording, parseRecording } from '@talarurus/pibulo/recording';
 const file = serializeRecording({ agents, events: completeAcceptedEvents });
 if (file.ok) {
   const imported = parseRecording(file.json);
@@ -104,7 +105,7 @@ The versioned envelope pins exact IDs, display names, event version and renderer
 
 ## Recorded motion and MP4
 
-`@talarurus/whoami/motion` compiles complete version 1 recordings with an explicit
+`@talarurus/pibulo/motion` compiles complete version 1 recordings with an explicit
 millisecond origin and motion policy into immutable per-agent tracks. Arbitrary
 timestamps support repeatable seek/replay and position-continuous interruptions.
 `/motion/react` provides `RecordedAgentAvatar` and `useMotionReducedPreference`;
@@ -114,7 +115,7 @@ Studio Motion mode previews multiple agents at one timestamp, with play/pause,
 restart, speed and event/millisecond seeking. Reduced motion keeps manual seeking
 and settled expressions. Live activity sessions are preserved during replay.
 
-Optional `@talarurus/whoami/export/mp4` exports existing sampled artwork using
+Optional `@talarurus/pibulo/export/mp4` exports existing sampled artwork using
 WebCodecs H.264 and a lazy MP4 muxer. Studio offers 512/1024 presets, progress,
 cancel and explicit download. Frames use fixed timestamps independent of preview
 speed/refresh rate. Limits: 30 fps, 1..8 agents, even 64..2048 dimensions, 30 seconds
@@ -168,6 +169,6 @@ npm run test:consumer
 npm run test:browser
 ```
 
-[v0.3.1 release preparation](docs/releases/preparation-v0.3.1.md) records the final checks and publication gate; [release notes](docs/releases/v0.3.1.md) describe the scope. [v0.2.0 review](docs/refinement-v0.2.0.md) and [v0.1.0 validation](docs/validation.md) retain historical results and boundaries. [Provenance](docs/provenance.md) identifies adapted and independently authored work.
+[Local rebrand verification](docs/reviews/pibulo-rebrand.md) records this development checkpoint. [v0.3.1 release preparation](docs/releases/preparation-v0.3.1.md) and [release notes](docs/releases/v0.3.1.md) remain historical. [v0.2.0 review](docs/refinement-v0.2.0.md) and [v0.1.0 validation](docs/validation.md) retain historical results and boundaries. [Provenance](docs/provenance.md) identifies adapted and independently authored work.
 
 MIT: original renderer and adapted website code by **Alain / Alain00/blobatar**; compatible optional scene code from **SparshKaushik/blobatarling**, maintained by Sparsh Kaushik with additions authored by Khai. Original copyright notices are retained. Geist fonts are SIL OFL 1.1. See [LICENSE](LICENSE), [THIRD-PARTY-NOTICES](THIRD-PARTY-NOTICES.txt), and vendor license/source records. No upstream endorsement or legal clean-room claim is made.

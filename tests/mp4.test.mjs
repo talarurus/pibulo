@@ -2,9 +2,9 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {buildSync} from 'esbuild';
-import {compileMotionRecording} from '@talarurus/whoami/motion';
-import {serializeRecording} from '@talarurus/whoami/recording';
-import {createMP4Plan,mp4FrameTiming,mp4FrameSVG,checkMP4Support,exportMP4,MP4_LIMITS} from '@talarurus/whoami/export/mp4';
+import {compileMotionRecording} from '@talarurus/pibulo/motion';
+import {serializeRecording} from '@talarurus/pibulo/recording';
+import {createMP4Plan,mp4FrameTiming,mp4FrameSVG,checkMP4Support,exportMP4,MP4_LIMITS} from '@talarurus/pibulo/export/mp4';
 const compile = (events=[],agents=[{id:'atlas',name:'Atlas'},{id:'mira',name:'Mira'}]) => {
   const file=serializeRecording({agents,events});assert.ok(file.ok);const result=compileMotionRecording(file.json,{originMs:0});assert.ok(result.ok);return result.motion;
 };

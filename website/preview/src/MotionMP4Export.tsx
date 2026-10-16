@@ -1,6 +1,6 @@
 import React, {useEffect, useRef, useState} from 'react';
-import type {CompiledMotion} from '@talarurus/whoami/motion';
-import {checkMP4Support, createMP4Plan, exportMP4, MP4ExportError, type MP4Progress} from '@talarurus/whoami/export/mp4';
+import type {CompiledMotion} from '@talarurus/pibulo/motion';
+import {checkMP4Support, createMP4Plan, exportMP4, MP4ExportError, type MP4Progress} from '@talarurus/pibulo/export/mp4';
 
 export default function MotionMP4Export({motion,reducedMotion}:{motion:CompiledMotion;reducedMotion:boolean}) {
   const [size,setSize]=useState(1024), [support,setSupport]=useState<string|null>(null), [checking,setChecking]=useState(true);
@@ -40,6 +40,6 @@ export default function MotionMP4Export({motion,reducedMotion}:{motion:CompiledM
     {(support||planError)&&<p role="status">{planError||support}</p>}
     {busy&&<div className="studio-mp4-progress"><progress aria-label="MP4 export progress" max={100} value={percentage}/><span role="status">{progress?.phase==='finalizing'?'Finishing MP4':`Rendering ${progress?.completedFrames??0} / ${progress?.totalFrames??0} frames`} · {percentage}%</span></div>}
     {notice&&<p role="status" className="studio-mp4-notice">{notice}</p>}
-    {download&&<div className="studio-mp4-download"><a href={download.url} download="whoami-motion.mp4">Download MP4 ↗</a><span>{download.width} × {download.height} · {(download.durationMs/1000).toFixed(2)} s · {(download.bytes/1048576).toFixed(2)} MiB</span></div>}
+    {download&&<div className="studio-mp4-download"><a href={download.url} download="pibulo-motion.mp4">Download MP4 ↗</a><span>{download.width} × {download.height} · {(download.durationMs/1000).toFixed(2)} s · {(download.bytes/1048576).toFixed(2)} MiB</span></div>}
   </section>;
 }

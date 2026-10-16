@@ -1,16 +1,16 @@
 # Recorded motion · v0.3.0
 
-Available unchanged in the v0.3.1 source package; this API was introduced in v0.3.0.
+Available unchanged in the Pibulo 0.3.2-dev.0 source package; this API was introduced in whoami v0.3.0. See [migration](migration-pibulo.md).
 
-`@talarurus/whoami/motion` exports `compileMotionRecording`, `MOTION_REVISION`
-(`whoami-motion-1`) and generated public types. `@talarurus/whoami/motion/react`
+`@talarurus/pibulo/motion` exports `compileMotionRecording`, `MOTION_REVISION`
+(`whoami-motion-1`) and generated public types. `@talarurus/pibulo/motion/react`
 exports `RecordedAgentAvatar` and `useMotionReducedPreference`. React is optional;
 the core has no framework, DOM, network or wall clock. No new dependency is added.
 
 ```tsx
-import {serializeRecording} from '@talarurus/whoami/recording';
-import {compileMotionRecording} from '@talarurus/whoami/motion';
-import {RecordedAgentAvatar} from '@talarurus/whoami/motion/react';
+import {serializeRecording} from '@talarurus/pibulo/recording';
+import {compileMotionRecording} from '@talarurus/pibulo/motion';
+import {RecordedAgentAvatar} from '@talarurus/pibulo/motion/react';
 
 const file = serializeRecording({
   agents: [{id: 'atlas', name: 'Atlas'}],

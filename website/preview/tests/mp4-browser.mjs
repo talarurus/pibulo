@@ -4,7 +4,7 @@ import {buildSync} from 'esbuild';
 process.env.PLAYWRIGHT_BROWSERS_PATH??=new URL('../../../test-results/motion-v030/browsers',import.meta.url).pathname;
 const {chromium,webkit}=await import('playwright');
 const base=process.env.PREVIEW_URL||'http://127.0.0.1:4318';
-const output=new URL('../../../test-results/mp4/',import.meta.url),assets=new URL(process.env.WHOAMI_MEDIA_DIR||'../../../assets/',import.meta.url);
+const output=new URL('../../../test-results/mp4/',import.meta.url),assets=new URL((process.env.PIBULO_MEDIA_DIR||process.env.WHOAMI_MEDIA_DIR)||'../../../test-results/pibulo-media/',import.meta.url);
 await mkdir(output,{recursive:true});await mkdir(assets,{recursive:true});
 const harness=buildSync({stdin:{contents:'import * as mp4 from "./src/mp4.ts";import {compileMotionRecording} from "./src/motion.ts";import {serializeRecording} from "./src/recording.ts";window.exportProbe={...mp4,compileMotionRecording,serializeRecording};',resolveDir:process.cwd()},bundle:true,platform:'browser',format:'iife',write:false}).outputFiles[0].text;
 const event=(agentId,sequence,timestamp,type)=>({version:1,agentId,sequence,timestamp,type,taskId:'task-1'});
@@ -113,7 +113,7 @@ for(const kind of (process.env.MP4_BROWSER?[process.env.MP4_BROWSER]:['chrome','
       await page.getByRole('combobox',{name:'MP4 preset'}).selectOption('512');await exportButton.click();
       await page.getByRole('link',{name:'Download MP4 ↗',exact:true}).waitFor({timeout:60000}).catch(async error=>{console.error(kind,await page.locator('.studio-mp4').innerText(),report.errors);throw error;});
       const downloadPromise=page.waitForEvent('download');await page.getByRole('link',{name:'Download MP4 ↗',exact:true}).click();const download=await downloadPromise;await download.saveAs(new URL(`${kind}-studio.mp4`,output).pathname);
-      assert.match(await page.locator('footer').innerText(),/v0\.3\.1/);
+      assert.match(await page.locator('footer').innerText(),/v0\.3\.2-dev\.0 development/);
       await page.getByRole('spinbutton',{name:'Motion timestamp',exact:true}).fill('2400');
       await page.evaluate(()=>{document.activeElement?.blur();window.scrollTo(0,0);});
       if(kind==='chrome')await page.screenshot({path:new URL('studio-mp4-desktop.png',assets).pathname,fullPage:true});

@@ -92,3 +92,17 @@ Historical review sections retain their checkpoint context. This preparation add
 release copy and verification only; no independent review is claimed. See
 [release preparation](releases/preparation-v0.3.1.md). GitHub publication requires
 separate authorization; npm publication and deployment are outside this release.
+
+
+## Pibulo local rebrand
+
+Owner-authorized local development starts at published whoami v0.3.1 commit
+`5d5a9b3e11f8873e3541fabb7eae11dd05ac33c9`. The active product becomes
+pibulo by Talarurus, with source-package identifier `@talarurus/pibulo` and
+unreleased metadata `0.3.2-dev.0`, retaining private:true. Current branding, imports,
+examples and QA expectations change; no renderer generation, artwork, identity,
+recording schema, motion/frame revision, upstream byte, notice or dependency
+migration occurs. Historical sections and release evidence retain their original
+context. See [migration](migration-pibulo.md) and [verification](reviews/pibulo-rebrand.md).
+No independent review is claimed. Public repository renaming and release
+publication require separate owner authorization.

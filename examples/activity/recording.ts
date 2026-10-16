@@ -1,4 +1,4 @@
-import {parseRecording, serializeRecording, type ActivityRecording} from '@talarurus/whoami/recording';
+import {parseRecording, serializeRecording, type ActivityRecording} from '@talarurus/pibulo/recording';
 
 const exported = serializeRecording({
   agents: [{id: 'atlas', name: 'Atlas'}],

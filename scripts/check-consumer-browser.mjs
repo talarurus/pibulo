@@ -1,13 +1,13 @@
 import {chromium} from 'playwright';
 import assert from 'node:assert/strict';
 import {mkdirSync,writeFileSync} from 'node:fs';
-const out=process.env.WHOAMI_CONSUMER_ARTIFACTS||'/tmp/whoami-consumer-browser';mkdirSync(out,{recursive:true});
+const out=(process.env.PIBULO_CONSUMER_ARTIFACTS||process.env.WHOAMI_CONSUMER_ARTIFACTS)||'/tmp/pibulo-consumer-browser';mkdirSync(out,{recursive:true});
 const browser=await chromium.launch({channel:'chrome',headless:true});
 const errors=[],checks=[];const context=await browser.newContext({viewport:{width:1280,height:900}}),page=await context.newPage();
 page.on('pageerror',e=>errors.push(e.message));
 await page.goto(process.env.CONSUMER_URL||'http://localhost:4330');
 await page.waitForTimeout(600);
-assert.equal(await page.locator('h1').innerText(),'whoami React example');
+assert.equal(await page.locator('h1').innerText(),'pibulo React example');
 assert.equal(await page.locator('svg').count(),2);assert.equal(await page.getByRole('img',{name:'Agent 001',exact:true}).count(),1);
 assert.ok(await page.locator('.preview-face .mo-root').count());
 await page.addStyleTag({content:'.mo-root,.mo-breathe,.mo-bob,.mo-eyes,.mo-eye,.mo-eye>*{animation-play-state:paused!important}'});
@@ -18,7 +18,7 @@ await page.mouse.move(box.x+box.width+100,box.y+box.height/2);await page.waitFor
 assert.ok(right[0].x-left[0].x>2,'installed Face gaze moves');checks.push('desktop packaged Face mounts and follows pointer');
 await page.screenshot({path:out+'/consumer-desktop.png'});
 await page.goto((process.env.CONSUMER_URL||'http://localhost:4330')+'/activity');
-assert.equal(await page.locator('h1').innerText(),'whoami activity example');
+assert.equal(await page.locator('h1').innerText(),'pibulo activity example');
 assert.equal(await page.getByRole('status').filter({hasText:'Example agent · Working'}).count(),2);
 await page.getByRole('button',{name:'Complete task'}).click();
 await page.getByRole('status').filter({hasText:'Example agent · Completed'}).first().waitFor();

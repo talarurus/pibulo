@@ -1,13 +1,13 @@
 # MP4 export · v0.3.0
 
-Available unchanged in the v0.3.1 source package; this API was introduced in v0.3.0.
+Available unchanged in the Pibulo 0.3.2-dev.0 source package; this API was introduced in whoami v0.3.0. See [migration](migration-pibulo.md).
 
-Optional `@talarurus/whoami/export/mp4` exports recorded agent motion locally
+Optional `@talarurus/pibulo/export/mp4` exports recorded agent motion locally
 using the existing deterministic sampler and identity artwork.
 
 ```ts
-import {compileMotionRecording} from '@talarurus/whoami/motion';
-import {exportMP4, checkMP4Support} from '@talarurus/whoami/export/mp4';
+import {compileMotionRecording} from '@talarurus/pibulo/motion';
+import {exportMP4, checkMP4Support} from '@talarurus/pibulo/export/mp4';
 
 const compiled = compileMotionRecording(recordingJSON, {originMs: 0});
 if (!compiled.ok) throw new Error(compiled.error);

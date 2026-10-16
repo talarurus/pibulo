@@ -1,5 +1,5 @@
-import {compileMotionRecording, type CompiledMotion} from '@talarurus/whoami/motion';
-import {RecordedAgentAvatar} from '@talarurus/whoami/motion/react';
+import {compileMotionRecording, type CompiledMotion} from '@talarurus/pibulo/motion';
+import {RecordedAgentAvatar} from '@talarurus/pibulo/motion/react';
 
 export function readMotion(recordingJSON: string, originMs: number): CompiledMotion {
   const result = compileMotionRecording(recordingJSON, {originMs});

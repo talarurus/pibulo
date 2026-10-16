@@ -1,0 +1,1018 @@
+{
+  "query": "case-insensitive whoami, all tracked and new non-ignored text files",
+  "excludedOutput": "assets/pibulo-rebrand/whoami-audit.json",
+  "activeOldPackageImports": 0,
+  "unclassifiedFiles": 0,
+  "files": [
+    {
+      "path": "AGENTS.md",
+      "category": "preserved provenance, notice or release boundary",
+      "matches": [
+        {
+          "line": 1,
+          "text": "# whoami release boundaries"
+        },
+        {
+          "line": 3,
+          "text": "This standalone repository contains the owner-authorized whoami v0.1.0 source release. Read docs/provenance.md and docs/api.md before edits. Preserve the pinned upstream renderer bytes, notices and identity fixtures. Generation changes require a separately authorized migration; never rewrite fixtures to hide failures."
+        }
+      ]
+    },
+    {
+      "path": "CHANGELOG.md",
+      "category": "explicit migration, history or compatibility documentation",
+      "matches": [
+        {
+          "line": 5,
+          "text": "- Local product rebrand: whoami \u2192 pibulo, published by Talarurus. Little faces. Big personalities."
+        },
+        {
+          "line": 36,
+          "text": "### Added by whoami"
+        },
+        {
+          "line": 55,
+          "text": "First standalone GitHub source release of whoami. Extracts the existing website and pinned Blobatar renderer into an independently buildable repository; packages the SVG helper and React Face with declarations/CSS; includes working JavaScript/TypeScript examples, release documentation, retained notices, and focused release checks."
+        }
+      ]
+    },
+    {
+      "path": "README.md",
+      "category": "explicit migration, history or compatibility documentation",
+      "matches": [
+        {
+          "line": 7,
+          "text": "**0.3.2-dev.0 is unreleased local development.** This rebrands whoami v0.3.1 while preserving the approved homepage, Blobatar artwork, deterministic identities and API behavior. Install the source package as `@talarurus/pibulo` using a local tarball. Neither package has been publicly published to npm."
+        },
+        {
+          "line": 16,
+          "text": "The [GitHub repository](https://github.com/talarurus/whoami) retains its current name pending separate authorization. Historical releases v0.1.0\u2013v0.3.1 and their original media remain unchanged. The following is the **historical whoami activity demo**, with the same three identities throughout:"
+        },
+        {
+          "line": 18,
+          "text": "![Historical whoami activity demo: Atlas, Mira and Cedar](assets/whoami-activity-demo.gif)"
+        },
+        {
+          "line": 20,
+          "text": "[Historical poster](assets/whoami-activity-poster.png) \u00b7 [Original MP4](assets/whoami-activity-demo.mp4) \u00b7 [Compatible version 1 recording](assets/whoami-activity-demo.recording.json)."
+        },
+        {
+          "line": 24,
+          "text": "Use Node **24.21.0 or later in Node 24** and npm **11**. The rebrand is currently available only on the local `brand/pibulo-rebrand` branch. The clone commands below identify the current repository; its remote retains published whoami until a separately authorized push."
+        },
+        {
+          "line": 27,
+          "text": "git clone https://github.com/talarurus/whoami.git"
+        },
+        {
+          "line": 28,
+          "text": "cd whoami"
+        }
+      ]
+    },
+    {
+      "path": "assets/pibulo-rebrand/preservation.json",
+      "category": "current validation evidence",
+      "matches": [
+        {
+          "line": 461,
+          "text": "      \"path\": \"assets/whoami-activity-demo.gif\","
+        },
+        {
+          "line": 465,
+          "text": "      \"path\": \"assets/whoami-activity-demo.mp4\","
+        },
+        {
+          "line": 469,
+          "text": "      \"path\": \"assets/whoami-activity-demo.recording.json\","
+        },
+        {
+          "line": 473,
+          "text": "      \"path\": \"assets/whoami-activity-poster.png\","
+        }
+      ]
+    },
+    {
+      "path": "assets/pibulo-rebrand/verification.json",
+      "category": "current validation evidence",
+      "matches": [
+        {
+          "line": 1138,
+          "text": "              \"revision\": \"whoami-mp4-grid-1\","
+        },
+        {
+          "line": 1776,
+          "text": "              \"revision\": \"whoami-mp4-grid-1\","
+        },
+        {
+          "line": 2467,
+          "text": "              \"revision\": \"whoami-mp4-grid-1\","
+        },
+        {
+          "line": 3105,
+          "text": "              \"revision\": \"whoami-mp4-grid-1\","
+        },
+        {
+          "line": 3808,
+          "text": "      \"consumer\": \"/Users/ammaarrehman/projects/talarurus/whoami/test-results/pibulo-consumer-1dPe2e\","
+        },
+        {
+          "line": 3874,
+          "text": "        \"historical whoami v1 recording round trip\","
+        }
+      ]
+    },
+    {
+      "path": "assets/visual-parity-v0.3.1/after/capture.json",
+      "category": "preserved historical release or evidence",
+      "matches": [
+        {
+          "line": 9,
+          "text": "      \"title\": \"whoami \u2014 a familiar face for every agent \u00b7 v0.3.0\""
+        },
+        {
+          "line": 15,
+          "text": "      \"title\": \"whoami editor \u00b7 v0.3.0\""
+        },
+        {
+          "line": 21,
+          "text": "      \"title\": \"whoami components \u00b7 v0.3.0\""
+        },
+        {
+          "line": 27,
+          "text": "      \"title\": \"whoami studio \u00b7 v0.3.0\""
+        },
+        {
+          "line": 33,
+          "text": "      \"title\": \"whoami studio \u00b7 v0.3.0\""
+        },
+        {
+          "line": 39,
+          "text": "      \"title\": \"whoami agent-scenes \u00b7 v0.3.0\""
+        },
+        {
+          "line": 45,
+          "text": "      \"title\": \"whoami docs \u00b7 v0.3.0\""
+        },
+        {
+          "line": 51,
+          "text": "      \"title\": \"whoami \u2014 a familiar face for every agent \u00b7 v0.3.0\""
+        },
+        {
+          "line": 57,
+          "text": "      \"title\": \"whoami editor \u00b7 v0.3.0\""
+        },
+        {
+          "line": 63,
+          "text": "      \"title\": \"whoami components \u00b7 v0.3.0\""
+        },
+        {
+          "line": 69,
+          "text": "      \"title\": \"whoami studio \u00b7 v0.3.0\""
+        },
+        {
+          "line": 75,
+          "text": "      \"title\": \"whoami studio \u00b7 v0.3.0\""
+        },
+        {
+          "line": 81,
+          "text": "      \"title\": \"whoami agent-scenes \u00b7 v0.3.0\""
+        },
+        {
+          "line": 87,
+          "text": "      \"title\": \"whoami docs \u00b7 v0.3.0\""
+        },
+        {
+          "line": 93,
+          "text": "      \"title\": \"whoami \u2014 a familiar face for every agent \u00b7 v0.3.0\""
+        },
+        {
+          "line": 99,
+          "text": "      \"title\": \"whoami editor \u00b7 v0.3.0\""
+        },
+        {
+          "line": 105,
+          "text": "      \"title\": \"whoami components \u00b7 v0.3.0\""
+        },
+        {
+          "line": 111,
+          "text": "      \"title\": \"whoami studio \u00b7 v0.3.0\""
+        },
+        {
+          "line": 117,
+          "text": "      \"title\": \"whoami studio \u00b7 v0.3.0\""
+        },
+        {
+          "line": 123,
+          "text": "      \"title\": \"whoami agent-scenes \u00b7 v0.3.0\""
+        },
+        {
+          "line": 129,
+          "text": "      \"title\": \"whoami docs \u00b7 v0.3.0\""
+        }
+      ]
+    },
+    {
+      "path": "assets/visual-parity-v0.3.1/before/capture.json",
+      "category": "preserved historical release or evidence",
+      "matches": [
+        {
+          "line": 9,
+          "text": "      \"title\": \"whoami \u2014 a familiar face for every agent \u00b7 v0.3.0\""
+        },
+        {
+          "line": 15,
+          "text": "      \"title\": \"whoami editor \u00b7 v0.3.0\""
+        },
+        {
+          "line": 21,
+          "text": "      \"title\": \"whoami components \u00b7 v0.3.0\""
+        },
+        {
+          "line": 27,
+          "text": "      \"title\": \"whoami studio \u00b7 v0.3.0\""
+        },
+        {
+          "line": 33,
+          "text": "      \"title\": \"whoami studio \u00b7 v0.3.0\""
+        },
+        {
+          "line": 39,
+          "text": "      \"title\": \"whoami agent-scenes \u00b7 v0.3.0\""
+        },
+        {
+          "line": 45,
+          "text": "      \"title\": \"whoami docs \u00b7 v0.3.0\""
+        },
+        {
+          "line": 51,
+          "text": "      \"title\": \"whoami \u2014 a familiar face for every agent \u00b7 v0.3.0\""
+        },
+        {
+          "line": 57,
+          "text": "      \"title\": \"whoami editor \u00b7 v0.3.0\""
+        },
+        {
+          "line": 63,
+          "text": "      \"title\": \"whoami components \u00b7 v0.3.0\""
+        },
+        {
+          "line": 69,
+          "text": "      \"title\": \"whoami studio \u00b7 v0.3.0\""
+        },
+        {
+          "line": 75,
+          "text": "      \"title\": \"whoami studio \u00b7 v0.3.0\""
+        },
+        {
+          "line": 81,
+          "text": "      \"title\": \"whoami agent-scenes \u00b7 v0.3.0\""
+        },
+        {
+          "line": 87,
+          "text": "      \"title\": \"whoami docs \u00b7 v0.3.0\""
+        },
+        {
+          "line": 93,
+          "text": "      \"title\": \"whoami \u2014 a familiar face for every agent \u00b7 v0.3.0\""
+        },
+        {
+          "line": 99,
+          "text": "      \"title\": \"whoami editor \u00b7 v0.3.0\""
+        },
+        {
+          "line": 105,
+          "text": "      \"title\": \"whoami components \u00b7 v0.3.0\""
+        },
+        {
+          "line": 111,
+          "text": "      \"title\": \"whoami studio \u00b7 v0.3.0\""
+        },
+        {
+          "line": 117,
+          "text": "      \"title\": \"whoami studio \u00b7 v0.3.0\""
+        },
+        {
+          "line": 123,
+          "text": "      \"title\": \"whoami agent-scenes \u00b7 v0.3.0\""
+        },
+        {
+          "line": 129,
+          "text": "      \"title\": \"whoami docs \u00b7 v0.3.0\""
+        }
+      ]
+    },
+    {
+      "path": "assets/visual-parity-v0.3.1/restored/capture.json",
+      "category": "preserved historical release or evidence",
+      "matches": [
+        {
+          "line": 9,
+          "text": "      \"title\": \"whoami \u2014 a familiar face for every agent \u00b7 v0.3.0\""
+        },
+        {
+          "line": 15,
+          "text": "      \"title\": \"whoami \u2014 a familiar face for every agent \u00b7 v0.3.0\""
+        },
+        {
+          "line": 21,
+          "text": "      \"title\": \"whoami \u2014 a familiar face for every agent \u00b7 v0.3.0\""
+        }
+      ]
+    },
+    {
+      "path": "assets/visual-parity-v0.3.1/restored/verification.json",
+      "category": "preserved historical release or evidence",
+      "matches": [
+        {
+          "line": 139,
+          "text": "    \"whoami-activity-demo.gif\": {"
+        },
+        {
+          "line": 144,
+          "text": "    \"whoami-activity-demo.mp4\": {"
+        },
+        {
+          "line": 149,
+          "text": "    \"whoami-activity-poster.png\": {"
+        },
+        {
+          "line": 154,
+          "text": "    \"whoami-activity-demo.recording.json\": {"
+        },
+        {
+          "line": 163,
+          "text": "        \"name\": \"whoami release branding, source-preserving labels and loaded Geist fonts\","
+        },
+        {
+          "line": 308,
+          "text": "        \"name\": \"All routes use whoami brand, nav works and scenes remain opt-in\","
+        }
+      ]
+    },
+    {
+      "path": "assets/visual-parity-v0.3.1/verification.json",
+      "category": "preserved historical release or evidence",
+      "matches": [
+        {
+          "line": 137,
+          "text": "            \"name\": \"whoami release branding, source-preserving labels and loaded Geist fonts\","
+        },
+        {
+          "line": 282,
+          "text": "            \"name\": \"All routes use whoami brand, nav works and scenes remain opt-in\","
+        },
+        {
+          "line": 497,
+          "text": "              \"revision\": \"whoami-mp4-grid-1\","
+        },
+        {
+          "line": 1135,
+          "text": "              \"revision\": \"whoami-mp4-grid-1\","
+        }
+      ]
+    },
+    {
+      "path": "assets/whoami-activity-demo.recording.json",
+      "category": "preserved historical release or evidence",
+      "matches": [
+        {
+          "line": 2,
+          "text": "  \"format\": \"whoami-recording\","
+        }
+      ]
+    },
+    {
+      "path": "docs/api.md",
+      "category": "explicit migration, history or compatibility documentation",
+      "matches": [
+        {
+          "line": 3,
+          "text": "Pibulo `0.3.2-dev.0` is an unreleased local rebrand of whoami v0.3.1."
+        },
+        {
+          "line": 141,
+          "text": "  \"format\": \"whoami-recording\","
+        }
+      ]
+    },
+    {
+      "path": "docs/migration-pibulo.md",
+      "category": "explicit migration, history or compatibility documentation",
+      "matches": [
+        {
+          "line": 1,
+          "text": "# whoami \u2192 pibulo"
+        },
+        {
+          "line": 9,
+          "text": "This owner-authorized local rebrand starts at whoami v0.3.1 commit"
+        },
+        {
+          "line": 16,
+          "text": "Replace `@talarurus/whoami` with `@talarurus/pibulo` in imports and dependency"
+        },
+        {
+          "line": 33,
+          "text": "There was **no public npm publication** of `@talarurus/whoami`."
+        },
+        {
+          "line": 40,
+          "text": "`whoami-recording`; motion revision `whoami-motion-1` and MP4 frame revision"
+        },
+        {
+          "line": 41,
+          "text": "`whoami-mp4-grid-1` remain unchanged. These are compatibility contracts, not current"
+        },
+        {
+          "line": 47,
+          "text": "share links, browser storage keys and the public `whoami-motion-cue` CSS class"
+        },
+        {
+          "line": 51,
+          "text": "`WHOAMI_*` names as fallbacks. New QA output defaults avoid historical media."
+        },
+        {
+          "line": 55,
+          "text": "The current remote and clone directory remain `talarurus/whoami` and `whoami`."
+        }
+      ]
+    },
+    {
+      "path": "docs/motion-api.md",
+      "category": "explicit migration, history or compatibility documentation",
+      "matches": [
+        {
+          "line": 3,
+          "text": "Available unchanged in the Pibulo 0.3.2-dev.0 source package; this API was introduced in whoami v0.3.0. See [migration](migration-pibulo.md)."
+        },
+        {
+          "line": 6,
+          "text": "(`whoami-motion-1`) and generated public types. `@talarurus/pibulo/motion/react`"
+        }
+      ]
+    },
+    {
+      "path": "docs/mp4-export.md",
+      "category": "explicit migration, history or compatibility documentation",
+      "matches": [
+        {
+          "line": 3,
+          "text": "Available unchanged in the Pibulo 0.3.2-dev.0 source package; this API was introduced in whoami v0.3.0. See [migration](migration-pibulo.md)."
+        }
+      ]
+    },
+    {
+      "path": "docs/mp4-frame-contract.md",
+      "category": "explicit migration, history or compatibility documentation",
+      "matches": [
+        {
+          "line": 1,
+          "text": "# MP4 frame contract \u00b7 whoami-mp4-grid-1"
+        }
+      ]
+    },
+    {
+      "path": "docs/provenance.md",
+      "category": "preserved provenance, notice or release boundary",
+      "matches": [
+        {
+          "line": 5,
+          "text": "whoami v0.1.0 extracts the existing preview at checkpoints c7c3b7fc565d7e0b112976fdf2378f725bd80043 and 5e0869f4d36d7892072bd683f65eb3f5800bdf82 into a standalone source tree. It preserves the previously approved Blobatar renderer and optional scenes. It does not migrate or modify original Blinkling generation data, packages, worktrees or history. The original v0.1.0 preparation used a private repository and draft release. The repository is now public; GitHub publication remains separately controlled. No npm publication or production deployment is included."
+        },
+        {
+          "line": 99,
+          "text": "Owner-authorized local development starts at published whoami v0.3.1 commit"
+        }
+      ]
+    },
+    {
+      "path": "docs/refinement-v0.2.0.md",
+      "category": "preserved historical release or evidence",
+      "matches": [
+        {
+          "line": 20,
+          "text": "The version 1 envelope contains `format: \"whoami-recording\"`, `version: 1`, `eventVersion: 1`, `initialState: \"idle\"`, pinned Blobatar `identity` revision/normalization, ordered `agents` and ordered accepted `events`. Exact agent IDs seed identity in raw mode; display names do not change the seed."
+        },
+        {
+          "line": 61,
+          "text": "| `WHOAMI_CONSUMER_OFFLINE=1 npm run test:consumer` | PASS; separate installed tarball, SVG/Face compatibility, activity/scene SSR, recording round trip, malformed JSON rejection, NodeNext TypeScript and application bundles |"
+        }
+      ]
+    },
+    {
+      "path": "docs/releases/preparation-v0.2.0.md",
+      "category": "preserved historical release or evidence",
+      "matches": [
+        {
+          "line": 1,
+          "text": "# whoami v0.2.0 release preparation"
+        },
+        {
+          "line": 7,
+          "text": "- Package and lock versions are `0.2.0`; name remains `@talarurus/whoami`. `whoami` remains a provisional product name."
+        },
+        {
+          "line": 8,
+          "text": "- `package.json` retains `private: true` specifically to prevent npm publication. This does not describe repository visibility: GitHub confirms `talarurus/whoami` is **public**."
+        },
+        {
+          "line": 21,
+          "text": "| Origin | `git@github-talarurus:talarurus/whoami.git` |"
+        },
+        {
+          "line": 27,
+          "text": "| Existing GitHub release | ID `412094234`, tag `v0.1.0`, title `whoami v0.1.0`, draft=true, prerelease=false, target=main, assets=0 |"
+        },
+        {
+          "line": 43,
+          "text": "| `WHOAMI_CONSUMER_OFFLINE=1 npm run test:consumer` | PASS; separate `talarurus-whoami-0.2.0.tgz` install, ESM SVG/Face/activity/scenes, recording round trip/rejection, SSR, NodeNext TypeScript and browser application bundles |"
+        },
+        {
+          "line": 70,
+          "text": "git tag -a v0.2.0 \"$RELEASE_COMMIT\" -m \"whoami v0.2.0 source release\""
+        }
+      ]
+    },
+    {
+      "path": "docs/releases/preparation-v0.3.0.md",
+      "category": "preserved historical release or evidence",
+      "matches": [
+        {
+          "line": 1,
+          "text": "# whoami v0.3.0 final release preparation"
+        },
+        {
+          "line": 34,
+          "text": "| Origin | `git@github-talarurus:talarurus/whoami.git` |"
+        },
+        {
+          "line": 91,
+          "text": "during preparation. Core commands, with WHOAMI_RELEASE_COMMIT fixed to that hash:"
+        },
+        {
+          "line": 94,
+          "text": "git push origin \"$WHOAMI_RELEASE_COMMIT:refs/heads/develop/v0.3.0\""
+        },
+        {
+          "line": 96,
+          "text": "git merge --ff-only \"$WHOAMI_RELEASE_COMMIT\""
+        },
+        {
+          "line": 97,
+          "text": "git push origin \"$WHOAMI_RELEASE_COMMIT:refs/heads/main\""
+        },
+        {
+          "line": 98,
+          "text": "git tag -a v0.3.0 \"$WHOAMI_RELEASE_COMMIT\" -m \"whoami v0.3.0 source release\""
+        },
+        {
+          "line": 100,
+          "text": "gh release create v0.3.0 --repo talarurus/whoami --verify-tag \\"
+        },
+        {
+          "line": 101,
+          "text": "  --target \"$WHOAMI_RELEASE_COMMIT\" --title \"whoami v0.3.0\" \\"
+        }
+      ]
+    },
+    {
+      "path": "docs/releases/preparation-v0.3.1.md",
+      "category": "preserved historical release or evidence",
+      "matches": [
+        {
+          "line": 1,
+          "text": "# whoami v0.3.1 release preparation"
+        },
+        {
+          "line": 38,
+          "text": "| Origin | `git@github-talarurus:talarurus/whoami.git` |"
+        },
+        {
+          "line": 103,
+          "text": "5. Run `gh release create v0.3.1 --repo talarurus/whoami --verify-tag`, with"
+        },
+        {
+          "line": 104,
+          "text": "   `--target` pinned to the release hash, `--title \"whoami v0.3.1\"`,"
+        }
+      ]
+    },
+    {
+      "path": "docs/releases/v0.1.0.md",
+      "category": "preserved historical release or evidence",
+      "matches": [
+        {
+          "line": 1,
+          "text": "whoami v0.1.0 is the first independently buildable GitHub source release. The repository is now public. No package is published to npm and no production website is deployed. This release uses the unchanged original v0.1.0 tag and source."
+        },
+        {
+          "line": 15,
+          "text": "git clone https://github.com/talarurus/whoami.git"
+        },
+        {
+          "line": 16,
+          "text": "cd whoami"
+        },
+        {
+          "line": 23,
+          "text": "After `npm run build`, run `npm run example:react` for http://localhost:4319. `npm pack` creates `talarurus-whoami-0.1.0.tgz`; install that local tarball in a separate application to import `@talarurus/whoami` or `@talarurus/whoami/react`. The package name is not a registry-installation instruction."
+        }
+      ]
+    },
+    {
+      "path": "docs/releases/v0.2.0.md",
+      "category": "preserved historical release or evidence",
+      "matches": [
+        {
+          "line": 1,
+          "text": "whoami v0.2.0 adds caller-driven agent activity to the existing deterministic SVG identity toolkit. A stable agent ID keeps its familiar face while structured events change its activity and expression. `whoami` remains a provisional product name; the package remains `@talarurus/whoami`."
+        },
+        {
+          "line": 3,
+          "text": "## New in whoami"
+        },
+        {
+          "line": 21,
+          "text": "git clone https://github.com/talarurus/whoami.git"
+        },
+        {
+          "line": 22,
+          "text": "cd whoami"
+        },
+        {
+          "line": 29,
+          "text": "`npm run build` produces the ESM package and declarations. `npm pack` creates `talarurus-whoami-0.2.0.tgz` for local installation in another application. This is **not** an npm registry installation instruction; package.json keeps `private: true` to prevent npm publication."
+        },
+        {
+          "line": 31,
+          "text": "Public entries: `@talarurus/whoami`, `/react`, `/activity`, `/activity/react`, `/recording` and optional `/scenes`, with CSS entries documented in `docs/api.md`. React 19.2 is optional for static SVG/engine/recording users and a peer for React integration."
+        }
+      ]
+    },
+    {
+      "path": "docs/releases/v0.3.0.md",
+      "category": "preserved historical release or evidence",
+      "matches": [
+        {
+          "line": 1,
+          "text": "whoami v0.3.0 adds recorded motion and local browser MP4 export to the existing agent identity toolkit. Stable IDs keep their original Blobatar faces while caller-provided lifecycle recordings drive expressions. The owner approved desktop Studio, mobile Studio and an actual 512\u00d7512 exported MP4. `whoami` and `@talarurus/whoami` retain their names."
+        },
+        {
+          "line": 3,
+          "text": "## Added by whoami"
+        },
+        {
+          "line": 5,
+          "text": "- **Recorded-motion API:** optional framework-neutral `@talarurus/whoami/motion` compiles complete version 1 JSON recordings with an explicit millisecond origin and resolved visual policy into immutable per-agent tracks. Arbitrary timestamp sampling supports seeking, replay and independent simultaneous agents. Original event order remains authoritative, including timestamp ties; interrupted transitions preserve position, not velocity. The existing activity engine and recording system are reused."
+        },
+        {
+          "line": 41,
+          "text": "git clone https://github.com/talarurus/whoami.git"
+        },
+        {
+          "line": 42,
+          "text": "cd whoami"
+        },
+        {
+          "line": 49,
+          "text": "`npm run build` produces ESM/declarations. `npm pack` creates `talarurus-whoami-0.3.0.tgz` for local installation in another application. This is not an npm registry installation instruction; `private:true` prevents npm publication. React 19.2 remains optional except for React integrations. See `docs/api.md`, `docs/motion-api.md`, `docs/mp4-export.md` and the typed examples."
+        }
+      ]
+    },
+    {
+      "path": "docs/releases/v0.3.1.md",
+      "category": "preserved historical release or evidence",
+      "matches": [
+        {
+          "line": 1,
+          "text": "whoami v0.3.1 refines the website and editor around the existing deterministic agent identity toolkit. The restored homepage design has owner approval at 1440px, 390px and 320px. This is a GitHub source release: `whoami` and `@talarurus/whoami` retain their names, and npm publication remains disabled."
+        },
+        {
+          "line": 5,
+          "text": "- The homepage preserves the large whoami wordmark, two-column desktop composition, unframed interactive avatar, generous whitespace and local installation/live code example. Mobile follows a simple vertical layout. Optional expression thumbnails and identity shortcuts remain available behind disclosures."
+        },
+        {
+          "line": 15,
+          "text": "Installation uses a locally built `talarurus-whoami-0.3.1.tgz`. The website and its SVG endpoint bind to loopback; this release does not provide a hosted API or deployed website. Agent activity is simulated or supplied by callers, not automatic agent monitoring or an approval backend. Optional companion scenes remain experimental."
+        }
+      ]
+    },
+    {
+      "path": "docs/reviews/homepage-restoration-v0.3.1.md",
+      "category": "preserved historical release or evidence",
+      "matches": [
+        {
+          "line": 17,
+          "text": "large whoami wordmark, generous space, unframed interactive avatar on the left,"
+        }
+      ]
+    },
+    {
+      "path": "docs/reviews/pibulo-rebrand.md",
+      "category": "explicit migration, history or compatibility documentation",
+      "matches": [
+        {
+          "line": 3,
+          "text": "Branch: `brand/pibulo-rebrand`. Baseline: published whoami v0.3.1 commit"
+        },
+        {
+          "line": 19,
+          "text": "URL and clone directory stay `talarurus/whoami` and `whoami` pending separate"
+        },
+        {
+          "line": 61,
+          "text": "| Historical recording consumer probe | PASS, unchanged whoami v1 recording imports and re-exports with identical JSON data |"
+        },
+        {
+          "line": 90,
+          "text": "## Remaining whoami references"
+        },
+        {
+          "line": 92,
+          "text": "The [reference audit](../../assets/pibulo-rebrand/whoami-audit.json) inventories"
+        },
+        {
+          "line": 101,
+          "text": "- Compatibility literals `whoami-recording`, `whoami-motion-1`,"
+        },
+        {
+          "line": 102,
+          "text": "  `whoami-mp4-grid-1` and `whoami-motion-cue`, including their current documentation,"
+        },
+        {
+          "line": 106,
+          "text": "- Legacy `WHOAMI_*` QA environment aliases; new `PIBULO_*` variables take priority."
+        }
+      ]
+    },
+    {
+      "path": "docs/reviews/visual-parity-v0.3.1.md",
+      "category": "preserved historical release or evidence",
+      "matches": [
+        {
+          "line": 63,
+          "text": "keeping whoami's dark identity. Owner feedback subsequently restored the original"
+        },
+        {
+          "line": 73,
+          "text": "upstream routes; whoami's playback was exercised separately."
+        },
+        {
+          "line": 105,
+          "text": "| npm distribution, hosted SVG API, shadcn registry, extra framework/native SDKs | Intentionally excluded | Upstream offers distribution/service paths; whoami remains source-only with a loopback endpoint and no new SDK work. |"
+        },
+        {
+          "line": 121,
+          "text": "- [GIF](../../assets/whoami-activity-demo.gif),"
+        },
+        {
+          "line": 122,
+          "text": "  [poster](../../assets/whoami-activity-poster.png),"
+        },
+        {
+          "line": 123,
+          "text": "  [original MP4](../../assets/whoami-activity-demo.mp4),"
+        },
+        {
+          "line": 124,
+          "text": "  [recording JSON](../../assets/whoami-activity-demo.recording.json)."
+        }
+      ]
+    },
+    {
+      "path": "docs/validation.md",
+      "category": "preserved historical release or evidence",
+      "matches": [
+        {
+          "line": 34,
+          "text": "Limitations: Chrome desktop and emulated mobile viewports only; no physical devices, Safari/Firefox matrix, screen-reader certification or independent acceptance review. PNG is static/browser-only. Composition examples are checked-in source, not exported SDK components. Scenes remain manual and experimental, with no monitoring, session/approval system, agent integration, export or packaged scene API. The loopback server has no hot reload and is not a production hosting service. This record concerns the standalone whoami release, not qualification of the original Blinkling packages."
+        }
+      ]
+    },
+    {
+      "path": "package.json",
+      "category": "actual current repository location and checkout",
+      "matches": [
+        {
+          "line": 10,
+          "text": "    \"url\": \"https://github.com/talarurus/whoami.git\""
+        }
+      ]
+    },
+    {
+      "path": "scripts/check-consumer-browser.mjs",
+      "category": "legacy QA environment fallback",
+      "matches": [
+        {
+          "line": 4,
+          "text": "const out=(process.env.PIBULO_CONSUMER_ARTIFACTS||process.env.WHOAMI_CONSUMER_ARTIFACTS)||'/tmp/pibulo-consumer-browser';mkdirSync(out,{recursive:true});"
+        }
+      ]
+    },
+    {
+      "path": "scripts/check-consumer.mjs",
+      "category": "legacy QA environment fallback and historical recording compatibility test",
+      "matches": [
+        {
+          "line": 14,
+          "text": "run('npm',['install','--ignore-scripts','--no-audit','--no-fund',...((process.env.PIBULO_CONSUMER_OFFLINE||process.env.WHOAMI_CONSUMER_OFFLINE)?['--offline']:[])]);"
+        },
+        {
+          "line": 16,
+          "text": "const legacyRecording=readFileSync('assets/whoami-activity-demo.recording.json','utf8');"
+        },
+        {
+          "line": 44,
+          "text": "assert.equal(legacy.recording.format,'whoami-recording');"
+        },
+        {
+          "line": 46,
+          "text": "console.log('Separate installed tarball: historical whoami v1 recording imports and re-exports unchanged.');"
+        },
+        {
+          "line": 75,
+          "text": "writeFileSync(join(out,'result.json'),JSON.stringify({consumer:out,package:packed.filename,sha512:packed.integrity,files:packed.files.map(f=>f.path),checks:['installed separate tarball','historical whoami v1 recording round trip','stable SVG hash/identity','React SSR','TypeScript declarations','browser application bundle']},null,2));"
+        }
+      ]
+    },
+    {
+      "path": "scripts/check-release.mjs",
+      "category": "actual current repository location and checkout",
+      "matches": [
+        {
+          "line": 5,
+          "text": "assert.equal(pkg.name,'@talarurus/pibulo');assert.equal(lock.name,pkg.name);assert.equal(lock.packages[''].name,pkg.name);assert.equal(pkg.version,'0.3.2-dev.0');assert.equal(lock.version,pkg.version);assert.equal(lock.packages[''].version,pkg.version);assert.equal(pkg.private,true);assert.equal(pkg.repository.url,'https://github.com/talarurus/whoami.git');"
+        }
+      ]
+    },
+    {
+      "path": "src/motion-react.tsx",
+      "category": "stable wire format, revision or CSS contract",
+      "matches": [
+        {
+          "line": 38,
+          "text": "    {(agent.state === 'thinking' || agent.state === 'working') && <small className=\"whoami-motion-cue\">{agent.state === 'thinking' ? '\u00b7\u00b7\u00b7 Planning' : '\u2197 Executing task'}</small>}"
+        }
+      ]
+    },
+    {
+      "path": "src/motion.ts",
+      "category": "stable wire format, revision or CSS contract",
+      "matches": [
+        {
+          "line": 12,
+          "text": "export const MOTION_REVISION = 'whoami-motion-1' as const;"
+        }
+      ]
+    },
+    {
+      "path": "src/mp4-plan.ts",
+      "category": "stable wire format, revision or CSS contract",
+      "matches": [
+        {
+          "line": 17,
+          "text": "  readonly revision: 'whoami-mp4-grid-1';"
+        },
+        {
+          "line": 29,
+          "text": "  if (!motion || motion.revision !== 'whoami-motion-1') throw new MP4ExportError('invalid-options', 'Use a compiled Pibulo motion recording.');"
+        },
+        {
+          "line": 46,
+          "text": "  return Object.freeze({revision:'whoami-mp4-grid-1',width,height,background:background.toLowerCase(),agentIds:Object.freeze([...agentIds]),reducedMotion,fps:30,frameCount,durationMs:frameCount * 1000 / 30});"
+        }
+      ]
+    },
+    {
+      "path": "src/recording.ts",
+      "category": "stable wire format, revision or CSS contract",
+      "matches": [
+        {
+          "line": 10,
+          "text": "  readonly format: 'whoami-recording';"
+        },
+        {
+          "line": 44,
+          "text": "  if (data.format !== 'whoami-recording' || data.version !== RECORDING_VERSION || data.eventVersion !== EVENT_VERSION)"
+        },
+        {
+          "line": 76,
+          "text": "  const recording: ActivityRecording = Object.freeze({format: 'whoami-recording', version: RECORDING_VERSION,"
+        },
+        {
+          "line": 101,
+          "text": "      {format: 'whoami-recording', version: RECORDING_VERSION, eventVersion: EVENT_VERSION,"
+        }
+      ]
+    },
+    {
+      "path": "website/preview/public/visual-parity.css",
+      "category": "stable wire format, revision or CSS contract",
+      "matches": [
+        {
+          "line": 44,
+          "text": ".preview-agent .whoami-motion-cue{display:none}"
+        }
+      ]
+    },
+    {
+      "path": "website/preview/reference-manifest.json",
+      "category": "preserved provenance, notice or release boundary",
+      "matches": [
+        {
+          "line": 55,
+          "text": "      \"destination\": \"website/preview/src/editor/snippet.mjs (adapted emitter for whoami source package)\""
+        }
+      ]
+    },
+    {
+      "path": "website/preview/src/Pages.jsx",
+      "category": "actual current repository location and checkout",
+      "matches": [
+        {
+          "line": 10,
+          "text": "<section id=\"quick-start\"><h2>Quick start</h2><p>Clone the current Talarurus repository, still hosted at talarurus/whoami; the local product is now pibulo. Use the local brand/pibulo-rebrand branch for Pibulo; the remote retains published whoami until an authorized push. No GitHub account is needed. Use Node 24.21 or later in the Node 24 series and npm 11. Install the locked dependencies, then start the website. Stop with Ctrl-C.</p><Code text={'git clone https://github.com/talarurus/whoami.git\\ncd whoami\\nnpm ci\\nnpm start\\n# http://localhost:4318'} label=\"Copy quick start\"/><p>Start in <a href=\"/studio\">Studio</a> for activity and recording replay. The editor is at <a href=\"/editor\">/editor</a>, examples at <a href=\"/components\">/components</a>, and the optional experiment at <a href=\"/agent-scenes\">/agent-scenes</a>. PORT selects another local port. Restart after code changes; there is no hot reload.</p></section>"
+        }
+      ]
+    },
+    {
+      "path": "website/preview/src/adapter.mjs",
+      "category": "preserved provenance, notice or release boundary",
+      "matches": [
+        {
+          "line": 1,
+          "text": "/*! whoami adapter around unmodified MIT Blobatar source. Copyright (c) 2026 Alain for upstream rendering; full notice in ../vendor/blobatar/LICENSE. */"
+        }
+      ]
+    },
+    {
+      "path": "website/preview/src/studio.css",
+      "category": "stable wire format, revision or CSS contract",
+      "matches": [
+        {
+          "line": 15,
+          "text": ".studio-motion-avatar{min-height:240px;justify-content:center}.whoami-motion-cue{font:9px 'Geist Mono',monospace;color:#b7becc;margin:4px 0 14px;min-height:14px}.studio-motion-avatar>span[aria-hidden]{display:block}"
+        },
+        {
+          "line": 17,
+          "text": "@media(max-width:700px){.studio-view-switch{flex-wrap:wrap;margin-top:18px}.studio-view-switch>span{flex-basis:100%;margin:5px 0 0}.studio-motion-panel{padding:15px;margin-top:12px}.studio-motion-heading{flex-direction:column;gap:0}.studio-motion-time{margin-bottom:14px}.studio-motion-actions label{margin-left:0}.studio-motion-actions input,.studio-motion-actions select{min-height:44px}.studio-motion-avatar{min-height:106px}.whoami-motion-cue{font-size:8px;letter-spacing:-.2px;margin:2px 0 8px;white-space:normal;text-align:center}}"
+        }
+      ]
+    },
+    {
+      "path": "website/preview/tests/motion-browser.mjs",
+      "category": "legacy QA environment fallback",
+      "matches": [
+        {
+          "line": 13,
+          "text": "const shots = (process.env.PIBULO_MOTION_SCREENSHOTS||process.env.WHOAMI_MOTION_SCREENSHOTS) ? new URL((process.env.PIBULO_MOTION_SCREENSHOTS||process.env.WHOAMI_MOTION_SCREENSHOTS), 'file://'+process.cwd()+'/') : new URL('../../../test-results/pibulo-media/', import.meta.url);"
+        }
+      ]
+    },
+    {
+      "path": "website/preview/tests/mp4-browser.mjs",
+      "category": "legacy QA environment fallback",
+      "matches": [
+        {
+          "line": 7,
+          "text": "const output=new URL('../../../test-results/mp4/',import.meta.url),assets=new URL((process.env.PIBULO_MEDIA_DIR||process.env.WHOAMI_MEDIA_DIR)||'../../../test-results/pibulo-media/',import.meta.url);"
+        }
+      ]
+    },
+    {
+      "path": "website/preview/tests/polish-browser.mjs",
+      "category": "legacy QA environment fallback",
+      "matches": [
+        {
+          "line": 2,
+          "text": "const require=createRequire(import.meta.url),{chromium}=require('playwright'),BASE=process.env.PREVIEW_URL||'http://localhost:4318',out=(process.env.PIBULO_ARTIFACTS||process.env.WHOAMI_ARTIFACTS)||mkdtempSync(join(tmpdir(),'pibulo-polish-'));"
+        }
+      ]
+    },
+    {
+      "path": "website/preview/tests/refinement-browser.mjs",
+      "category": "legacy QA environment fallback",
+      "matches": [
+        {
+          "line": 7,
+          "text": "const mode=process.argv.includes('--before')?'before':'after',out=(process.env.PIBULO_REFINEMENT_ARTIFACTS||process.env.WHOAMI_REFINEMENT_ARTIFACTS)||mkdtempSync(join(tmpdir(),'pibulo-refinement-'));"
+        }
+      ]
+    },
+    {
+      "path": "website/preview/tests/studio-browser.mjs",
+      "category": "legacy QA environment fallback",
+      "matches": [
+        {
+          "line": 6,
+          "text": "const base=process.env.PREVIEW_URL||'http://localhost:4318', out=(process.env.PIBULO_STUDIO_ARTIFACTS||process.env.WHOAMI_STUDIO_ARTIFACTS)||'/tmp/pibulo-v020-studio';"
+        },
+        {
+          "line": 7,
+          "text": "const assets=(process.env.PIBULO_MEDIA_DIR||process.env.WHOAMI_MEDIA_DIR)||'test-results/pibulo-media';"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,79 @@
+{
+  "mode": "rebrand",
+  "browser": "155.0.8059.80",
+  "pages": [
+    {
+      "name": "home",
+      "width": 1440,
+      "overflow": false,
+      "title": "pibulo — Little faces. Big personalities. · v0.3.2-dev.0"
+    },
+    {
+      "name": "editor",
+      "width": 1440,
+      "overflow": false,
+      "title": "pibulo editor · v0.3.2-dev.0"
+    },
+    {
+      "name": "studio-activity",
+      "width": 1440,
+      "overflow": false,
+      "title": "pibulo studio · v0.3.2-dev.0"
+    },
+    {
+      "name": "studio-motion",
+      "width": 1440,
+      "overflow": false,
+      "title": "pibulo studio · v0.3.2-dev.0"
+    },
+    {
+      "name": "home",
+      "width": 390,
+      "overflow": false,
+      "title": "pibulo — Little faces. Big personalities. · v0.3.2-dev.0"
+    },
+    {
+      "name": "editor",
+      "width": 390,
+      "overflow": false,
+      "title": "pibulo editor · v0.3.2-dev.0"
+    },
+    {
+      "name": "studio-activity",
+      "width": 390,
+      "overflow": false,
+      "title": "pibulo studio · v0.3.2-dev.0"
+    },
+    {
+      "name": "studio-motion",
+      "width": 390,
+      "overflow": false,
+      "title": "pibulo studio · v0.3.2-dev.0"
+    },
+    {
+      "name": "home",
+      "width": 320,
+      "overflow": false,
+      "title": "pibulo — Little faces. Big personalities. · v0.3.2-dev.0"
+    },
+    {
+      "name": "editor",
+      "width": 320,
+      "overflow": false,
+      "title": "pibulo editor · v0.3.2-dev.0"
+    },
+    {
+      "name": "studio-activity",
+      "width": 320,
+      "overflow": false,
+      "title": "pibulo studio · v0.3.2-dev.0"
+    },
+    {
+      "name": "studio-motion",
+      "width": 320,
+      "overflow": false,
+      "title": "pibulo studio · v0.3.2-dev.0"
+    }
+  ],
+  "errors": []
+}

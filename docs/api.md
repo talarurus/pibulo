@@ -1,11 +1,11 @@
 # API and integration
 
-v0.3.1 refines website presentation and editor customization; it adds no public API.
-Package metadata is `0.3.1`. The recorded-motion and browser MP4 entries introduced
-in v0.3.0, and historical v0.2.0 interfaces, remain compatible.
-This is a source distribution; npm publication remains disabled.
+Pibulo `0.3.2-dev.0` is an unreleased local rebrand of whoami v0.3.1.
+Public APIs and deterministic identities are unchanged; package imports now use
+`@talarurus/pibulo`. This is a source distribution; npm publication remains disabled.
+See [migration and compatibility](migration-pibulo.md).
 
-Install the locally built tarball as shown in the README. The root ESM entry is `@talarurus/whoami`; React is `@talarurus/whoami/react`. Node 24 and React 19.2 are the tested versions. CommonJS is not included.
+Install the locally built tarball as shown in the README. The root ESM entry is `@talarurus/pibulo`; React is `@talarurus/pibulo/react`. Node 24 and React 19.2 are the tested versions. CommonJS is not included.
 
 `svgFor(config?, size=512, {decorative=false, label}?)` returns static SVG. Sizes are integers 24..4096. `name` defaults to atlas. Informative SVG includes a title derived from name or label; decorative SVG omits it. Insert only the SVG returned by this renderer, never arbitrary untrusted markup.
 
@@ -29,11 +29,11 @@ The existing root SVG and `/react` Face exports above remain unchanged. New ESM 
 
 | Entry | Exports |
 | --- | --- |
-| `@talarurus/whoami/activity` | `createActivityEngine`, `replayActivity`, `validateActivityEvent`, `EVENT_VERSION`, `EVENT_STATES`, `ACTIVITY_LABELS`; generated public types |
-| `@talarurus/whoami/activity/react` | `AgentAvatar`, `useAgentActivity`; `AgentAvatarProps` |
-| `@talarurus/whoami/recording` | `serializeRecording`, `parseRecording`, `RECORDING_VERSION`, `RECORDING_IDENTITY`, `RECORDING_LIMITS`; generated recording types |
-| `@talarurus/whoami/scenes` | `AgentScene` |
-| `@talarurus/whoami/scenes.css` | Optional upstream scene transitions and reduced-motion rules |
+| `@talarurus/pibulo/activity` | `createActivityEngine`, `replayActivity`, `validateActivityEvent`, `EVENT_VERSION`, `EVENT_STATES`, `ACTIVITY_LABELS`; generated public types |
+| `@talarurus/pibulo/activity/react` | `AgentAvatar`, `useAgentActivity`; `AgentAvatarProps` |
+| `@talarurus/pibulo/recording` | `serializeRecording`, `parseRecording`, `RECORDING_VERSION`, `RECORDING_IDENTITY`, `RECORDING_LIMITS`; generated recording types |
+| `@talarurus/pibulo/scenes` | `AgentScene` |
+| `@talarurus/pibulo/scenes.css` | Optional upstream scene transitions and reduced-motion rules |
 
 The activity engine is framework-neutral and contains no renderer, React, network or wall clock. Register agent definitions `{id, name?}` with `createActivityEngine({agents, historyLimit: 100})`. IDs are exact case-sensitive, well-formed strings of 1..128 UTF-16 units without controls. Names have the same bounds and default to ID. Unique IDs are required; invalid definitions/limits throw TypeError/RangeError. History limits are integers 1..10000. The registered set is fixed; create another engine for a different roster.
 
@@ -42,7 +42,7 @@ The activity engine is framework-neutral and contains no renderer, React, networ
 ### Version 1 event schema
 
 ```ts
-import type { ActivityEvent } from '@talarurus/whoami/activity';
+import type { ActivityEvent } from '@talarurus/pibulo/activity';
 
 const event: ActivityEvent = {
   version: 1,
@@ -85,7 +85,7 @@ Every event requires version, type, agentId, sequence and timestamp. Task events
 `getHistory()` returns an immutable tail of **accepted** events in dispatch order, bounded globally across the roster. It is not necessarily a replayable recording after eviction. Retain the complete input sequence separately when persistence/replay is needed. There are no implicit checkpoints or durable storage.
 
 ```ts
-import { replayActivity } from '@talarurus/whoami/activity';
+import { replayActivity } from '@talarurus/pibulo/activity';
 const {engine, results} = replayActivity({agents: [{id: 'atlas'}]}, recording);
 // Same starting definitions + ordered recording = same snapshots and results.
 // Invalid/stale records yield the same rejections; inspect results[].ok.
@@ -96,11 +96,11 @@ Replay creates a fresh engine and dispatches the supplied sequence in original o
 ### React activity rendering
 
 ```tsx
-import {createActivityEngine} from '@talarurus/whoami/activity';
-import {AgentAvatar} from '@talarurus/whoami/activity/react';
-import '@talarurus/whoami/motion.css';
-import '@talarurus/whoami/gaze.css';
-import '@talarurus/whoami/react.css';
+import {createActivityEngine} from '@talarurus/pibulo/activity';
+import {AgentAvatar} from '@talarurus/pibulo/activity/react';
+import '@talarurus/pibulo/motion.css';
+import '@talarurus/pibulo/gaze.css';
+import '@talarurus/pibulo/react.css';
 const engine = createActivityEngine({agents: [{id:'atlas', name:'Atlas'}]});
 export function Agent() {
   return <AgentAvatar engine={engine} agentId="atlas" size={96} motion="always"/>;
@@ -115,10 +115,10 @@ Both provide an accessible visible text status (`Name · State`) with polite, at
 
 ## JSON activity recordings · version 1
 
-`@talarurus/whoami/recording` is framework-neutral and bundles only the activity engine. It does not load React, the renderer or optional scenes. Recordings start from idle and preserve agent registration order, exact IDs/display names, accepted event order, the event version and pinned visual identity contract. No snapshots or unchecked engine hydration are imported.
+`@talarurus/pibulo/recording` is framework-neutral and bundles only the activity engine. It does not load React, the renderer or optional scenes. Recordings start from idle and preserve agent registration order, exact IDs/display names, accepted event order, the event version and pinned visual identity contract. No snapshots or unchecked engine hydration are imported.
 
 ```ts
-import {serializeRecording, parseRecording} from '@talarurus/whoami/recording';
+import {serializeRecording, parseRecording} from '@talarurus/pibulo/recording';
 
 const exported = serializeRecording({
   agents: [{id: 'atlas', name: 'Atlas'}],

@@ -1,4 +1,4 @@
-import {createActivityEngine, type ActivityEvent, type ActivityState} from '@talarurus/whoami/activity';
+import {createActivityEngine, type ActivityEvent, type ActivityState} from '@talarurus/pibulo/activity';
 
 const event: ActivityEvent = {
   version: 1, type: 'task.started', agentId: 'agent-001', taskId: 'task-001', sequence: 1, timestamp: 0,

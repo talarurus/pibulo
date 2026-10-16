@@ -1,6 +1,6 @@
-import {serializeRecording} from '@talarurus/whoami/recording';
-import {compileMotionRecording} from '@talarurus/whoami/motion';
-import type {ActivityEvent} from '@talarurus/whoami/activity';
+import {serializeRecording} from '@talarurus/pibulo/recording';
+import {compileMotionRecording} from '@talarurus/pibulo/motion';
+import type {ActivityEvent} from '@talarurus/pibulo/activity';
 
 // One recording for the homepage and README media. Existing raw identities only.
 export const demoAgents = [{id:'atlas',name:'Atlas'},{id:'mira',name:'Mira'},{id:'cedar',name:'Cedar'}];

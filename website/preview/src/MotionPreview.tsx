@@ -1,5 +1,5 @@
 import React,{useEffect,useRef} from 'react';
-import {RecordedAgentAvatar,useMotionReducedPreference} from '@talarurus/whoami/motion/react';
+import {RecordedAgentAvatar,useMotionReducedPreference} from '@talarurus/pibulo/motion/react';
 import {useMotionPlayback} from './useMotionPlayback';
 import {demoAgents,demoMotion,demoDuration,demoSteps} from './demo-recording';
 

@@ -1,6 +1,6 @@
 # MP4 frame contract · whoami-mp4-grid-1
 
-Implemented by the optional `@talarurus/whoami/export/mp4` entry, consuming
+Implemented by the optional `@talarurus/pibulo/export/mp4` entry, consuming
 unchanged `CompiledMotion.sample`/`svgFor`. It never captures Studio DOM, advances
 a live engine, uses rAF or records the screen.
 

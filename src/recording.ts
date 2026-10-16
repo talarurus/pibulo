@@ -86,7 +86,7 @@ export function parseRecording(json: string, options: RecordingLimits = {}): Rec
     if (typeof json !== 'string') return fail('invalid-recording', 'Expected recording JSON text.');
     if (json.length > limits.maxBytes || new TextEncoder().encode(json).byteLength > limits.maxBytes) return fail('recording-limit', `Recording exceeds ${limits.maxBytes} UTF-8 bytes.`);
     let payload: unknown;
-    try { payload = JSON.parse(json); } catch { return fail('invalid-recording', 'Could not parse recording JSON. Choose a valid whoami recording file.'); }
+    try { payload = JSON.parse(json); } catch { return fail('invalid-recording', 'Could not parse recording JSON. Choose a valid Pibulo recording file.'); }
     return validatePayload(payload, limits);
   } catch { return fail('invalid-recording', 'Recording could not be read.'); }
 }

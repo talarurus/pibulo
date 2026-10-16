@@ -1,12 +1,12 @@
 import React from 'react';
 import {createRoot} from 'react-dom/client';
-import {createActivityEngine, replayActivity, type ActivityEvent} from '@talarurus/whoami/activity';
-import {AgentAvatar} from '@talarurus/whoami/activity/react';
-import {AgentScene} from '@talarurus/whoami/scenes';
-import '@talarurus/whoami/motion.css';
-import '@talarurus/whoami/gaze.css';
-import '@talarurus/whoami/react.css';
-import '@talarurus/whoami/scenes.css';
+import {createActivityEngine, replayActivity, type ActivityEvent} from '@talarurus/pibulo/activity';
+import {AgentAvatar} from '@talarurus/pibulo/activity/react';
+import {AgentScene} from '@talarurus/pibulo/scenes';
+import '@talarurus/pibulo/motion.css';
+import '@talarurus/pibulo/gaze.css';
+import '@talarurus/pibulo/react.css';
+import '@talarurus/pibulo/scenes.css';
 
 const agents = [{id: 'example-agent', name: 'Example agent'}];
 const recording: readonly ActivityEvent[] = [
@@ -29,7 +29,7 @@ function Example() {
     if (!result.ok) console.error(result.code, result.error);
   }
   return <main style={{maxWidth: 600, margin: 'auto', padding: 16}}>
-    <h1>whoami activity example</h1><p>Simulated caller events.</p>
+    <h1>pibulo activity example</h1><p>Simulated caller events.</p>
     <div><AgentAvatar engine={engine} agentId="example-agent" size={96}/></div>
     <div><AgentScene engine={engine} agentId="example-agent" size={240} motion="always"/></div>
     <button type="button" onClick={complete}>Complete task</button>

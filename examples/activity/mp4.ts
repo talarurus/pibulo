@@ -1,5 +1,5 @@
-import {compileMotionRecording} from '@talarurus/whoami/motion';
-import {checkMP4Support, exportMP4, MP4ExportError} from '@talarurus/whoami/export/mp4';
+import {compileMotionRecording} from '@talarurus/pibulo/motion';
+import {checkMP4Support, exportMP4, MP4ExportError} from '@talarurus/pibulo/export/mp4';
 
 /** Call from an explicit browser UI action. The host owns the download URL. */
 export async function makeVideo(recordingJSON:string, signal:AbortSignal):Promise<Blob> {

@@ -1,4 +1,4 @@
-/* whoami visual pass. Website presentation only; renderer styles stay pinned. */
+/* pibulo visual pass. Website presentation only; renderer styles stay pinned. */
 :root{--muted:#a2a2ad;--accent:#c2d9b6;--line:#2b2b31}
 .nav{padding-top:24px;padding-bottom:24px}.nav nav{gap:24px}.nav nav a{padding:8px 0}.brand{font-weight:600}
 .button{min-height:44px;border-radius:8px;padding:12px 18px;font-size:13px}.button.secondary{background:transparent;border-color:#3e3e46;color:var(--ink)}.button.secondary:hover{background:#202024;border-color:#7e8b78}

@@ -26,7 +26,7 @@ export interface MP4Plan {
   readonly durationMs: number;
 }
 export function createMP4Plan(motion: CompiledMotion, options: MP4Options = {}): MP4Plan {
-  if (!motion || motion.revision !== 'whoami-motion-1') throw new MP4ExportError('invalid-options', 'Use a compiled whoami motion recording.');
+  if (!motion || motion.revision !== 'whoami-motion-1') throw new MP4ExportError('invalid-options', 'Use a compiled Pibulo motion recording.');
   if (!options || typeof options !== 'object' || Array.isArray(options) || Object.getPrototypeOf(options) !== Object.prototype)
     throw new MP4ExportError('invalid-options', 'Expected plain MP4 options.');
   const descriptors = Object.getOwnPropertyDescriptors(options);

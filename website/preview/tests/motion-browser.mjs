@@ -1,16 +1,16 @@
 import assert from 'node:assert/strict';
 import {mkdir, readFile, writeFile} from 'node:fs/promises';
 import {buildSync} from 'esbuild';
-import {compileMotionRecording} from '@talarurus/whoami/motion';
-import {serializeRecording} from '@talarurus/whoami/recording';
-import {svgFor} from '@talarurus/whoami';
+import {compileMotionRecording} from '@talarurus/pibulo/motion';
+import {serializeRecording} from '@talarurus/pibulo/recording';
+import {svgFor} from '@talarurus/pibulo';
 await import('../../../scripts/motion-baseline.mjs');
 const {svgFor: baselineSVG} = await import('../../../test-results/motion-v030/baseline.mjs');
 process.env.PLAYWRIGHT_BROWSERS_PATH ??= new URL('../../../test-results/motion-v030/browsers', import.meta.url).pathname;
 const {chromium, webkit} = await import('playwright');
 const base = process.env.PREVIEW_URL || 'http://127.0.0.1:4318';
 const output = new URL('../../../test-results/motion-v030/', import.meta.url);
-const shots = process.env.WHOAMI_MOTION_SCREENSHOTS ? new URL(process.env.WHOAMI_MOTION_SCREENSHOTS, 'file://'+process.cwd()+'/') : new URL('../../../assets/', import.meta.url);
+const shots = (process.env.PIBULO_MOTION_SCREENSHOTS||process.env.WHOAMI_MOTION_SCREENSHOTS) ? new URL((process.env.PIBULO_MOTION_SCREENSHOTS||process.env.WHOAMI_MOTION_SCREENSHOTS), 'file://'+process.cwd()+'/') : new URL('../../../test-results/pibulo-media/', import.meta.url);
 await mkdir(output, {recursive:true}); await mkdir(shots, {recursive:true});
 const event = (id, sequence, timestamp, type, taskId='task') => ({version:1,agentId:id,sequence,timestamp,type,...(type==='agent.reset'?{}:{taskId})});
 const source={agents:[{id:'atlas',name:'Atlas'},{id:'mira',name:'Mira'},{id:'cedar',name:'Cedar'}],events:[

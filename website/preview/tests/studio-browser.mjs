@@ -1,10 +1,10 @@
 import {chromium} from 'playwright';
 import assert from 'node:assert/strict';
-import {parseRecording, serializeRecording} from '@talarurus/whoami/recording';
-import {svgFor} from '@talarurus/whoami';
+import {parseRecording, serializeRecording} from '@talarurus/pibulo/recording';
+import {svgFor} from '@talarurus/pibulo';
 import {mkdirSync, writeFileSync, readFileSync} from 'node:fs';
-const base=process.env.PREVIEW_URL||'http://localhost:4318', out=process.env.WHOAMI_STUDIO_ARTIFACTS||'/tmp/whoami-v020-studio';
-const assets=process.env.WHOAMI_MEDIA_DIR||'assets';
+const base=process.env.PREVIEW_URL||'http://localhost:4318', out=(process.env.PIBULO_STUDIO_ARTIFACTS||process.env.WHOAMI_STUDIO_ARTIFACTS)||'/tmp/pibulo-v020-studio';
+const assets=(process.env.PIBULO_MEDIA_DIR||process.env.WHOAMI_MEDIA_DIR)||'test-results/pibulo-media';
 mkdirSync(out,{recursive:true});mkdirSync(assets,{recursive:true});
 const browser=await chromium.launch({channel:'chrome',headless:true});
 const context=await browser.newContext({viewport:{width:1440,height:1100},permissions:['clipboard-read','clipboard-write']});
@@ -146,7 +146,7 @@ try {
  await check('Recording documentation exposes a copyable public integration on small screens',async()=>{
   await page.setViewportSize({width:320,height:844});await page.goto(base+'/docs#activity');
   await page.getByRole('button',{name:'Copy recording integration',exact:true}).click();
-  assert.match(await page.evaluate(()=>navigator.clipboard.readText()),/whoami\/recording/);
+  assert.match(await page.evaluate(()=>navigator.clipboard.readText()),/pibulo\/recording/);
   assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1));
  });
  assert.deepEqual(errors,[]);checks.push('No browser runtime errors');

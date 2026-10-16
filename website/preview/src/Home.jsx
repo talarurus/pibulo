@@ -21,7 +21,7 @@ export function Home(){
     <section className="home-hero">
       <div className="home-identity">
         <h1>{BRAND.wordmark}</h1>
-        <p>Deterministic avatars for AI agents.<br/>A familiar face, from any name.</p>
+        <p>{BRAND.tagline}<br/>Expressive identities for AI agents.</p>
         <div className="home-name"><label htmlFor="hero-name">Name or seed</label><div className="hero-seed-control"><input id="hero-name" maxLength={256} value={name} placeholder="Try any name" aria-describedby="hero-name-hint" onChange={e=>chooseName(e.target.value)}/><button type="button" aria-label="Shuffle name" onClick={shuffle}>Shuffle</button></div></div>
         <p className="micro" id="hero-name-hint">Type a name to generate a face.</p>
         <button type="button" className="home-face" id="hero-avatar" onClick={react} aria-label={`Make ${name||'the empty-seed avatar'} react`} aria-describedby="hero-reaction-hint" data-expression={shown} data-base-expression={expression}><Face name={name} config={{...config,expression:shown}} size={300} motion="always" pointerGaze decorative={false}/></button>

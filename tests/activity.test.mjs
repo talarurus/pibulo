@@ -3,10 +3,10 @@ import assert from 'node:assert/strict';
 import {createElement} from 'react';
 import {renderToStaticMarkup} from 'react-dom/server';
 import {build} from 'esbuild';
-import {createActivityEngine, replayActivity, validateActivityEvent, EVENT_STATES} from '@talarurus/whoami/activity';
-import {AgentAvatar} from '@talarurus/whoami/activity/react';
-import {AgentScene} from '@talarurus/whoami/scenes';
-import {identity} from '@talarurus/whoami';
+import {createActivityEngine, replayActivity, validateActivityEvent, EVENT_STATES} from '@talarurus/pibulo/activity';
+import {AgentAvatar} from '@talarurus/pibulo/activity/react';
+import {AgentScene} from '@talarurus/pibulo/scenes';
+import {identity} from '@talarurus/pibulo';
 const agents = [{id:'Atlas',name:'Atlas'}, {id:'atlas',name:'Other'}];
 const event = (type,sequence,extra={}) => ({version:1,agentId:'Atlas',sequence,timestamp:sequence,taskId:'task-1',type,...extra});
 test('all lifecycle states, input resolution, terminal states and reset have explicit mappings',()=>{
