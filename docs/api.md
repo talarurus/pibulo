@@ -1,7 +1,8 @@
 # API and integration
 
-v0.3.0 adds optional recorded-motion and browser MP4 entries below.
-Package metadata is `0.3.0`; historical v0.2.0 interfaces remain compatible.
+v0.3.1 refines website presentation and editor customization; it adds no public API.
+Package metadata is `0.3.1`. The recorded-motion and browser MP4 entries introduced
+in v0.3.0, and historical v0.2.0 interfaces, remain compatible.
 This is a source distribution; npm publication remains disabled.
 
 Install the locally built tarball as shown in the README. The root ESM entry is `@talarurus/whoami`; React is `@talarurus/whoami/react`. Node 24 and React 19.2 are the tested versions. CommonJS is not included.

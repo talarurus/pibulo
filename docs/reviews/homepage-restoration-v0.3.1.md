@@ -1,5 +1,10 @@
 # Homepage restoration — owner visual review
 
+**Subsequent owner decision:** the restored homepage at `0d6e0f7` was approved at
+1440, 390 and 320 pixels. [v0.3.1 release preparation](../releases/preparation-v0.3.1.md)
+is authorized; publication remains a separate gate. The review below retains its
+original pre-approval context.
+
 Work branch: `design/v0.3.1-visual-parity`. Starting commit: `96af0a3`.
 Reference: published v0.3.0, `629c32397057eba7719ab8fe8bb3544a1f985d47`.
 Verified locally on 2026-10-15. Awaiting owner visual approval; no push, tag,

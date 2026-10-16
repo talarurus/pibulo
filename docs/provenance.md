@@ -79,3 +79,16 @@ historical releases or company website are changed. No new dependency is added.
 Package metadata remains 0.3.0 pending separately authorized release preparation.
 See reviews/visual-parity-v0.3.1.md for comparison, evidence and the owner approval
 gate. No independent review is claimed.
+
+## v0.3.1 release preparation
+
+The owner approved the restored homepage at 1440, 390 and 320 pixels at
+`0d6e0f78225264d9ba5bd6195a3fc9297bc606bb`, then authorized release preparation.
+Package/lock metadata and current website labels are now 0.3.1 with private:true.
+The approved layout, all artwork, identities, fixtures, APIs, dependencies, notices
+and demo assets are preserved. Attribution remains as recorded above: pinned
+Blobatar/Blobatarling MIT artwork, Geist OFL fonts and optional MIT mp4-muxer.
+Historical review sections retain their checkpoint context. This preparation adds
+release copy and verification only; no independent review is claimed. See
+[release preparation](releases/preparation-v0.3.1.md). GitHub publication requires
+separate authorization; npm publication and deployment are outside this release.

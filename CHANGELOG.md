@@ -1,5 +1,16 @@
 # Changelog
 
+## 0.3.1 · prepared for GitHub source release
+
+- Owner-approved homepage refinement preserves the large wordmark, generous whitespace, two-column composition, unframed interactive avatar and local installation/live code example.
+- Quiet recording-driven preview below the hero exposes existing idle, thinking, working and completed states, with playback/manual seeking, reduced-motion support and a direct Studio Motion link.
+- Editor expression thumbnails, earlier palette controls, hue selection/reset, configuration-preserving section navigation and mobile customization jump improve discovery. Incomplete palette input remains recoverable.
+- Component source downloads now serve actual checkout files and helpers; existing source-only disclaimers remain. Responsive, contrast and selection feedback improvements are retained.
+- README includes the approved recording-driven GIF, static poster, original MP4 and restored homepage screenshots.
+- Existing artwork, seed-to-identity mappings, fixtures, public APIs, Activity/Motion Studio and MP4 exporter remain unchanged. No new dependency, framework SDK or hosted service.
+- Attribution remains intact: Blobatar/Blobatarling MIT artwork, Geist OFL fonts and optional pinned deprecated MIT mp4-muxer 5.2.2. Existing exporter limits and maintenance caveat still apply.
+- Prepared locally; GitHub publication requires separate authorization. npm publication remains disabled. See `docs/releases/preparation-v0.3.1.md` and `docs/releases/v0.3.1.md`.
+
 ## 0.3.0 · prepared for GitHub source release
 
 - Optional typed recorded-motion API: validated v1 recordings, explicit origin, immutable tracks, arbitrary sampling, continuous interrupted poses and reduced-motion policy.

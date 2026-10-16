@@ -1,5 +1,7 @@
 # MP4 export · v0.3.0
 
+Available unchanged in the v0.3.1 source package; this API was introduced in v0.3.0.
+
 Optional `@talarurus/whoami/export/mp4` exports recorded agent motion locally
 using the existing deterministic sampler and identity artwork.
 

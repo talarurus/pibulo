@@ -2,7 +2,7 @@
 
 A familiar face for every agent. Stable SVG identities, caller-driven task activity, React components, and an interactive Agent Identity Studio.
 
-**v0.3.0** is the published source baseline. This checkout contains the **v0.3.1 visual pass for owner review**, with package metadata still at 0.3.0. Existing generation-2 artwork, seed mappings and public APIs are preserved. Nothing is published to npm or deployed as a hosted website.
+**v0.3.1** is prepared for a GitHub source release, with the restored homepage approved at desktop and both mobile widths. It refines avatar customization and presentation while preserving generation-2 artwork, seed mappings and public APIs. Publication requires separate owner authorization. The package is not published to npm; the website runs locally.
 
 ![whoami: Atlas, Mira and Cedar progress from idle to thinking, working and completed](assets/whoami-activity-demo.gif)
 
@@ -38,7 +38,7 @@ Open [Agent Identity Studio](http://localhost:4318/studio), [the website](http:/
 npm run build
 npm pack
 # In a separate application
-npm install /absolute/path/to/talarurus-whoami-0.3.0.tgz
+npm install /absolute/path/to/talarurus-whoami-0.3.1.tgz
 ```
 
 The package name below resolves through that local tarball. It is **not** an npm registry installation instruction.
@@ -168,6 +168,6 @@ npm run test:consumer
 npm run test:browser
 ```
 
-[v0.3.0 release preparation](docs/releases/preparation-v0.3.0.md) records the final checks and publication gate; [release notes](docs/releases/v0.3.0.md) describe the scope. [v0.2.0 review](docs/refinement-v0.2.0.md) and [v0.1.0 validation](docs/validation.md) retain historical results and boundaries. [Provenance](docs/provenance.md) identifies adapted and independently authored work.
+[v0.3.1 release preparation](docs/releases/preparation-v0.3.1.md) records the final checks and publication gate; [release notes](docs/releases/v0.3.1.md) describe the scope. [v0.2.0 review](docs/refinement-v0.2.0.md) and [v0.1.0 validation](docs/validation.md) retain historical results and boundaries. [Provenance](docs/provenance.md) identifies adapted and independently authored work.
 
 MIT: original renderer and adapted website code by **Alain / Alain00/blobatar**; compatible optional scene code from **SparshKaushik/blobatarling**, maintained by Sparsh Kaushik with additions authored by Khai. Original copyright notices are retained. Geist fonts are SIL OFL 1.1. See [LICENSE](LICENSE), [THIRD-PARTY-NOTICES](THIRD-PARTY-NOTICES.txt), and vendor license/source records. No upstream endorsement or legal clean-room claim is made.

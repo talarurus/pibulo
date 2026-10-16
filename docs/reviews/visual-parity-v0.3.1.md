@@ -1,5 +1,10 @@
 # v0.3.1 visual parity pass — owner review
 
+**Subsequent owner decision:** the restored homepage at `0d6e0f7` was approved at
+1440, 390 and 320 pixels. [v0.3.1 release preparation](../releases/preparation-v0.3.1.md)
+is authorized; publication remains a separate gate. The review below retains its
+original pre-approval context.
+
 **Status:** the owner requested restoration of the v0.3.0 homepage after reviewing
 the first pass (`96af0a3`). The restored homepage is awaiting visual approval.
 See [the restoration review](homepage-restoration-v0.3.1.md) for current screenshots

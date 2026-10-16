@@ -1,6 +1,6 @@
 {
   "name": "@talarurus/whoami",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "Deterministic SVG agent identities, recorded motion and browser MP4 export, with React components",
   "private": true,
   "type": "module",

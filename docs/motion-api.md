@@ -1,5 +1,7 @@
 # Recorded motion · v0.3.0
 
+Available unchanged in the v0.3.1 source package; this API was introduced in v0.3.0.
+
 `@talarurus/whoami/motion` exports `compileMotionRecording`, `MOTION_REVISION`
 (`whoami-motion-1`) and generated public types. `@talarurus/whoami/motion/react`
 exports `RecordedAgentAvatar` and `useMotionReducedPreference`. React is optional;
