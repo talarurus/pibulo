@@ -1,0 +1,52 @@
+{
+  "browser": "155.0.8059.80",
+  "base": "http://127.0.0.1:4331",
+  "checks": [
+    {
+      "width": 1440,
+      "route": "/docs",
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "route": "/",
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "route": "/studio",
+      "pass": true
+    },
+    {
+      "width": 390,
+      "route": "/docs",
+      "pass": true
+    },
+    {
+      "width": 390,
+      "route": "/",
+      "pass": true
+    },
+    {
+      "width": 390,
+      "route": "/studio",
+      "pass": true
+    },
+    {
+      "width": 320,
+      "route": "/docs",
+      "pass": true
+    },
+    {
+      "width": 320,
+      "route": "/",
+      "pass": true
+    },
+    {
+      "width": 320,
+      "route": "/studio",
+      "pass": true
+    }
+  ],
+  "errors": []
+}

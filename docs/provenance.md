@@ -106,3 +106,16 @@ migration occurs. Historical sections and release evidence retain their original
 context. See [migration](migration-pibulo.md) and [verification](reviews/pibulo-rebrand.md).
 No independent review is claimed. Public repository renaming and release
 publication require separate owner authorization.
+
+## Pibulo repository rename
+
+The owner separately authorized renaming the existing public GitHub repository
+`talarurus/whoami` to `talarurus/pibulo` from clean local rebrand commit
+`a8afbfa0aa3b056a9c3342bd0bc087e42cfddebb`. The repository identity, remote
+branches, historical tags and releases are preserved. Active repository links,
+clone instructions and their release-check expectation now use the new URL;
+the local checkout directory remains `whoami`. Package identity remains
+`@talarurus/pibulo`, `0.3.2-dev.0`, private:true. No source release, push,
+deployment, npm publication, artwork or compatibility migration is included.
+See [rename verification](reviews/pibulo-repository-rename.md). Historical
+rebrand/release records above retain their original checkpoint context.

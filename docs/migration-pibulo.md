@@ -52,9 +52,16 @@ QA scripts prefer `PIBULO_*` environment variables and retain the corresponding
 
 ## Repository and publication
 
-The current remote and clone directory remain `talarurus/whoami` and `whoami`.
-They describe the actual repository location pending separate rename authorization.
-This branch has not been pushed. No tags, GitHub Releases, npm packages, website
-deployments or Cloudflare changes are part of this work.
+The owner-authorized in-place repository rename is complete:
+[talarurus/pibulo](https://github.com/talarurus/pibulo). The old
+`talarurus/whoami` repository and historical release URLs redirect to the new name.
+The existing local checkout directory remains `whoami`; its `origin` is now
+`https://github.com/talarurus/pibulo.git`. New clones default to `pibulo`.
+Do not reuse the old repository name while its redirects are needed.
 
-See [local verification and the proposed GitHub plan](reviews/pibulo-rebrand.md).
+This branch has not been pushed. The remote default branch remains `main`, at
+published whoami v0.3.1, until a separately authorized Pibulo source release.
+No tags, GitHub Releases, npm packages, website deployments or Cloudflare changes
+were made. See [repository rename verification](reviews/pibulo-repository-rename.md).
+
+See the [historical local rebrand verification and proposed GitHub plan](reviews/pibulo-rebrand.md).

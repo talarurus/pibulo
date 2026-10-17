@@ -13,7 +13,7 @@ An open-source toolkit for expressive AI-agent identities, activity visualizatio
 [Mobile Studio](assets/pibulo-rebrand/studio-motion-390.png) ·
 [Migration](docs/migration-pibulo.md) · [Local verification](docs/reviews/pibulo-rebrand.md).
 
-The [GitHub repository](https://github.com/talarurus/whoami) retains its current name pending separate authorization. Historical releases v0.1.0–v0.3.1 and their original media remain unchanged. The following is the **historical whoami activity demo**, with the same three identities throughout:
+The existing [GitHub repository](https://github.com/talarurus/pibulo) has been renamed to `talarurus/pibulo`; the old repository URL redirects here. Historical releases v0.1.0–v0.3.1 and their original media remain unchanged. The following is the **historical whoami activity demo**, with the same three identities throughout:
 
 ![Historical whoami activity demo: Atlas, Mira and Cedar](assets/whoami-activity-demo.gif)
 
@@ -21,11 +21,11 @@ The [GitHub repository](https://github.com/talarurus/whoami) retains its current
 
 ## Run the website
 
-Use Node **24.21.0 or later in Node 24** and npm **11**. The rebrand is currently available only on the local `brand/pibulo-rebrand` branch. The clone commands below identify the current repository; its remote retains published whoami until a separately authorized push.
+Use Node **24.21.0 or later in Node 24** and npm **11**. The rebrand is currently available only on the local `brand/pibulo-rebrand` branch. The clone commands below identify the renamed repository; its default branch still contains published whoami v0.3.1 until a separately authorized Pibulo source release. The existing local checkout remains in `whoami`; a new clone uses `pibulo`.
 
 ```sh
-git clone https://github.com/talarurus/whoami.git
-cd whoami
+git clone https://github.com/talarurus/pibulo.git
+cd pibulo
 npm ci
 npm start
 ```

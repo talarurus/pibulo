@@ -5,7 +5,7 @@
 - Local product rebrand: whoami → pibulo, published by Talarurus. Little faces. Big personalities.
 - Source-package imports become `@talarurus/pibulo`; private local tarball distribution remains in effect.
 - Existing recording formats, motion/MP4 revisions, artwork, deterministic identities and public API behavior remain compatible.
-- Historical releases, tags, media and attribution are preserved. Public repository rename and release publication require separate owner authorization.
+- Historical releases, tags, media and attribution are preserved. The owner-authorized repository rename to `talarurus/pibulo` is complete; Pibulo release publication still requires separate owner authorization.
 - See [migration](docs/migration-pibulo.md) and [verification](docs/reviews/pibulo-rebrand.md).
 
 ## 0.3.1 · prepared for GitHub source release
