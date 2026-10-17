@@ -2,7 +2,7 @@ import assert from 'node:assert/strict';
 import {readFileSync,readdirSync,statSync} from 'node:fs';
 import {createHash} from 'node:crypto';
 const pkg=JSON.parse(readFileSync('package.json')),lock=JSON.parse(readFileSync('package-lock.json'));
-assert.equal(pkg.name,'@talarurus/pibulo');assert.equal(lock.name,pkg.name);assert.equal(lock.packages[''].name,pkg.name);assert.equal(pkg.version,'0.3.2-dev.0');assert.equal(lock.version,pkg.version);assert.equal(lock.packages[''].version,pkg.version);assert.equal(pkg.private,true);assert.equal(pkg.repository.url,'https://github.com/talarurus/pibulo.git');
+assert.equal(pkg.name,'@talarurus/pibulo');assert.equal(lock.name,pkg.name);assert.equal(lock.packages[''].name,pkg.name);assert.equal(pkg.version,'0.3.2');assert.equal(lock.version,pkg.version);assert.equal(lock.packages[''].version,pkg.version);assert.equal(pkg.private,true);assert.equal(pkg.repository.url,'https://github.com/talarurus/pibulo.git');
 assert.equal(pkg.devDependencies['mp4-muxer'],'5.2.2');
 assert.match(readFileSync('THIRD-PARTY-NOTICES.txt','utf8'),/Copyright \(c\) 2023 Vanilagy/);
 for(const [name,version] of Object.entries(pkg.devDependencies))assert.match(version,/^\d+\.\d+\.\d+$/);

@@ -113,7 +113,7 @@ for(const kind of (process.env.MP4_BROWSER?[process.env.MP4_BROWSER]:['chrome','
       await page.getByRole('combobox',{name:'MP4 preset'}).selectOption('512');await exportButton.click();
       await page.getByRole('link',{name:'Download MP4 ↗',exact:true}).waitFor({timeout:60000}).catch(async error=>{console.error(kind,await page.locator('.studio-mp4').innerText(),report.errors);throw error;});
       const downloadPromise=page.waitForEvent('download');await page.getByRole('link',{name:'Download MP4 ↗',exact:true}).click();const download=await downloadPromise;await download.saveAs(new URL(`${kind}-studio.mp4`,output).pathname);
-      assert.match(await page.locator('footer').innerText(),/v0\.3\.2-dev\.0 development/);
+      assert.match(await page.locator('footer').innerText(),/v0\.3\.2 source/);
       await page.getByRole('spinbutton',{name:'Motion timestamp',exact:true}).fill('2400');
       await page.evaluate(()=>{document.activeElement?.blur();window.scrollTo(0,0);});
       if(kind==='chrome')await page.screenshot({path:new URL('studio-mp4-desktop.png',assets).pathname,fullPage:true});

@@ -1,6 +1,6 @@
 {
   "name": "@talarurus/pibulo",
-  "version": "0.3.2-dev.0",
+  "version": "0.3.2",
   "description": "An open-source toolkit for expressive AI-agent identities, activity visualization, deterministic replay and motion export.",
   "private": true,
   "type": "module",
@@ -64,7 +64,12 @@
     "docs/motion-api.md",
     "docs/mp4-export.md",
     "docs/mp4-frame-contract.md",
-    "docs/migration-pibulo.md"
+    "docs/migration-pibulo.md",
+    "docs/releases/v0.3.2.md",
+    "assets/pibulo-rebrand/home-1440.png",
+    "assets/pibulo-rebrand/home-390.png",
+    "assets/whoami-activity-poster.png",
+    "assets/whoami-activity-demo.recording.json"
   ],
   "sideEffects": [
     "**/*.css"

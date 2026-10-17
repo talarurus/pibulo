@@ -1,6 +1,6 @@
 # Recorded motion · v0.3.0
 
-Available unchanged in the Pibulo 0.3.2-dev.0 source package; this API was introduced in whoami v0.3.0. See [migration](migration-pibulo.md).
+Available unchanged in the Pibulo 0.3.2 source package; this API was introduced in whoami v0.3.0. See [migration](migration-pibulo.md).
 
 `@talarurus/pibulo/motion` exports `compileMotionRecording`, `MOTION_REVISION`
 (`whoami-motion-1`) and generated public types. `@talarurus/pibulo/motion/react`
@@ -143,4 +143,4 @@ browser-driven. Existing Face CSS/gaze and AgentScene playback are outside this
 motion sampler. No cross-engine pixel identity, hardware encoding determinism or
 historical CSS-animation parity is claimed. See the implemented
 [MP4 frame contract](mp4-frame-contract.md) and
-[development validation](development-v0.3.0.md).
+[development validation](https://github.com/talarurus/pibulo/blob/v0.3.2/docs/development-v0.3.0.md).

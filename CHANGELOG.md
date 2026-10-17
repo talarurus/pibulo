@@ -1,12 +1,13 @@
 # Changelog
 
-## Unreleased · pibulo 0.3.2-dev.0
+## 0.3.2 · Pibulo, prepared for GitHub source release
 
-- Local product rebrand: whoami → pibulo, published by Talarurus. Little faces. Big personalities.
-- Source-package imports become `@talarurus/pibulo`; private local tarball distribution remains in effect.
+- Product rebrand: whoami → pibulo, published by Talarurus. Little faces. Big personalities.
+- Source-package imports become `@talarurus/pibulo`; distribution is through GitHub source and locally built tarballs, with private:true and no npm publication.
 - Existing recording formats, motion/MP4 revisions, artwork, deterministic identities and public API behavior remain compatible.
 - Historical releases, tags, media and attribution are preserved. The owner-authorized repository rename to `talarurus/pibulo` is complete; Pibulo release publication still requires separate owner authorization.
-- See [migration](docs/migration-pibulo.md) and [verification](docs/reviews/pibulo-rebrand.md).
+- Package small documentation assets and use release-pinned links for larger media and historical review records.
+- See [release notes](docs/releases/v0.3.2.md), [migration](docs/migration-pibulo.md) and [release preparation](docs/releases/preparation-v0.3.2.md).
 
 ## 0.3.1 · prepared for GitHub source release
 

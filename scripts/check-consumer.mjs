@@ -1,5 +1,5 @@
-import {mkdtempSync,writeFileSync,readFileSync,mkdirSync,copyFileSync} from 'node:fs';
-import {join,resolve} from 'node:path';
+import {mkdtempSync,writeFileSync,readFileSync,mkdirSync,copyFileSync,existsSync} from 'node:fs';
+import {join,resolve,posix} from 'node:path';
 import {execFileSync} from 'node:child_process';
 import assert from 'node:assert/strict';
 const root=process.cwd();mkdirSync('test-results',{recursive:true});
@@ -12,6 +12,30 @@ assert.ok(packed.files.some(f=>f.path==='dist/mp4.js'));
 assert.ok(packed.files.some(f=>/^dist\/video\/mp4-muxer-.*\.js$/.test(f.path)));
 writeFileSync(join(out,'package.json'),JSON.stringify({name:'pibulo-separate-consumer',private:true,type:'module',dependencies:{'@talarurus/pibulo':'file:./'+packed.filename,react:'19.2.0','react-dom':'19.2.0'},devDependencies:{esbuild:'0.25.11',typescript:'5.9.3','@types/react':'19.2.2','@types/react-dom':'19.2.2'}}));
 run('npm',['install','--ignore-scripts','--no-audit','--no-fund',...((process.env.PIBULO_CONSUMER_OFFLINE||process.env.WHOAMI_CONSUMER_OFFLINE)?['--offline']:[])]);
+const installed=join(out,'node_modules/@talarurus/pibulo');
+const pkg=JSON.parse(readFileSync(join(installed,'package.json')));
+for(const value of Object.values(pkg.exports))for(const target of typeof value==='string'?[value]:Object.values(value))
+ assert.ok(existsSync(join(installed,target)),'Installed export target: '+target);
+const pendingPublicLinks=new Set();let documentationLinks=0;
+for(const {path:file} of packed.files.filter(f=>f.path.endsWith('.md'))){
+ const source=readFileSync(join(root,file),'utf8');
+ assert.equal(readFileSync(join(installed,file),'utf8'),source,'Installed documentation: '+file);
+ for(const [,link] of source.matchAll(/\]\(([^)]+)\)/g)){
+  if(link.startsWith('#'))continue;
+  const prefix=['https://github.com/talarurus/pibulo/blob/v0.3.2/','https://raw.githubusercontent.com/talarurus/pibulo/v0.3.2/'].find(prefix=>link.startsWith(prefix));
+  if(prefix){
+   const target=decodeURIComponent(link.slice(prefix.length).split('#')[0]);
+   assert.ok(existsSync(join(root,target)),'Future release source path: '+link);
+   pendingPublicLinks.add(link);
+  }else if(!/^[a-z]+:/i.test(link)){
+   const target=posix.normalize(posix.join(posix.dirname(file),link.split('#')[0]));
+   assert.ok(existsSync(join(root,target)),'Repository documentation link: '+file+' -> '+link);
+   assert.ok(existsSync(join(installed,target)),'Installed documentation link: '+file+' -> '+link);
+  }else continue;
+  documentationLinks++;
+ }
+}
+console.log('Separate installed tarball: '+documentationLinks+' documentation links resolve locally; '+pendingPublicLinks.size+' tag-pinned URLs await post-publication public verification.');
 const expected=JSON.parse(readFileSync('tests/fixtures/preview-identity.json')).cases[0];
 const legacyRecording=readFileSync('assets/whoami-activity-demo.recording.json','utf8');
 writeFileSync(join(out,'verify.mjs'),`import assert from 'node:assert/strict';
@@ -72,6 +96,6 @@ writeFileSync(join(out,'web/activity.html'),'<!doctype html><html lang="en"><met
 writeFileSync(join(out,'server.mjs'),`import {createServer} from 'node:http';import {readFile} from 'node:fs/promises';
 createServer(async(req,res)=>{const name=({'/':'index.html','/main.js':'main.js','/main.css':'main.css','/activity':'activity.html','/activity.js':'activity.js','/activity.css':'activity.css'})[req.url];if(!name){res.writeHead(404);res.end();return}res.setHeader('Content-Type',name.endsWith('.js')?'text/javascript':name.endsWith('.css')?'text/css':'text/html');res.end(await readFile(new URL('web/'+name,import.meta.url)))}).listen(Number(process.env.PORT)||4330,'127.0.0.1');
 `);
-writeFileSync(join(out,'result.json'),JSON.stringify({consumer:out,package:packed.filename,sha512:packed.integrity,files:packed.files.map(f=>f.path),checks:['installed separate tarball','historical whoami v1 recording round trip','stable SVG hash/identity','React SSR','TypeScript declarations','browser application bundle']},null,2));
+writeFileSync(join(out,'result.json'),JSON.stringify({consumer:out,package:packed.filename,sha512:packed.integrity,files:packed.files.map(f=>f.path),documentationLinks,pendingPublicLinks:[...pendingPublicLinks].sort(),checks:['installed separate tarball','all export targets present','repository and installed documentation links','historical whoami v1 recording round trip','stable SVG hash/identity','React SSR','TypeScript declarations','browser application bundle']},null,2));
 console.log('PASS independent consumer install, ESM imports, React SSR, TypeScript and browser bundle.');
 console.log('Consumer directory:',out);

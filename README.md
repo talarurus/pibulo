@@ -4,27 +4,27 @@
 
 An open-source toolkit for expressive AI-agent identities, activity visualization, deterministic replay and motion export. Published by **Talarurus**.
 
-**0.3.2-dev.0 is unreleased local development.** This rebrands whoami v0.3.1 while preserving the approved homepage, Blobatar artwork, deterministic identities and API behavior. Install the source package as `@talarurus/pibulo` using a local tarball. Neither package has been publicly published to npm.
+**v0.3.2 is prepared for a GitHub source release.** This rebrands whoami v0.3.1 while preserving the approved homepage, Blobatar artwork, deterministic identities and API behavior. Install the source package as `@talarurus/pibulo` using a local tarball. Neither package has been publicly published to npm. Publication awaits separate owner authorization.
 
 ![pibulo homepage](assets/pibulo-rebrand/home-1440.png)
 
 [Mobile homepage](assets/pibulo-rebrand/home-390.png) ·
-[Studio](assets/pibulo-rebrand/studio-motion-1440.png) ·
-[Mobile Studio](assets/pibulo-rebrand/studio-motion-390.png) ·
-[Migration](docs/migration-pibulo.md) · [Local verification](docs/reviews/pibulo-rebrand.md).
+[Studio](https://github.com/talarurus/pibulo/blob/v0.3.2/assets/pibulo-rebrand/studio-motion-1440.png) ·
+[Mobile Studio](https://github.com/talarurus/pibulo/blob/v0.3.2/assets/pibulo-rebrand/studio-motion-390.png) ·
+[Migration](docs/migration-pibulo.md) · [Local verification](https://github.com/talarurus/pibulo/blob/v0.3.2/docs/reviews/pibulo-rebrand.md).
 
 The existing [GitHub repository](https://github.com/talarurus/pibulo) has been renamed to `talarurus/pibulo`; the old repository URL redirects here. Historical releases v0.1.0–v0.3.1 and their original media remain unchanged. The following is the **historical whoami activity demo**, with the same three identities throughout:
 
-![Historical whoami activity demo: Atlas, Mira and Cedar](assets/whoami-activity-demo.gif)
+![Historical whoami activity demo: Atlas, Mira and Cedar](https://raw.githubusercontent.com/talarurus/pibulo/v0.3.2/assets/whoami-activity-demo.gif)
 
-[Historical poster](assets/whoami-activity-poster.png) · [Original MP4](assets/whoami-activity-demo.mp4) · [Compatible version 1 recording](assets/whoami-activity-demo.recording.json).
+[Historical poster](assets/whoami-activity-poster.png) · [Original MP4](https://github.com/talarurus/pibulo/blob/v0.3.2/assets/whoami-activity-demo.mp4) · [Compatible version 1 recording](assets/whoami-activity-demo.recording.json).
 
 ## Run the website
 
-Use Node **24.21.0 or later in Node 24** and npm **11**. The rebrand is currently available only on the local `brand/pibulo-rebrand` branch. The clone commands below identify the renamed repository; its default branch still contains published whoami v0.3.1 until a separately authorized Pibulo source release. The existing local checkout remains in `whoami`; a new clone uses `pibulo`.
+Use Node **24.21.0 or later in Node 24** and npm **11**. The commands below select the v0.3.2 source release. New clones use `pibulo`; an existing checkout may keep its original directory name. The release tag and tag-pinned media/documentation URLs become available only after publication; their public verification is pending until then.
 
 ```sh
-git clone https://github.com/talarurus/pibulo.git
+git clone --branch v0.3.2 https://github.com/talarurus/pibulo.git
 cd pibulo
 npm ci
 npm start
@@ -39,7 +39,7 @@ Open [Agent Identity Studio](http://localhost:4318/studio), [the website](http:/
 npm run build
 npm pack
 # In a separate application
-npm install /absolute/path/to/talarurus-pibulo-0.3.2-dev.0.tgz
+npm install /absolute/path/to/talarurus-pibulo-0.3.2.tgz
 ```
 
 The package name below resolves through that local tarball. It is **not** an npm registry installation instruction.
@@ -66,7 +66,7 @@ export default function AgentAvatar() {
 }
 ```
 
-React **19.2** is a peer dependency for React consumers. Run `npm run example:react` after building, then open http://localhost:4319. See [API and integration](docs/api.md) and the [working TypeScript example](examples/react/main.tsx).
+React **19.2** is a peer dependency for React consumers. Run `npm run example:react` after building, then open http://localhost:4319. See [API and integration](docs/api.md) and the [working TypeScript example](https://github.com/talarurus/pibulo/blob/v0.3.2/examples/react/main.tsx).
 
 ## Agent activity
 
@@ -88,7 +88,7 @@ export function Agent() {
 
 Import the three CSS entries shown in the Face example for animated avatars. Optional `AgentScene` is exported from `@talarurus/pibulo/scenes`; import `scenes.css` and `motion.css`. The engine has no React, renderer, clock or transport dependency. Caller-supplied events produce idle, waiting, thinking, working, needs-input, completed and error states. Sequences, task IDs and transition validation protect current state; accepted history is bounded. `replayActivity(options, recording)` deterministically reconstructs a complete caller recording.
 
-The Studio uses these public exports for independent agents, task controls, input resolution, errors/reset, a navigable timeline, replay/pause/step/seek, validated local JSON import/export and copyable examples. Built-in events and controls are clearly simulated; imported recordings are labeled as caller-supplied. Its recording is in memory, capped at 120 accepted events; new sessions preserve agent identity. See [the schema and transition rules](docs/api.md), [typed examples](examples/activity/main.tsx), and [development verification](docs/development-v0.2.0.md).
+The Studio uses these public exports for independent agents, task controls, input resolution, errors/reset, a navigable timeline, replay/pause/step/seek, validated local JSON import/export and copyable examples. Built-in events and controls are clearly simulated; imported recordings are labeled as caller-supplied. Its recording is in memory, capped at 120 accepted events; new sessions preserve agent identity. See [the schema and transition rules](docs/api.md), [typed examples](https://github.com/talarurus/pibulo/blob/v0.3.2/examples/activity/main.tsx), and [development verification](https://github.com/talarurus/pibulo/blob/v0.3.2/docs/development-v0.2.0.md).
 
 Recording files use `@talarurus/pibulo/recording`:
 
@@ -101,7 +101,7 @@ if (file.ok) {
 }
 ```
 
-The versioned envelope pins exact IDs, display names, event version and renderer revision. Import validates every event through a fresh engine; a failure leaves the caller’s session unchanged. SDK limits are 1 MiB / 1,000 events / 32 agents; Studio uses 256 KiB / 120 events / 8 agents. Recordings may contain caller-supplied task descriptions: review before sharing. Files stay local, with no upload or automatic persistence. See [the complete format](docs/api.md#json-activity-recordings--version-1), [typed example](examples/activity/recording.ts), and [final refinement and separate-agent review](docs/refinement-v0.2.0.md).
+The versioned envelope pins exact IDs, display names, event version and renderer revision. Import validates every event through a fresh engine; a failure leaves the caller’s session unchanged. SDK limits are 1 MiB / 1,000 events / 32 agents; Studio uses 256 KiB / 120 events / 8 agents. Recordings may contain caller-supplied task descriptions: review before sharing. Files stay local, with no upload or automatic persistence. See [the complete format](docs/api.md#json-activity-recordings--version-1), [typed example](https://github.com/talarurus/pibulo/blob/v0.3.2/examples/activity/recording.ts), and [final refinement and separate-agent review](https://github.com/talarurus/pibulo/blob/v0.3.2/docs/refinement-v0.2.0.md).
 
 ## Recorded motion and MP4
 
@@ -132,7 +132,7 @@ Chrome 155 and Playwright WebKit 26.5 passed genuine H.264 export/playback tests
 including multiple agents, cancellation and cleanup. Support is detected per
 runtime/configuration; this does not certify every Safari/iOS device or browser.
 The owner approved desktop/mobile Studio and the actual 512×512 MP4. Existing
-media-decoding evidence is retained in [the verification record](docs/mp4-verification.json).
+media-decoding evidence is retained in [the verification record](https://github.com/talarurus/pibulo/blob/v0.3.2/docs/mp4-verification.json).
 
 **Dependency maintenance risk:** optional video export bundles pinned MIT
 `mp4-muxer@5.2.2`, deprecated upstream in favor of Mediabunny. Its original
@@ -151,7 +151,7 @@ The typed activity engine, React subscriptions, event replay and versioned recor
 - Presence, agent list, user table, password helper and group chat examples; a browser-local wall.
 - Six optional **experimental manual companion scenes** at `/agent-scenes`.
 
-The standard artwork uses pinned Blobatar generation 2. This release preserves existing renderer bytes and identity behavior. The renderer, expressions, motion, gaze and laptop artwork are reused upstream work. The activity engine, replay, React activity binding and Studio are new first-party functionality. No automatic Codex/Claude monitoring, network transport, approval backend or scene export is included. Existing compositions remain checked-in examples; `Face` remains backward compatible.
+The standard artwork uses pinned Blobatar generation 2. This release preserves existing renderer bytes and identity behavior. The renderer, expressions, motion, gaze and laptop artwork are reused upstream work. The activity engine, replay, React activity binding and Studio are existing first-party functionality. No automatic Codex/Claude monitoring, network transport, approval backend or scene export is included. Existing compositions remain checked-in examples; `Face` remains backward compatible.
 
 The roster is fixed per engine, with one current task per agent. Callers supply increasing per-agent sequences, nondecreasing timestamps and unique task IDs across resets. Stale/out-of-order events are rejected rather than buffered. A bounded history tail may be incomplete for replay; retain the full accepted recording. SDK recording validation enforces unique task IDs across the whole recording. Reaching the maximum safe-integer sequence requires a new session. There are no durable sessions, external approval actions, automatic integrations or authentication guarantees.
 
@@ -169,6 +169,6 @@ npm run test:consumer
 npm run test:browser
 ```
 
-[Local rebrand verification](docs/reviews/pibulo-rebrand.md) records this development checkpoint. [v0.3.1 release preparation](docs/releases/preparation-v0.3.1.md) and [release notes](docs/releases/v0.3.1.md) remain historical. [v0.2.0 review](docs/refinement-v0.2.0.md) and [v0.1.0 validation](docs/validation.md) retain historical results and boundaries. [Provenance](docs/provenance.md) identifies adapted and independently authored work.
+[v0.3.2 release notes](docs/releases/v0.3.2.md) describe this release; [release preparation](https://github.com/talarurus/pibulo/blob/v0.3.2/docs/releases/preparation-v0.3.2.md) records qualification and the separate publication gate. [Local rebrand verification](https://github.com/talarurus/pibulo/blob/v0.3.2/docs/reviews/pibulo-rebrand.md) remains historical. [v0.3.1 release preparation](https://github.com/talarurus/pibulo/blob/v0.3.2/docs/releases/preparation-v0.3.1.md) and [release notes](https://github.com/talarurus/pibulo/blob/v0.3.2/docs/releases/v0.3.1.md) remain historical. [v0.2.0 review](https://github.com/talarurus/pibulo/blob/v0.3.2/docs/refinement-v0.2.0.md) and [v0.1.0 validation](https://github.com/talarurus/pibulo/blob/v0.3.2/docs/validation.md) retain historical results and boundaries. [Provenance](https://github.com/talarurus/pibulo/blob/v0.3.2/docs/provenance.md) identifies adapted and independently authored work.
 
 MIT: original renderer and adapted website code by **Alain / Alain00/blobatar**; compatible optional scene code from **SparshKaushik/blobatarling**, maintained by Sparsh Kaushik with additions authored by Khai. Original copyright notices are retained. Geist fonts are SIL OFL 1.1. See [LICENSE](LICENSE), [THIRD-PARTY-NOTICES](THIRD-PARTY-NOTICES.txt), and vendor license/source records. No upstream endorsement or legal clean-room claim is made.

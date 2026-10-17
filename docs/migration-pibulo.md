@@ -6,9 +6,8 @@ The product is now **pibulo**, published by **Talarurus**.
 An open-source toolkit for expressive AI-agent identities, activity visualization,
 deterministic replay and motion export.
 
-This owner-authorized local rebrand starts at whoami v0.3.1 commit
-`5d5a9b3e11f8873e3541fabb7eae11dd05ac33c9`. Version `0.3.2-dev.0`
-identifies unreleased development. Historical releases v0.1.0–v0.3.1 retain their
+Pibulo v0.3.2 is the first GitHub source release under the new name, based on
+whoami v0.3.1 commit `5d5a9b3e11f8873e3541fabb7eae11dd05ac33c9`. Historical releases v0.1.0–v0.3.1 retain their
 original names, tags, release notes, attribution and artifacts.
 
 ## Package migration
@@ -26,7 +25,7 @@ import '@talarurus/pibulo/react.css';
 ```
 
 Build with `npm ci`, `npm run build`, then `npm pack`. In a separate application,
-install the resulting local `talarurus-pibulo-0.3.2-dev.0.tgz` tarball. Remove the old
+install the resulting local `talarurus-pibulo-0.3.2.tgz` tarball. Remove the old
 local dependency and update its imports together. All export subpaths, signatures,
 behavior and peer requirements remain the same.
 
@@ -59,9 +58,14 @@ The existing local checkout directory remains `whoami`; its `origin` is now
 `https://github.com/talarurus/pibulo.git`. New clones default to `pibulo`.
 Do not reuse the old repository name while its redirects are needed.
 
-This branch has not been pushed. The remote default branch remains `main`, at
-published whoami v0.3.1, until a separately authorized Pibulo source release.
-No tags, GitHub Releases, npm packages, website deployments or Cloudflare changes
-were made. See [repository rename verification](reviews/pibulo-repository-rename.md).
+Distribution is through GitHub source archives and locally built tarballs.
+Studio and the SVG endpoint run locally; agent events are supplied by callers.
+Release preparation does not publish a tag or GitHub Release. Publication requires
+separate owner authorization. No npm publication, hosted Studio, deployment or
+Cloudflare change accompanies this release. See [repository rename verification](https://github.com/talarurus/pibulo/blob/v0.3.2/docs/reviews/pibulo-repository-rename.md).
 
-See the [historical local rebrand verification and proposed GitHub plan](reviews/pibulo-rebrand.md).
+See the [historical local rebrand verification and proposed GitHub plan](https://github.com/talarurus/pibulo/blob/v0.3.2/docs/reviews/pibulo-rebrand.md).
+
+[Release notes](releases/v0.3.2.md) describe the import-path change and preserved scope.
+Tag-pinned references in this guide become live after publication and must be
+verified then; local qualification checks their paths in the prepared source.

@@ -119,3 +119,17 @@ the local checkout directory remains `whoami`. Package identity remains
 deployment, npm publication, artwork or compatibility migration is included.
 See [rename verification](reviews/pibulo-repository-rename.md). Historical
 rebrand/release records above retain their original checkpoint context.
+
+## Pibulo v0.3.2 release preparation
+
+The owner authorized final source-release preparation from independently reviewed
+commit `fe11472ec2571f083bfe5fb7a264439ee8609ca6`. Active package/lock, website
+and documentation metadata are now 0.3.2, retaining private:true. Small README
+assets and the compatible historical recording are packaged; larger media and
+internal records use v0.3.2-pinned GitHub references, whose public verification
+remains pending until publication. No implementation, artwork, vendor, license,
+fixture, font, recording schema or identity mapping changes. Historical rebrand
+and release records above retain their original context. See
+[release notes](releases/v0.3.2.md) and [preparation](releases/preparation-v0.3.2.md).
+The independent review covers the approved baseline; final preparation QA is
+implementation-agent verification. GitHub publication requires separate approval.

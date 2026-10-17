@@ -1,6 +1,6 @@
 # MP4 export · v0.3.0
 
-Available unchanged in the Pibulo 0.3.2-dev.0 source package; this API was introduced in whoami v0.3.0. See [migration](migration-pibulo.md).
+Available unchanged in the Pibulo 0.3.2 source package; this API was introduced in whoami v0.3.0. See [migration](migration-pibulo.md).
 
 Optional `@talarurus/pibulo/export/mp4` exports recorded agent motion locally
 using the existing deterministic sampler and identity artwork.
@@ -26,7 +26,7 @@ const video = await exportMP4(compiled.motion, options, {
 // video.plan describes dimensions, roster, duration and fixed timing.
 ```
 
-[Typed example](../examples/activity/mp4.ts). `createMP4Plan`, `mp4FrameTiming`
+[Typed example](https://github.com/talarurus/pibulo/blob/v0.3.2/examples/activity/mp4.ts). `createMP4Plan`, `mp4FrameTiming`
 and `mp4FrameSVG` expose plan, microsecond timing and pure frame oracle.
 `MP4_LIMITS` lists bounds. Strict plain options: width, height, background,
 ordered agentIds and reducedMotion; unknown/accessor fields fail. Result: Blob,
@@ -62,11 +62,11 @@ extends approved `bf51b0c` on develop/v0.3.0. Historical tags, experiment branch
 renderer bytes, APIs, fixtures and old screenshots are preserved. QA is by the
 implementation agent. The owner subsequently approved the desktop/mobile Studio
 and actual 512×512 MP4. This is distinct from the automated technical QA and does
-not certify every browser/device. [Final release preparation](releases/preparation-v0.3.0.md)
+not certify every browser/device. [Final release preparation](https://github.com/talarurus/pibulo/blob/v0.3.2/docs/releases/preparation-v0.3.0.md)
 records the metadata checks and separate publication gate.
 
 Qualification used Node 24.21.0/npm 11.19.0, Playwright 1.62.1 and macOS native
-AVFoundation. [Machine-readable results](mp4-verification.json) retain codec
+AVFoundation. [Machine-readable results](https://github.com/talarurus/pibulo/blob/v0.3.2/docs/mp4-verification.json) retain codec
 probes, decoded metadata, hashes, resource metrics and fidelity measurements.
 
 | Check | Result |
@@ -111,9 +111,9 @@ Browser tests use the same pinned Chrome/WebKit setup as the motion milestone;
 configuration. Decode final files with Swift on macOS, then run
 `node scripts/check-mp4-inspection.mjs`. Raw outputs stay under ignored test-results.
 
-[Desktop](../assets/studio-mp4-desktop.png)
-· [Mobile, reduced motion](../assets/studio-mp4-mobile.png)
-· [Playable three-agent sample](../assets/motion-export-demo.mp4).
+[Desktop](https://github.com/talarurus/pibulo/blob/v0.3.2/assets/studio-mp4-desktop.png)
+· [Mobile, reduced motion](https://github.com/talarurus/pibulo/blob/v0.3.2/assets/studio-mp4-mobile.png)
+· [Playable three-agent sample](https://github.com/talarurus/pibulo/blob/v0.3.2/assets/motion-export-demo.mp4).
 
 ## Limits and next review
 

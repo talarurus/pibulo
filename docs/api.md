@@ -1,6 +1,6 @@
 # API and integration
 
-Pibulo `0.3.2-dev.0` is an unreleased local rebrand of whoami v0.3.1.
+Pibulo `0.3.2` is the first GitHub source release under the new name, following whoami v0.3.1.
 Public APIs and deterministic identities are unchanged; package imports now use
 `@talarurus/pibulo`. This is a source distribution; npm publication remains disabled.
 See [migration and compatibility](migration-pibulo.md).
